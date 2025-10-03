@@ -58,28 +58,23 @@ let ApiService = ApiService_1 = class ApiService {
             };
         }
     }
-    async sendPouleData(poule) {
+    async getResult(unitCode) {
         try {
-            this.logger.log(`Sending poule ${poule.ID}`);
-            const response = await axios_1.default.put(`${this.apiBaseUrl}/unit/raw-update`, {
-                ...poule,
-            }, {
+            const response = await axios_1.default.get(`${this.apiBaseUrl}/result/get-by-code/${unitCode}`, {
                 headers: {
                     'Content-Type': 'application/json',
                     'Authorization': `Bearer ${this.apiKey}`,
                     'X-API-Version': '1.0',
                 },
-                timeout: 15000,
             });
-            this.logger.log(`Successfully sent poule ${poule.ID} data. Status: ${response.status}`);
             return {
                 success: true,
                 data: response.data,
-                message: `Poule ${poule.ID} data sent successfully`,
+                message: `Result sent successfully`,
             };
         }
         catch (error) {
-            this.logger.error(`Failed to send poule ${poule.ID} data: ${error.message}`);
+            this.logger.error(`Failed to get result: ${error.message}`);
             if (axios_1.default.isAxiosError(error)) {
                 return {
                     success: false,
@@ -90,7 +85,36 @@ let ApiService = ApiService_1 = class ApiService {
             return {
                 success: false,
                 error: error.message,
-                message: `Unknown error occurred while sending poule ${poule.ID} data`,
+                message: `Unknown error occurred while getting result`,
+            };
+        }
+    }
+    async sendPouleData(poule) {
+        try {
+            const response = await axios_1.default.put(`${this.apiBaseUrl}/unit/raw-update`, {
+                ...poule,
+            }, {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${this.apiKey}`,
+                    'X-API-Version': '1.0',
+                },
+                timeout: 15000,
+            });
+        }
+        catch (error) {
+            this.logger.error(`Failed to send poule`);
+            if (axios_1.default.isAxiosError(error)) {
+                return {
+                    success: false,
+                    error: error.message,
+                    message: `API Error: ${error.response?.status} - ${error.response?.statusText}`,
+                };
+            }
+            return {
+                success: false,
+                error: error.message,
+                message: `Unknown error occurred while sending poule data`,
             };
         }
     }

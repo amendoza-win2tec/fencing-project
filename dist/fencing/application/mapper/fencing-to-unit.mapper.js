@@ -76,10 +76,10 @@ const rscCodeConverter = (gender, phase, sportEvent, combatNumber) => {
     const phaseCode = phaseDictionary[phase];
     const sportEventCode = sportEventDictionary[sportEvent];
     const unitCode = combatNumber.padStart(4, '0');
-    const rscCode = `${disciplineCode}${genderCode}${sportEventCode.padEnd(18, '-')}${phaseCode.padEnd(4, '-')}--------`;
+    const rscCode = `${disciplineCode}W${sportEventCode.padEnd(18, '-')}${phaseCode.padEnd(4, '-')}--------`;
     return {
         discipline: disciplineCode,
-        gender: genderCode,
+        gender: 'W',
         sportEvent: sportEventCode,
         phase: phaseCode,
         phaseCode: rscCode,

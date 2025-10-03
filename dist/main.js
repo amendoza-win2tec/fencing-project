@@ -9,9 +9,43 @@ const config_1 = require("@nestjs/config");
 async function bootstrap() {
     const app = await core_1.NestFactory.create(app_module_1.AppModule);
     const logger = new common_1.Logger('Bootstrap');
-    app.use('/api/fencing/process-xml', (0, express_1.raw)({ type: 'application/xml' }));
-    app.use('/api/fencing/process-xml', (0, express_1.raw)({ type: 'text/xml' }));
-    app.use('/api/fencing/process-xml', (0, express_1.raw)({ type: 'application/octet-stream' }));
+    app.use('/api/fencing/process-xml', (0, express_1.raw)({
+        type: 'application/xml',
+        limit: '50mb'
+    }));
+    app.use('/api/fencing/process-xml', (0, express_1.raw)({
+        type: 'text/xml',
+        limit: '50mb'
+    }));
+    app.use('/api/fencing/process-xml', (0, express_1.raw)({
+        type: 'application/octet-stream',
+        limit: '50mb'
+    }));
+    app.use('/api/wrestling/process-xml', (0, express_1.raw)({
+        type: 'application/xml',
+        limit: '50mb'
+    }));
+    app.use('/api/wrestling/process-xml', (0, express_1.raw)({
+        type: 'text/xml',
+        limit: '50mb'
+    }));
+    app.use('/api/wrestling/process-xml', (0, express_1.raw)({
+        type: 'application/octet-stream',
+        limit: '50mb'
+    }));
+    app.use('/api/wrestling/send-poules', (0, express_1.raw)({
+        type: 'application/xml',
+        limit: '50mb'
+    }));
+    app.use('/api/wrestling/send-poules', (0, express_1.raw)({
+        type: 'text/xml',
+        limit: '50mb'
+    }));
+    app.use('/api/wrestling/send-poules', (0, express_1.raw)({
+        type: 'application/octet-stream',
+        limit: '50mb'
+    }));
+    app.use((0, express_1.json)({ limit: '50mb' }));
     app.enableCors();
     app.setGlobalPrefix('api');
     const port = process.env.PORT || 3000;
@@ -44,8 +78,14 @@ async function bootstrap() {
     logger.log(`   POST http://localhost:${port}/api/fencing/process-file`);
     logger.log(`   POST http://localhost:${port}/api/fencing/send-poules`);
     logger.log(`   POST http://localhost:${port}/api/fencing/test-mqtt-data`);
+    logger.log(`🤼 Wrestling Endpoints:`);
+    logger.log(`   POST http://localhost:${port}/api/wrestling/process-xml`);
+    logger.log(`   POST http://localhost:${port}/api/wrestling/process-file`);
+    logger.log(`   POST http://localhost:${port}/api/wrestling/send-poules`);
+    logger.log(`   POST http://localhost:${port}/api/wrestling/test-mqtt-data`);
     logger.log(`📡 MQTT Endpoints:`);
-    logger.log(`   Topic: TSOVR/FEN/RT/#`);
+    logger.log(`   Topic: TSOVR/FEN/RT/# (Fencing)`);
+    logger.log(`   Topic: TSOVR/WRESTLING/RT/# (Wrestling)`);
     logger.log(`   Test: pnpm run test:mqtt`);
 }
 bootstrap();

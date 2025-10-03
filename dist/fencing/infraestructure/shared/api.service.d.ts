@@ -1,5 +1,5 @@
 import { ConfigService } from '@nestjs/config';
-import { Poule } from '../../domain/interfaces/fencing.interfaces';
+import { Poule, W2TECUnit } from '../../domain/interfaces/fencing.interfaces';
 import { CreateStartListDto } from 'src/fencing/domain/interfaces/fencing-participant.interfaces';
 import { CreateResultDto } from 'src/fencing/domain/interfaces/fencing-results.interface';
 export interface ApiResponse {
@@ -28,7 +28,8 @@ export declare class ApiService {
     private readonly mqttHost;
     constructor(configService: ConfigService);
     sendPoulesData(request: PoulesApiRequest): Promise<ApiResponse>;
-    sendPouleData(poule: Poule): Promise<ApiResponse>;
+    getResult(unitCode: string): Promise<ApiResponse>;
+    sendPouleData(poule: W2TECUnit): Promise<ApiResponse>;
     sendStartListData(startList: CreateStartListDto): Promise<ApiResponse>;
     sendResultData(result: CreateResultDto): Promise<ApiResponse>;
     checkApiHealth(): Promise<boolean>;

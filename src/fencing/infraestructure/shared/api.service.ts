@@ -1,7 +1,7 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import axios, { AxiosResponse } from 'axios';
-import { Poule } from '../../domain/interfaces/fencing.interfaces';
+import { Poule, W2TECUnit } from '../../domain/interfaces/fencing.interfaces';
 import { CreateStartListDto } from 'src/fencing/domain/interfaces/fencing-participant.interfaces';
 import { CreateResultDto } from 'src/fencing/domain/interfaces/fencing-results.interface';
 
@@ -86,12 +86,42 @@ export class ApiService {
     }
   }
 
+  async getResult(unitCode: string): Promise<ApiResponse> {
+    try {
+      const response: AxiosResponse = await axios.get(`${this.apiBaseUrl}/result/get-by-code/${unitCode}`, {
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${this.apiKey}`,
+          'X-API-Version': '1.0',
+        },
+      });
+      return {
+        success: true,
+        data: response.data,
+        message: `Result sent successfully`,
+      };
+    } catch (error) {
+      this.logger.error(`Failed to get result: ${error.message}`);
+      if (axios.isAxiosError(error)) {
+        return {
+          success: false,
+          error: error.message,
+          message: `API Error: ${error.response?.status} - ${error.response?.statusText}`,
+        };
+      }
+      return {
+        success: false,
+        error: error.message,
+        message: `Unknown error occurred while getting result`,
+      };
+    }
+  }
+
   /**
    * Send individual Poule data
    */
-  async sendPouleData(poule: Poule): Promise<ApiResponse> {
+  async sendPouleData(poule: W2TECUnit): Promise<ApiResponse> {
     try {
-      this.logger.log(`Sending poule ${poule.ID}`);
       
       const response: AxiosResponse = await axios.put(
         `${this.apiBaseUrl}/unit/raw-update`,
@@ -107,16 +137,8 @@ export class ApiService {
           timeout: 15000, // 15 seconds timeout
         }
       );
-
-      this.logger.log(`Successfully sent poule ${poule.ID} data. Status: ${response.status}`);
-      
-      return {
-        success: true,
-        data: response.data,
-        message: `Poule ${poule.ID} data sent successfully`,
-      };
     } catch (error) {
-      this.logger.error(`Failed to send poule ${poule.ID} data: ${error.message}`);
+      this.logger.error(`Failed to send poule`);
       
       if (axios.isAxiosError(error)) {
         return {
@@ -129,7 +151,7 @@ export class ApiService {
       return {
         success: false,
         error: error.message,
-        message: `Unknown error occurred while sending poule ${poule.ID} data`,
+        message: `Unknown error occurred while sending poule data`,
       };
     }
   }
