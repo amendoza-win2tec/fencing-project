@@ -136,6 +136,7 @@ export interface FencingCompetition {
   Date: string;
   TitreCourt: string;
   TitreLong: string;
+  Equipes : Equipe[];
   Tireurs: {
     Tireur: Tireur[];
   };
@@ -388,4 +389,94 @@ export interface MqttMatchData {
   state: string;
   rightFencer: MqttFencerData;
   leftFencer: MqttFencerData;
+}
+
+// Team competition interfaces based on MS_Team_Table.xml structure
+
+// Team member (Tireur in team context)
+export interface TeamMember {
+  ID: string;
+  Nom: string;
+  Prenom: string;
+  DateNaissance?: string;
+  Sexe: 'M' | 'F';
+  Lateralite: 'I' | 'D';
+  Nation: string;
+  LicenceNat?: string;
+  dossard: string;
+  IdOrigine: string;
+}
+
+// Team (Equipe)
+export interface Equipe {
+  ID: string;
+  Nom: string;
+  Nation: string;
+  Tireur: TeamMember[];
+}
+
+// Team in match context
+export interface EquipeInMatch {
+  REF: string;
+  Statut?: 'V' | 'D' | '';
+  Place?: string;
+  Cote?: 'D' | 'G';
+}
+
+// Team match
+export interface TeamMatch {
+  ID: string;
+  Date: string;
+  Heure?: string;
+  Piste?: string;
+  Equipe: EquipeInMatch[];
+}
+
+// Team tableau
+export interface TeamTableau {
+  ID: string;
+  Titre: string;
+  Taille: string;
+  Match: TeamMatch[];
+}
+
+// Team suite de tableaux
+export interface TeamSuiteDeTableaux {
+  ID: string;
+  Titre: string;
+  NbDeTableaux: string;
+  Tableau: TeamTableau[];
+}
+
+// Team phase de tableaux
+export interface TeamPhaseDeTableaux {
+  PhaseID: string;
+  ID: string;
+  Equipe: {
+    REF: string;
+    RangInitial: string;
+    IdOrigine: string;
+  }[];
+  SuiteDeTableaux: TeamSuiteDeTableaux[];
+}
+
+// Team competition (CompetitionParEquipes)
+export interface TeamCompetition {
+  Version: string;
+  Championnat: string;
+  Annee: string;
+  Arme: string;
+  Sexe: 'M' | 'F';
+  Domaine: string;
+  Categorie: string;
+  Date: string;
+  TitreCourt: string;
+  TitreLong: string;
+  Equipes: {
+    Equipe: Equipe[];
+  };
+  Arbitres?: string;
+  Phases: {
+    PhaseDeTableaux: TeamPhaseDeTableaux;
+  };
 }
