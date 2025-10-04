@@ -26,22 +26,22 @@ import {
 // Using interfaces from fencing-teams.interfaces.ts
 
 // Dictionary to map team member IDs to participant codes
-// const participantDictionary: Record<string, string> = {
-//   '1': '211',
-//   '2': '248',
-//   '3': '458',
-//   '4': '279',
-//   '5': '488',
-//   '6': '249',
-// };
-
-const participantDictionaryWomen: Record<string, string> = {
-  '1': '254', // UZBEKISTAN -> Uzbekistan 1 (group 211)
-  '2': '278', // AZERBAIJAN 1 -> Azerbaijan 1 (group 248)
-  '3': '210', // BELARUS -> Belarus (group 458)
-  '4': '267', // RUSSIA -> Russia 1 (group 279)
-  '5': '255', // KAZAKHSTAN -> Kazakhstan 1 (group 488)
+const participantDictionary: Record<string, string> = {
+  '1': '211',
+  '2': '248',
+  '3': '458',
+  '4': '279',
+  '5': '488',
+  '6': '249',
 };
+
+// const participantDictionaryWomen: Record<string, string> = {
+//   '1': '254', // UZBEKISTAN -> Uzbekistan 1 (group 211)
+//   '2': '278', // AZERBAIJAN 1 -> Azerbaijan 1 (group 248)
+//   '3': '210', // BELARUS -> Belarus (group 458)
+//   '4': '267', // RUSSIA -> Russia 1 (group 279)
+//   '5': '255', // KAZAKHSTAN -> Kazakhstan 1 (group 488)
+// };
 
 const sportEventDictionary: Record<string, string> = {
   S: 'TEAMSABR',
@@ -74,7 +74,7 @@ export class FencingTeamToResultMapper {
    * Map team member to participant using group data
    */
   mapTeamMemberToParticipant(teamMember: TeamMember, teamId: string, index: number, street: string): ParticipantRequestResultDto | null {
-    const groupCode = participantDictionaryWomen[teamId];
+    const groupCode = participantDictionary[teamId];
     
     if (groupCode) {
       const group = this.groupService.getGroupByCode(groupCode);
@@ -108,7 +108,7 @@ export class FencingTeamToResultMapper {
    * Map team to group with team members as participants using real group data
    */
   mapTeamToGroup(team: Team, teamInMatch?: TeamInMatch, matchResult?: string): GroupRequestResultDto | null {
-    const groupCode = participantDictionaryWomen[team._ID];
+    const groupCode = participantDictionary[team._ID];
     
     if (!groupCode) {
       return null;

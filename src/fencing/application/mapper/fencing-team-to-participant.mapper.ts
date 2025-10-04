@@ -19,22 +19,22 @@ import {
 } from '../../domain/interfaces/fencing-teams.interfaces';
 
 // Dictionary to map team IDs to group codes based on teams-example.json and groups.json
-// const participantDictionary: Record<string, string> = {
-//   '1': '211', // UZBEKISTAN -> Uzbekistan 1 (group 211)
-//   '2': '248', // AZERBAIJAN 1 -> Azerbaijan 1 (group 248)
-//   '3': '458', // BELARUS -> Belarus (group 458)
-//   '4': '279', // RUSSIA -> Russia 1 (group 279)
-//   '5': '488', // KAZAKHSTAN -> Kazakhstan 1 (group 488)
-//   '6': '249', // AZERBAIJAN 2 -> Azerbaijan 2 (group 249)
-// };
-
-const participantDictionaryWomen: Record<string, string> = {
-  '1': '254', // UZBEKISTAN -> Uzbekistan 1 (group 211)
-  '2': '278', // AZERBAIJAN 1 -> Azerbaijan 1 (group 248)
-  '3': '210', // BELARUS -> Belarus (group 458)
-  '4': '267', // RUSSIA -> Russia 1 (group 279)
-  '5': '255', // KAZAKHSTAN -> Kazakhstan 1 (group 488)
+const participantDictionary: Record<string, string> = {
+  '1': '211', // UZBEKISTAN -> Uzbekistan 1 (group 211)
+  '2': '248', // AZERBAIJAN 1 -> Azerbaijan 1 (group 248)
+  '3': '458', // BELARUS -> Belarus (group 458)
+  '4': '279', // RUSSIA -> Russia 1 (group 279)
+  '5': '488', // KAZAKHSTAN -> Kazakhstan 1 (group 488)
+  '6': '249', // AZERBAIJAN 2 -> Azerbaijan 2 (group 249)
 };
+
+// const participantDictionaryWomen: Record<string, string> = {
+//   '1': '254', // UZBEKISTAN -> Uzbekistan 1 (group 211)
+//   '2': '278', // AZERBAIJAN 1 -> Azerbaijan 1 (group 248)
+//   '3': '210', // BELARUS -> Belarus (group 458)
+//   '4': '267', // RUSSIA -> Russia 1 (group 279)
+//   '5': '255', // KAZAKHSTAN -> Kazakhstan 1 (group 488)
+// };
 
 const sportEventDictionary: Record<string, string> = {
   S: 'TEAMSABR',
@@ -74,7 +74,7 @@ export class FencingTeamToParticipantMapper {
    * Map team member to participant for start list using group data
    */
   mapTeamMemberToParticipant(teamMember: TeamMember, teamId: string, index: number, street: string): ParticipantRequestStartListDto | null {
-    const groupCode = participantDictionaryWomen[teamId];
+    const groupCode = participantDictionary[teamId];
     
     if (groupCode) {
       const group = this.groupService.getGroupByCode(groupCode);
@@ -100,7 +100,7 @@ export class FencingTeamToParticipantMapper {
    * Map team to group for start list using real group data
    */
   mapTeamToGroup(team: Team, street: string): GroupRequestStartListDto | null {
-    const groupCode = participantDictionaryWomen[team._ID];
+    const groupCode = participantDictionary[team._ID];
     
     if (!groupCode) {
       return null;
