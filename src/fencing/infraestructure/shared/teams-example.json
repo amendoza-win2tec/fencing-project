@@ -1,0 +1,485 @@
+{
+	"CompetitionParEquipes": {
+		"Equipes": {
+			"Equipe": [
+				{
+					"Tireur": [
+						{
+							"_ID": "3",
+							"_Nom": "ALIYEV",
+							"_Prenom": "Rasul",
+							"_Sexe": "M",
+							"_Lateralite": "I",
+							"_Nation": "AZE",
+							"_LicenceNat": "AZE",
+							"_dossard": "7003",
+							"_IdOrigine": "3"
+						},
+						{
+							"_ID": "8",
+							"_Nom": "HUSEYNOV",
+							"_Prenom": "Abbas",
+							"_Sexe": "M",
+							"_Lateralite": "I",
+							"_Nation": "AZE",
+							"_LicenceNat": "AZE",
+							"_dossard": "7008",
+							"_IdOrigine": "8"
+						},
+						{
+							"_ID": "9",
+							"_Nom": "HUSNADDINOV",
+							"_Prenom": "Timur",
+							"_Sexe": "M",
+							"_Lateralite": "I",
+							"_Nation": "AZE",
+							"_LicenceNat": "AZE",
+							"_dossard": "7009",
+							"_IdOrigine": "9"
+						},
+						{
+							"_ID": "16",
+							"_Nom": "MAMMADLI",
+							"_Prenom": "Nahid",
+							"_Sexe": "M",
+							"_Lateralite": "I",
+							"_Nation": "AZE",
+							"_LicenceNat": "AZE",
+							"_dossard": "7016",
+							"_IdOrigine": "16"
+						}
+					],
+					"_ID": "2",
+					"_Nom": "AZERBAIJAN 1",
+					"_Nation": "AZE"
+				},
+				{
+					"Tireur": [
+						{
+							"_ID": "11",
+							"_Nom": "ISLAMZADA",
+							"_Prenom": "Ayxan",
+							"_Sexe": "M",
+							"_Lateralite": "I",
+							"_Nation": "AZE",
+							"_LicenceNat": "AZE",
+							"_dossard": "7011",
+							"_IdOrigine": "11"
+						},
+						{
+							"_ID": "12",
+							"_Nom": "ISMAYILOV",
+							"_Prenom": "Ali",
+							"_Sexe": "M",
+							"_Lateralite": "I",
+							"_Nation": "AZE",
+							"_LicenceNat": "AZE",
+							"_dossard": "7012",
+							"_IdOrigine": "12"
+						},
+						{
+							"_ID": "18",
+							"_Nom": "NASIBZADA",
+							"_Prenom": "Abdulmalik",
+							"_Sexe": "M",
+							"_Lateralite": "I",
+							"_Nation": "AZE",
+							"_LicenceNat": "AZE",
+							"_dossard": "7018",
+							"_IdOrigine": "18"
+						},
+						{
+							"_ID": "20",
+							"_Nom": "SHABANLI",
+							"_Prenom": "Najaf",
+							"_Sexe": "M",
+							"_Lateralite": "I",
+							"_Nation": "AZE",
+							"_LicenceNat": "AZE",
+							"_dossard": "7020",
+							"_IdOrigine": "20"
+						}
+					],
+					"_ID": "6",
+					"_Nom": "AZERBAIJAN 2",
+					"_Nation": "AZE"
+				},
+				{
+					"Tireur": [
+						{
+							"_ID": "4",
+							"_Nom": "AUSIANKIN",
+							"_Prenom": "Andrei",
+							"_DateNaissance": "12.06.2009",
+							"_Sexe": "M",
+							"_Lateralite": "I",
+							"_Nation": "BLR",
+							"_dossard": "7004",
+							"_IdOrigine": "4"
+						},
+						{
+							"_ID": "6",
+							"_Nom": "HAURUSIK",
+							"_Prenom": "Kanstantsin",
+							"_DateNaissance": "11.05.2007",
+							"_Sexe": "M",
+							"_Lateralite": "I",
+							"_Nation": "BLR",
+							"_dossard": "7006",
+							"_IdOrigine": "6"
+						},
+						{
+							"_ID": "7",
+							"_Nom": "HRUSHAVETS",
+							"_Prenom": "Raman",
+							"_DateNaissance": "28.11.2006",
+							"_Sexe": "M",
+							"_Lateralite": "I",
+							"_Nation": "BLR",
+							"_dossard": "7007",
+							"_IdOrigine": "7"
+						},
+						{
+							"_ID": "17",
+							"_Nom": "NASENNIK",
+							"_Prenom": "Ivan",
+							"_DateNaissance": "18.11.2006",
+							"_Sexe": "M",
+							"_Lateralite": "I",
+							"_Nation": "BLR",
+							"_dossard": "7017",
+							"_IdOrigine": "17"
+						}
+					],
+					"_ID": "3",
+					"_Nom": "BELARUS",
+					"_Nation": "BLR"
+				},
+				{
+					"Tireur": [
+						{
+							"_ID": "13",
+							"_Nom": "KAIYM",
+							"_Prenom": "Aibar",
+							"_DateNaissance": "31.01.2009",
+							"_Sexe": "M",
+							"_Lateralite": "I",
+							"_Nation": "KAZ",
+							"_dossard": "7013",
+							"_IdOrigine": "13"
+						},
+						{
+							"_ID": "14",
+							"_Nom": "KARAMAN",
+							"_Prenom": "Yerkhan",
+							"_DateNaissance": "15.04.2008",
+							"_Sexe": "M",
+							"_Lateralite": "G",
+							"_Nation": "KAZ",
+							"_dossard": "7014",
+							"_IdOrigine": "14"
+						},
+						{
+							"_ID": "21",
+							"_Nom": "STANBEK",
+							"_Prenom": "Sultan",
+							"_DateNaissance": "19.09.2006",
+							"_Sexe": "M",
+							"_Lateralite": "I",
+							"_Nation": "KAZ",
+							"_dossard": "7021",
+							"_IdOrigine": "21"
+						},
+						{
+							"_ID": "24",
+							"_Nom": "ZHAILYBAY",
+							"_Prenom": "Nurmukhammed",
+							"_DateNaissance": "26.10.2006",
+							"_Sexe": "M",
+							"_Lateralite": "I",
+							"_Nation": "KAZ",
+							"_dossard": "7024",
+							"_IdOrigine": "24"
+						}
+					],
+					"_ID": "5",
+					"_Nom": "KAZAKHSTAN",
+					"_Nation": "KAZ"
+				},
+				{
+					"Tireur": [
+						{
+							"_ID": "5",
+							"_Nom": "BORISOV",
+							"_Prenom": "Iaroslav",
+							"_DateNaissance": "18.04.2008",
+							"_Sexe": "M",
+							"_Lateralite": "I",
+							"_Nation": "RUS",
+							"_dossard": "7005",
+							"_IdOrigine": "5"
+						},
+						{
+							"_ID": "10",
+							"_Nom": "IARULLIN",
+							"_Prenom": "Kiram",
+							"_DateNaissance": "20.09.2006",
+							"_Sexe": "M",
+							"_Lateralite": "I",
+							"_Nation": "RUS",
+							"_dossard": "7010",
+							"_IdOrigine": "10"
+						},
+						{
+							"_ID": "19",
+							"_Nom": "NOVIKOV",
+							"_Prenom": "Ivan",
+							"_DateNaissance": "28.12.2007",
+							"_Sexe": "M",
+							"_Lateralite": "I",
+							"_Nation": "RUS",
+							"_dossard": "7019",
+							"_IdOrigine": "19"
+						},
+						{
+							"_ID": "22",
+							"_Nom": "TAYCHENACHEV",
+							"_Prenom": "Petr",
+							"_DateNaissance": "07.03.2008",
+							"_Sexe": "M",
+							"_Lateralite": "I",
+							"_Nation": "RUS",
+							"_dossard": "7022",
+							"_IdOrigine": "22"
+						}
+					],
+					"_ID": "4",
+					"_Nom": "RUSSIA",
+					"_Nation": "RUS"
+				},
+				{
+					"Tireur": [
+						{
+							"_ID": "1",
+							"_Nom": "ABDUKARIMBEKOV",
+							"_Prenom": "Sardor",
+							"_DateNaissance": "05.03.2007",
+							"_Sexe": "M",
+							"_Lateralite": "G",
+							"_Nation": "UZB",
+							"_dossard": "7001",
+							"_IdOrigine": "1"
+						},
+						{
+							"_ID": "2",
+							"_Nom": "ABULOV",
+							"_Prenom": "Shannazar",
+							"_DateNaissance": "22.12.2008",
+							"_Sexe": "M",
+							"_Lateralite": "I",
+							"_Nation": "UZB",
+							"_dossard": "7002",
+							"_IdOrigine": "2"
+						},
+						{
+							"_ID": "15",
+							"_Nom": "KENESBAEV",
+							"_Prenom": "Nursultan",
+							"_DateNaissance": "09.02.2008",
+							"_Sexe": "M",
+							"_Lateralite": "I",
+							"_Nation": "UZB",
+							"_dossard": "7015",
+							"_IdOrigine": "15"
+						},
+						{
+							"_ID": "23",
+							"_Nom": "URAKBAEV",
+							"_Prenom": "Alpamis",
+							"_DateNaissance": "02.11.2007",
+							"_Sexe": "M",
+							"_Lateralite": "I",
+							"_Nation": "UZB",
+							"_dossard": "7023",
+							"_IdOrigine": "23"
+						}
+					],
+					"_ID": "1",
+					"_Nom": "UZBEKISTAN",
+					"_Nation": "UZB"
+				}
+			]
+		},
+		"Arbitres": "",
+		"Phases": {
+			"PhaseDeTableaux": {
+				"Equipe": [
+					{
+						"_REF": "4",
+						"_RangInitial": "1",
+						"_IdOrigine": ""
+					},
+					{
+						"_REF": "5",
+						"_RangInitial": "2",
+						"_IdOrigine": ""
+					},
+					{
+						"_REF": "1",
+						"_RangInitial": "3",
+						"_IdOrigine": ""
+					},
+					{
+						"_REF": "2",
+						"_RangInitial": "4",
+						"_IdOrigine": ""
+					},
+					{
+						"_REF": "3",
+						"_RangInitial": "5",
+						"_IdOrigine": ""
+					},
+					{
+						"_REF": "6",
+						"_RangInitial": "6",
+						"_IdOrigine": ""
+					}
+				],
+				"SuiteDeTableaux": {
+					"Tableau": [
+						{
+							"Match": [
+								{
+									"Equipe": [
+										{
+											"_REF": "4",
+											"_Statut": "V",
+											"_Place": "1"
+										},
+										""
+									],
+									"_ID": "1",
+									"_Date": "04.10.2025"
+								},
+								{
+									"Equipe": [
+										{
+											"_REF": "3",
+											"_Place": "5",
+											"_Cote": "D"
+										},
+										{
+											"_REF": "2",
+											"_Place": "4",
+											"_Cote": "G"
+										}
+									],
+									"_ID": "2",
+									"_Date": "04.10.2025",
+									"_Heure": "13:00",
+									"_Piste": "YELLOW"
+								},
+								{
+									"Equipe": [
+										{
+											"_REF": "1",
+											"_Place": "3",
+											"_Cote": "G"
+										},
+										{
+											"_REF": "6",
+											"_Place": "6",
+											"_Cote": "D"
+										}
+									],
+									"_ID": "3",
+									"_Date": "04.10.2025",
+									"_Heure": "13:00",
+									"_Piste": "GREEN"
+								},
+								{
+									"Equipe": [
+										"",
+										{
+											"_REF": "5",
+											"_Statut": "V",
+											"_Place": "2"
+										}
+									],
+									"_ID": "4",
+									"_Date": "04.10.2025"
+								}
+							],
+							"_ID": "A8",
+							"_Titre": "Tableau of 8",
+							"_Taille": "8"
+						},
+						{
+							"Match": [
+								{
+									"Equipe": [
+										{
+											"_REF": "4",
+											"_Place": "1"
+										},
+										""
+									],
+									"_ID": "1",
+									"_Date": "04.10.2025",
+									"_Heure": "14:00",
+									"_Piste": "YELLOW"
+								},
+								{
+									"Equipe": [
+										"",
+										{
+											"_REF": "5",
+											"_Place": "2"
+										}
+									],
+									"_ID": "2",
+									"_Date": "04.10.2025",
+									"_Heure": "14:00",
+									"_Piste": "GREEN"
+								}
+							],
+							"_ID": "A4",
+							"_Titre": "Semi-finals",
+							"_Taille": "4"
+						},
+						{
+							"Match": {
+								"Equipe": [
+									"",
+									""
+								],
+								"_ID": "1",
+								"_Date": "04.10.2025",
+								"_Heure": "15:50",
+								"_Piste": "PODIUM"
+							},
+							"_ID": "A2",
+							"_Titre": "Final",
+							"_Taille": "2"
+						}
+					],
+					"_ID": "SuiteTab_A",
+					"_Titre": "Direct tableau",
+					"_NbDeTableaux": "3"
+				},
+				"_PhaseID": "PhaseTableaux1",
+				"_ID": "1"
+			}
+		},
+		"_Version": "3.3",
+		"_Championnat": "3rd CIS GAMES",
+		"_Annee": "2025",
+		"_Arme": "S",
+		"_Sexe": "M",
+		"_Domaine": "I",
+		"_Categorie": "U23",
+		"_Date": "04.10.2025",
+		"_TitreCourt": "SM_TEAM",
+		"_TitreLong": "3RD CIS GAMES - MEN'S TEAM SABRE"
+	}
+}

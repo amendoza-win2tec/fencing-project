@@ -13,6 +13,9 @@ import {
   MqttMatchData,
   MqttFencerData
 } from '../../domain/interfaces/fencing.interfaces';
+import { FencingTeamsCompetition } from '../../domain/interfaces/fencing-teams.interfaces';
+import { CreateResultDto } from '../../domain/interfaces/fencing-results.interface';
+import { CreateStartListDto } from '../../domain/interfaces/fencing-participant.interfaces';
 import * as xml2js from 'xml2js';
 
 @Controller('fencing')
@@ -108,6 +111,58 @@ export class FencingController {
       return result;
     } catch (error) {
       throw new BadRequestException(`Error sending poules to API: ${error.message}`);
+    }
+  }
+
+  @Post('process-teams-xml')
+  async processFencingTeamsXml(@Req() req: RawBodyRequest<Request>): Promise<{ success: boolean; data: { results: CreateResultDto[], startLists: CreateStartListDto[], unit: string }; message: string }> {
+    try {
+      // Get XML content from raw body
+      const xmlContent = req.body?.toString('utf8');
+      
+      if (!xmlContent) {
+        throw new BadRequestException('XML content is required');
+      }
+
+      // Parse XML to JSON
+      const parser = new xml2js.Parser({
+        explicitArray: false,
+        mergeAttrs: true,
+        explicitRoot: false,
+      });
+
+      const xmlJson: FencingTeamsCompetition = await parser.parseStringPromise(xmlContent);
+
+      // Process the fencing teams
+      const result = await this.fencingService.processFencingTeams(xmlJson);
+
+      return {
+        success: true,
+        data: result,
+        message: 'Fencing teams XML processed successfully',
+      };
+    } catch (error) {
+      throw new BadRequestException(`Error processing teams XML: ${error.message}`);
+    }
+  }
+
+  @Post('process-teams-json')
+  async processFencingTeamsJson(@Body() body: FencingTeamsCompetition): Promise<{ success: boolean; data: { results: CreateResultDto[], startLists: CreateStartListDto[], unit: string }; message: string }> {
+    try {
+      if (!body) {
+        throw new BadRequestException('JSON content is required');
+      }
+
+      // Process the fencing teams directly from JSON
+      const result = await this.fencingService.processFencingTeams(body);
+
+      return {
+        success: true,
+        data: result,
+        message: 'Fencing teams JSON processed successfully',
+      };
+    } catch (error) {
+      throw new BadRequestException(`Error processing teams JSON: ${error.message}`);
     }
   }
 

@@ -6,8 +6,12 @@ import { ParticipantController } from './infraestructure/controllers/participant
 import { ApiService } from './infraestructure/shared/api.service';
 import { ParticipantService } from './infraestructure/shared/participant.service';
 import { ParticipantLookupUtil } from './infraestructure/shared/participant-lookup.util';
+import { GroupService } from './infraestructure/shared/group.service';
 import { FencingToParticipantMapper } from './application/mapper/fencing-to-participant.mapper';
 import { FencingToResultMapper } from './application/mapper/fencing-to-result.mapper';
+import { FencingTeamToResultMapper } from './application/mapper/fencing-team-to-result.mapper';
+import { FencingTeamToParticipantMapper } from './application/mapper/fencing-team-to-participant.mapper';
+import { FencingTeamToUnitMapper } from './application/mapper/fencing-team-to-unit.mapper';
 import { BullModule } from '@nestjs/bullmq';
 
 @Module({
@@ -28,16 +32,24 @@ import { BullModule } from '@nestjs/bullmq';
     ApiService, 
     ParticipantService, 
     ParticipantLookupUtil,
+    GroupService,
     FencingToParticipantMapper,
-    FencingToResultMapper
+    FencingToResultMapper,
+    FencingTeamToResultMapper,
+    FencingTeamToParticipantMapper,
+    FencingTeamToUnitMapper
   ],
   exports: [
     FencingService, 
     ApiService, 
     ParticipantService, 
     ParticipantLookupUtil,
+    GroupService,
     FencingToParticipantMapper,
-    FencingToResultMapper
+    FencingToResultMapper,
+    FencingTeamToResultMapper,
+    FencingTeamToParticipantMapper,
+    FencingTeamToUnitMapper
   ],
 })
 export class FencingModule {}

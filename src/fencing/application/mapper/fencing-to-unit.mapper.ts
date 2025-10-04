@@ -206,9 +206,11 @@ export const mapToW2tecPhases = (
   const parsedTime = `${match.startTime}:00`;
   const _gender = genderDictionary[gender];
 
+  
   /**
    * Maps a ConvertedMatch to W2TEC Unit
    */
+  const dateInfo = generateDateInfo(parsedDate, parsedTime);
   return {
     unitsNumber: 1,
     code: rscVO.rscCode.slice(0, -8).concat(rscVO.unit.padEnd(8, '-')),
@@ -225,13 +227,13 @@ export const mapToW2tecPhases = (
       unit: rscVO.unit,
       phaseCode: rscVO.rscCode,
     },
-    dateInfo: generateDateInfo(parsedDate, parsedTime),
+    dateInfo: dateInfo,
     location: locationDictionary[match.location],
     hasMedals: getMedalsInfo(rscVO).hasMedals,
     medalCodes: getMedalsInfo(rscVO).medalCodes,
     medalQuantities: getMedalsInfo(rscVO).medalQuantities,
     venue: 'GSP',
-    status: determineUnitStatus(tireurStatus),
+    status: new Date(dateInfo.startDate) < new Date() ? 'OFFICIAL' : determineUnitStatus(tireurStatus),
   };
 };
 

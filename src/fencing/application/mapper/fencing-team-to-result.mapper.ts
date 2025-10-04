@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { ParticipantService } from '../../infraestructure/shared/participant.service';
+import { GroupService, Group, GroupParticipant } from '../../infraestructure/shared/group.service';
 import { Participant } from '../../domain/interfaces/participant.interfaces';
 import { 
   CreateResultDto, 
@@ -9,101 +10,44 @@ import {
   GlobalResultRequestResultDto,
   MetadataRequestResultDto
 } from '../../domain/interfaces/fencing-results.interface';
+import { CreateStartListDto } from '../../domain/interfaces/fencing-participant.interfaces';
+import { 
+  FencingTeamsCompetition,
+  TeamCompetition,
+  Team,
+  TeamMember,
+  TeamInMatch,
+  TeamMatch,
+  TeamTableau,
+  TeamSuiteDeTableaux,
+  TeamPhaseDeTableaux
+} from '../../domain/interfaces/fencing-teams.interfaces';
 
-// Team competition interfaces based on the XML structure
-export interface TeamMember {
-  ID: string;
-  Nom: string;
-  Prenom: string;
-  DateNaissance?: string;
-  Sexe: 'M' | 'F';
-  Lateralite: 'I' | 'D';
-  Nation: string;
-  LicenceNat?: string;
-  dossard: string;
-  IdOrigine: string;
-}
-
-export interface Team {
-  ID: string;
-  Nom: string;
-  Nation: string;
-  Tireur: TeamMember[];
-}
-
-export interface TeamInMatch {
-  REF: string;
-  Statut?: 'V' | 'D' | '';
-  Place?: string;
-  Cote?: 'D' | 'G';
-}
-
-export interface TeamMatch {
-  ID: string;
-  Date: string;
-  Heure?: string;
-  Piste?: string;
-  Equipe: TeamInMatch[];
-}
-
-export interface TeamTableau {
-  ID: string;
-  Titre: string;
-  Taille: string;
-  Match: TeamMatch[];
-}
-
-export interface TeamSuiteDeTableaux {
-  ID: string;
-  Titre: string;
-  NbDeTableaux: string;
-  Tableau: TeamTableau[];
-}
-
-export interface TeamPhaseDeTableaux {
-  PhaseID: string;
-  ID: string;
-  Equipe: {
-    REF: string;
-    RangInitial: string;
-    IdOrigine: string;
-  }[];
-  SuiteDeTableaux: TeamSuiteDeTableaux[];
-}
-
-export interface TeamCompetition {
-  Version: string;
-  Championnat: string;
-  Annee: string;
-  Arme: string;
-  Sexe: 'M' | 'F';
-  Domaine: string;
-  Categorie: string;
-  Date: string;
-  TitreCourt: string;
-  TitreLong: string;
-  Equipes: {
-    Equipe: Team[];
-  };
-  Phases: {
-    PhaseDeTableaux: TeamPhaseDeTableaux;
-  };
-}
+// Using interfaces from fencing-teams.interfaces.ts
 
 // Dictionary to map team member IDs to participant codes
-const participantDictionary: Record<string, string> = {
-  '1': '211',
-  '2': '248',
-  '3': '458',
-  '4': '279',
-  '5': '488',
-  '6': '249',
+// const participantDictionary: Record<string, string> = {
+//   '1': '211',
+//   '2': '248',
+//   '3': '458',
+//   '4': '279',
+//   '5': '488',
+//   '6': '249',
+// };
+
+const participantDictionaryWomen: Record<string, string> = {
+  '1': '254', // UZBEKISTAN -> Uzbekistan 1 (group 211)
+  '2': '278', // AZERBAIJAN 1 -> Azerbaijan 1 (group 248)
+  '3': '210', // BELARUS -> Belarus (group 458)
+  '4': '267', // RUSSIA -> Russia 1 (group 279)
+  '5': '255', // KAZAKHSTAN -> Kazakhstan 1 (group 488)
 };
 
 const sportEventDictionary: Record<string, string> = {
-  S: 'SABRE',
-  E: 'EPEE',
-  F: 'FOIL',
+  S: 'TEAMSABR',
+  E: 'TEAMEPEE',
+  F: 'TEAMFOIL',
+  'TEAMSABR': 'TEAMSABR'
 };
 
 const phaseDictionary: Record<string, string> = {
@@ -121,25 +65,29 @@ const genderDictionary: Record<string, string> = {
 
 @Injectable()
 export class FencingTeamToResultMapper {
-  constructor(private readonly participantService: ParticipantService) {}
+  constructor(
+    private readonly participantService: ParticipantService,
+    private readonly groupService: GroupService
+  ) {}
 
   /**
-   * Map team member to participant
+   * Map team member to participant using group data
    */
-  mapTeamMemberToParticipant(teamMember: TeamMember, index: number, street: string): ParticipantRequestResultDto | null {
-    const participantCode = participantDictionary[teamMember.ID];
+  mapTeamMemberToParticipant(teamMember: TeamMember, teamId: string, index: number, street: string): ParticipantRequestResultDto | null {
+    const groupCode = participantDictionaryWomen[teamId];
     
-    if (participantCode) {
-      const result = this.participantService.getByCode(participantCode);
-      if (result.participant) {
+    if (groupCode) {
+      const group = this.groupService.getGroupByCode(groupCode);
+      if (group && group.participants && group.participants[index]) {
+        const participant = group.participants[index];
         return {
-          participantId: result.participant.idParticipant,
-          name: result.participant.name,
-          surname: result.participant.surname,
-          delegation: result.participant.organisation.code,
+          participantId: participant.participantId,
+          name: participant.name,
+          surname: participant.surname,
+          delegation: participant.delegation,
           startingOrder: (index + 1).toString(),
           startingSortOrder: index,
-          bib: teamMember.dossard,
+          bib: teamMember._dossard,
           street: street,
           decorator: [],
           rk: "",
@@ -150,7 +98,6 @@ export class FencingTeamToResultMapper {
           wlt: "",
           qualified: "",
           difference: "",
-          accumulatedResult: "",
         };
       }
     }
@@ -158,17 +105,43 @@ export class FencingTeamToResultMapper {
   }
 
   /**
-   * Map team to group with team members as participants
+   * Map team to group with team members as participants using real group data
    */
   mapTeamToGroup(team: Team, teamInMatch?: TeamInMatch, matchResult?: string): GroupRequestResultDto | null {
-    const teamMembers = team.Tireur || [];
+    const groupCode = participantDictionaryWomen[team._ID];
+    
+    if (!groupCode) {
+      return null;
+    }
+
+    const group = this.groupService.getGroupByCode(groupCode);
+    if (!group) {
+      return null;
+    }
+
     const participants: ParticipantRequestResultDto[] = [];
     
-    teamMembers.forEach((member, index) => {
-      const participant = this.mapTeamMemberToParticipant(member, index, "");
-      if (participant) {
-        participants.push(participant);
-      }
+    // Use all participants from the group
+    group.participants.forEach((participant, index) => {
+      participants.push({
+        participantId: participant.participantId,
+        name: participant.name,
+        surname: participant.surname,
+        delegation: participant.delegation,
+        startingOrder: (index + 1).toString(),
+        startingSortOrder: index,
+        bib: "", // Will be filled from team member data if available
+        street: teamInMatch?._Cote || "",
+        decorator: [],
+        rk: "",
+        rkPo: 99,
+        result: "",
+        irm: "",
+        winner: false,
+        wlt: "",
+        qualified: "",
+          difference: "",
+      });
     });
 
     if (participants.length === 0) {
@@ -177,22 +150,166 @@ export class FencingTeamToResultMapper {
 
     return {
       result: matchResult || "",
-      groupId: parseInt(team.ID),
-      name: team.Nom,
-      delegation: team.Nation,
-      startingOrder: teamInMatch?.Place || "1",
-      startingSortOrder: parseInt(teamInMatch?.Place || "1") - 1,
+      groupId: group.groupId,
+      name: group.name,
+      delegation: group.delegation,
+      startingOrder: teamInMatch?._Place || "1",
+      startingSortOrder: parseInt(teamInMatch?._Place || "1") - 1,
       decorator: [],
       participants: participants,
-      rk: teamInMatch?.Place || "",
-      rkPo: parseInt(teamInMatch?.Place || "1") - 1,
+      rk: teamInMatch?._Place || "",
+      rkPo: parseInt(teamInMatch?._Place || "1") - 1,
       irm: "",
-      winner: teamInMatch?.Statut === 'V',
-      wlt: teamInMatch?.Statut === 'V' ? 'W' : teamInMatch?.Statut === 'D' ? 'L' : '',
+      winner: teamInMatch?._Statut === 'V',
+      wlt: teamInMatch?._Statut === 'V' ? 'W' : teamInMatch?._Statut === 'D' ? 'L' : '',
       qualified: "",
       difference: "",
       bib: "",
-      street: teamInMatch?.Cote || "",
+      street: teamInMatch?._Cote || "",
+    };
+  }
+
+  /**
+   * Map team match to period result using start list information
+   */
+  mapTeamMatchToPeriodResultWithStartList(
+    match: TeamMatch,
+    teams: Team[],
+    phase: string,
+    sportEvent: string,
+    startList?: CreateStartListDto
+  ): PeriodResultRequestResultDto | null {
+    const validTeams = match.Equipe.filter(team => team && typeof team === 'object' && team !== null) as TeamInMatch[];
+    
+    if (validTeams.length < 2) {
+      return null;
+    }
+
+    const team1InMatch = validTeams[0] as TeamInMatch;
+    const team2InMatch = validTeams[1] as TeamInMatch;
+    
+    const team1Ref = team1InMatch._REF;
+    const team2Ref = team2InMatch._REF;
+    
+    if (!team1Ref || !team2Ref) {
+      return null;
+    }
+
+    const team1 = teams.find(t => t._ID === team1Ref);
+    const team2 = teams.find(t => t._ID === team2Ref);
+
+    if (!team1 || !team2) {
+      return null;
+    }
+
+    // Use start list information if available
+    let group1: GroupRequestResultDto | null = null;
+    let group2: GroupRequestResultDto | null = null;
+
+    if (startList && startList.groups && startList.groups.length >= 2) {
+      // Use groups from start list
+      group1 = {
+        result: team1InMatch._Statut === 'V' ? '1' : '0',
+        groupId: startList.groups[0].groupId,
+        name: startList.groups[0].name,
+        delegation: startList.groups[0].delegation,
+        startingOrder: team1InMatch._Place || "1",
+        startingSortOrder: parseInt(team1InMatch._Place || "1") - 1,
+        decorator: [],
+        participants: startList.groups[0].participants.map(p => ({
+          participantId: p.participantId,
+          name: p.name,
+          surname: p.surname,
+          delegation: p.delegation,
+          startingOrder: p.startingOrder.toString(),
+          startingSortOrder: p.startingSortOrder,
+          bib: p.bib,
+          street: p.street,
+          decorator: p.decorator,
+          rk: "",
+          rkPo: 99,
+          result: "",
+          irm: "",
+          winner: false,
+          wlt: "",
+          qualified: "",
+          difference: "",
+        })),
+        rk: team1InMatch._Place || "",
+        rkPo: parseInt(team1InMatch._Place || "1") - 1,
+        irm: "",
+        winner: team1InMatch._Statut === 'V',
+        wlt: team1InMatch._Statut === 'V' ? 'W' : team1InMatch._Statut === 'D' ? 'L' : '',
+        qualified: "",
+          difference: "",
+        bib: "",
+        street: team1InMatch._Cote || "",
+      };
+
+      group2 = {
+        result: team2InMatch._Statut === 'V' ? '1' : '0',
+        groupId: startList.groups[1].groupId,
+        name: startList.groups[1].name,
+        delegation: startList.groups[1].delegation,
+        startingOrder: team2InMatch._Place || "2",
+        startingSortOrder: parseInt(team2InMatch._Place || "2") - 1,
+        decorator: [],
+        participants: startList.groups[1].participants.map(p => ({
+          participantId: p.participantId,
+          name: p.name,
+          surname: p.surname,
+          delegation: p.delegation,
+          startingOrder: p.startingOrder.toString(),
+          startingSortOrder: p.startingSortOrder,
+          bib: p.bib,
+          street: p.street,
+          decorator: p.decorator,
+          rk: "",
+          rkPo: 99,
+          result: "",
+          irm: "",
+          winner: false,
+          wlt: "",
+          qualified: "",
+          difference: "",
+        })),
+        rk: team2InMatch._Place || "",
+        rkPo: parseInt(team2InMatch._Place || "2") - 1,
+        irm: "",
+        winner: team2InMatch._Statut === 'V',
+        wlt: team2InMatch._Statut === 'V' ? 'W' : team2InMatch._Statut === 'D' ? 'L' : '',
+        qualified: "",
+          difference: "",
+        bib: "",
+        street: team2InMatch._Cote || "",
+      };
+    } else {
+      // Fallback to original mapping
+      group1 = this.mapTeamToGroup(team1, team1InMatch, team1InMatch._Statut);
+      group2 = this.mapTeamToGroup(team2, team2InMatch, team2InMatch._Statut);
+    }
+
+    if (!group1 || !group2) {
+      return null;
+    }
+
+    const result = `${group1.result} - ${group2.result}`;
+
+    return {
+      result: result,
+      unitCode: `${sportEvent}${phase}${match._ID}`,
+      name: `Match ${match._ID}`,
+      order: parseInt(match._ID),
+      duration: "",
+      distance: "",
+      resHome: group1.result,
+      resAway: group2.result,
+      totalHome: group1.result,
+      totalAway: group2.result,
+      periodId: `period_${match._ID}`,
+      participants: [],
+      groups: [group1, group2],
+      decorator: [],
     };
   }
 
@@ -209,25 +326,32 @@ export class FencingTeamToResultMapper {
       return null;
     }
 
-    const team1Ref = match.Equipe[0]?.REF;
-    const team2Ref = match.Equipe[1]?.REF;
+    // Filter out empty strings and get valid team references
+    const validTeams = match.Equipe.filter(team => typeof team === 'object' && team !== null);
+    
+    if (validTeams.length < 2) {
+      return null;
+    }
+
+    const team1InMatch = validTeams[0] as TeamInMatch;
+    const team2InMatch = validTeams[1] as TeamInMatch;
+    
+    const team1Ref = team1InMatch._REF;
+    const team2Ref = team2InMatch._REF;
     
     if (!team1Ref || !team2Ref) {
       return null;
     }
 
-    const team1 = teams.find(t => t.ID === team1Ref);
-    const team2 = teams.find(t => t.ID === team2Ref);
+    const team1 = teams.find(t => t._ID === team1Ref);
+    const team2 = teams.find(t => t._ID === team2Ref);
 
     if (!team1 || !team2) {
       return null;
     }
 
-    const team1InMatch = match.Equipe[0];
-    const team2InMatch = match.Equipe[1];
-
-    const group1 = this.mapTeamToGroup(team1, team1InMatch, team1InMatch?.Statut);
-    const group2 = this.mapTeamToGroup(team2, team2InMatch, team2InMatch?.Statut);
+    const group1 = this.mapTeamToGroup(team1, team1InMatch, team1InMatch._Statut);
+    const group2 = this.mapTeamToGroup(team2, team2InMatch, team2InMatch._Statut);
 
     if (!group1 || !group2) {
       return null;
@@ -237,16 +361,16 @@ export class FencingTeamToResultMapper {
 
     return {
       result: result,
-      unitCode: `${sportEvent}${phase}${match.ID}`,
-      name: `Match ${match.ID}`,
-      order: parseInt(match.ID),
+      unitCode: `${sportEvent}${phase}${match._ID}`,
+      name: `Match ${match._ID}`,
+      order: parseInt(match._ID),
       duration: "",
       distance: "",
       resHome: group1.result,
       resAway: group2.result,
       totalHome: group1.result,
       totalAway: group2.result,
-      periodId: `period_${match.ID}`,
+      periodId: `period_${match._ID}`,
       participants: [],
       groups: [group1, group2],
       decorator: [],
@@ -262,21 +386,77 @@ export class FencingTeamToResultMapper {
     unit: string
   ): MetadataRequestResultDto {
     const discipline = 'FEN';
-    const gender = genderDictionary[competition.Sexe];
-    const sportEvent = sportEventDictionary[competition.Arme];
+    const gender = genderDictionary[competition._Sexe];
+    const sportEvent = sportEventDictionary[competition._Arme].replace('-', '');
     const phaseCode = phaseDictionary[phase] || phase;
-    const phaseCodeString = `${discipline}${sportEvent.padEnd(18, '-')}${phaseCode.padEnd(4, '-')}--------`;
-    const unitCodeString = `${phaseCodeString}${unit.padEnd(8, '-')}`;
+    const phaseCodeString = `${discipline}${gender}${sportEvent.padEnd(18, '-')}${phaseCode.padEnd(4, '-')}--------`;
+    const unitCodeString = `${phaseCodeString.slice(0, -8)}${unit.padStart(4, '0')}----`;
 
     return {
       discipline: discipline,
       gender: gender,
       sportEvent: sportEvent,
-      category: competition.Categorie,
+      category: 'GENERAL',
       phase: phaseCode,
-      unit: unit,
+      unit: unit.padStart(4, '0'),
       phaseCode: phaseCodeString,
       unitCode: unitCodeString,
+    };
+  }
+
+  /**
+   * Create CreateResultDto from team competition data using start list information
+   */
+  createTeamResultDtoWithStartList(
+    competition: TeamCompetition,
+    match: TeamMatch,
+    phase: string,
+    unit: string,
+    startList?: CreateStartListDto
+  ): CreateResultDto | null {
+    const teams = competition.Equipes.Equipe;
+    const periodResult = this.mapTeamMatchToPeriodResultWithStartList(match, teams, phase, sportEventDictionary[competition._Arme], startList);
+    
+    if (!periodResult) {
+      return null;
+    }
+
+    const metadata = this.generateMetadata(competition, phase, unit);
+    
+    // Create global result with all teams from the match
+    const globalResult: GlobalResultRequestResultDto = {
+      result: periodResult.result,
+      groups: periodResult.groups,
+      participants: [],
+      decorator: [],
+      current: "",
+      last: "",
+      duration: "",
+    };
+
+    return {
+      metadata: metadata,
+      periods: [
+        {
+          result: periodResult.result,
+          name: "R1",
+          order: 0,
+          periodId: "period_1",
+          participants: [],
+          groups: periodResult.groups,
+          decorator: [],
+          duration: "",
+        },
+      ],
+      globalResult: globalResult,
+      currentPeriod: "1",
+      current: "",
+      last: "",
+      duration: "",
+      decorator: [],
+      hasStats: false,
+      stats: {},
+      splits: [],
     };
   }
 
@@ -290,7 +470,7 @@ export class FencingTeamToResultMapper {
     unit: string
   ): CreateResultDto | null {
     const teams = competition.Equipes.Equipe;
-    const periodResult = this.mapTeamMatchToPeriodResult(match, teams, phase, sportEventDictionary[competition.Arme]);
+    const periodResult = this.mapTeamMatchToPeriodResult(match, teams, phase, sportEventDictionary[competition._Arme]);
     
     if (!periodResult) {
       return null;
@@ -313,7 +493,6 @@ export class FencingTeamToResultMapper {
     return {
       metadata: metadata,
       periods: [periodResult],
-      splits: [],
       globalResult: globalResult,
       currentPeriod: "1",
       current: "",
@@ -322,8 +501,43 @@ export class FencingTeamToResultMapper {
       decorator: [],
       hasStats: false,
       stats: {},
-      officials: [],
+      splits: [],
     };
+  }
+
+  /**
+   * Process entire team competition with start lists and return array of CreateResultDto
+   */
+  processTeamCompetitionWithStartLists(competition: TeamCompetition, startLists: CreateStartListDto[]): CreateResultDto[] {
+    const results: CreateResultDto[] = [];
+    
+    if (!competition.Phases?.PhaseDeTableaux?.SuiteDeTableaux) {
+      return results;
+    }
+
+    const suiteDeTableaux = competition.Phases.PhaseDeTableaux.SuiteDeTableaux;
+    
+    // Handle both single tableau and array of tableaux
+    const tableaux = Array.isArray(suiteDeTableaux.Tableau) ? suiteDeTableaux.Tableau : [suiteDeTableaux.Tableau];
+    
+    tableaux.forEach(tableau => {
+      if (!tableau.Match) return;
+      
+      const matches = Array.isArray(tableau.Match) ? tableau.Match : [tableau.Match];
+      matches.forEach(match => {
+        // Find corresponding start list for this match
+        const correspondingStartList = startLists.find(sl => 
+          sl.metadata.unit === match._ID && sl.metadata.phase === tableau._ID
+        );
+        
+        const result = this.createTeamResultDtoWithStartList(competition, match, tableau._ID, match._ID, correspondingStartList);
+        if (result) {
+          results.push(result);
+        }
+      });
+    });
+
+    return results;
   }
 
   /**
@@ -338,18 +552,18 @@ export class FencingTeamToResultMapper {
 
     const suiteDeTableaux = competition.Phases.PhaseDeTableaux.SuiteDeTableaux;
     
-    suiteDeTableaux.forEach(suite => {
-      if (!suite.Tableau) return;
+    // Handle both single tableau and array of tableaux
+    const tableaux = Array.isArray(suiteDeTableaux.Tableau) ? suiteDeTableaux.Tableau : [suiteDeTableaux.Tableau];
+    
+    tableaux.forEach(tableau => {
+      if (!tableau.Match) return;
       
-      suite.Tableau.forEach(tableau => {
-        if (!tableau.Match) return;
-        
-        tableau.Match.forEach(match => {
-          const result = this.createTeamResultDto(competition, match, tableau.ID, match.ID);
-          if (result) {
-            results.push(result);
-          }
-        });
+      const matches = Array.isArray(tableau.Match) ? tableau.Match : [tableau.Match];
+      matches.forEach(match => {
+        const result = this.createTeamResultDto(competition, match, tableau._ID, match._ID);
+        if (result) {
+          results.push(result);
+        }
       });
     });
 

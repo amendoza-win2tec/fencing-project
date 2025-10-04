@@ -1,0 +1,770 @@
+[{
+  "_id": {
+    "$oid": "68dfc5660f6ddc607c6f2b2d"
+  },
+  "groupId": 209,
+  "code": "209",
+  "name": "Uzbekistan 1",
+  "delegation": "UZB",
+  "participants": [
+    {
+      "participantId": "ef5eb801-f0f0-49aa-8830-40ee9203443a",
+      "name": "Nurmuhammad ",
+      "surname": "Muminov",
+      "delegation": "UZB"
+    },
+    {
+      "participantId": "e128f4f0-d06e-402e-b2a7-fd029204949d",
+      "name": "Iskandar",
+      "surname": "Turishev",
+      "delegation": "UZB"
+    },
+    {
+      "participantId": "94f0667b-4263-44e8-919f-067667940e01",
+      "name": "Asilbek",
+      "surname": "Ibodulloev",
+      "delegation": "UZB"
+    },
+    {
+      "participantId": "ac06c650-797a-4796-9b00-0a5a2d40e916",
+      "name": "Kamronbek",
+      "surname": "Ismoilov",
+      "delegation": "UZB"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68dfc5660f6ddc607c6f2b31"
+  },
+  "groupId": 210,
+  "code": "210",
+  "name": "Uzbekistan 1",
+  "delegation": "UZB",
+  "participants": [
+    {
+      "participantId": "02ccd342-43c7-49f2-8ca5-6eec564179c5",
+      "name": "Marvarid",
+      "surname": "Zuvaydilloeva",
+      "delegation": "UZB"
+    },
+    {
+      "participantId": "d5b1538b-6c07-4580-a4c7-0cedf74a3930",
+      "name": "Sanam",
+      "surname": "Nazarova",
+      "delegation": "UZB"
+    },
+    {
+      "participantId": "c5c6e10c-2c0d-4e36-99d6-64298d19a82f",
+      "name": "Madinabonu",
+      "surname": "Mansurova",
+      "delegation": "UZB"
+    },
+    {
+      "participantId": "d67e8b26-d335-43d3-9f38-69675b5fa6c1",
+      "name": "Ozodakhon",
+      "surname": "Usmonjonova",
+      "delegation": "UZB"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68dfc5660f6ddc607c6f2b35"
+  },
+  "groupId": 211,
+  "code": "211",
+  "name": "Uzbekistan 1",
+  "delegation": "UZB",
+  "participants": [
+    {
+      "participantId": "32a5fb2d-27ae-4988-b800-9fc18e8417b6",
+      "name": "Alpamis",
+      "surname": "Urakbaev",
+      "delegation": "UZB"
+    },
+    {
+      "participantId": "60ccfc0f-41ab-444d-9baa-1623831799af",
+      "name": "Nursultan ",
+      "surname": "Kenesbaev",
+      "delegation": "UZB"
+    },
+    {
+      "participantId": "9b18e633-1474-4145-9f70-eefff19cc153",
+      "name": "Sardor",
+      "surname": "Abdukarimbekov",
+      "delegation": "UZB"
+    },
+    {
+      "participantId": "352ca0d2-69ef-42be-b611-cad09601e0ff",
+      "name": "Shannazar ",
+      "surname": "Abulov",
+      "delegation": "UZB"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68dfc5660f6ddc607c6f2b3a"
+  },
+  "groupId": 212,
+  "code": "212",
+  "name": "Uzbekistan 1",
+  "delegation": "UZB",
+  "participants": [
+    {
+      "participantId": "28d13d9b-58f2-441f-9c0c-7aeeac8bf98f",
+      "name": "Nargiza",
+      "surname": "Jaksybaeva",
+      "delegation": "UZB"
+    },
+    {
+      "participantId": "1cd9bd3a-92c2-4377-9486-3401776d5f31",
+      "name": "Nargiza",
+      "surname": "Utebaeva",
+      "delegation": "UZB"
+    },
+    {
+      "participantId": "000d622e-8699-41f5-a59b-3250a38ceca4",
+      "name": "Ayakoz",
+      "surname": "Jumamuratova",
+      "delegation": "UZB"
+    },
+    {
+      "participantId": "9cbcbb05-ea1b-4e52-9b3c-49dcadb039b4",
+      "name": "Salima",
+      "surname": "Ruzieva",
+      "delegation": "UZB"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68dfc5660f6ddc607c6f2b3e"
+  },
+  "groupId": 248,
+  "code": "248",
+  "name": "Azerbaijan 1",
+  "delegation": "AZE",
+  "participants": [
+    {
+      "participantId": "67a87e5c-1b90-41ea-b8d1-a399cdc2ec7f",
+      "name": "Ayxan",
+      "surname": "İslamzadə",
+      "delegation": "AZE"
+    },
+    {
+      "participantId": "088d438c-3d1b-49f9-9a10-cb1b57a14b59",
+      "name": "Əli",
+      "surname": "İsmayılov",
+      "delegation": "AZE"
+    },
+    {
+      "participantId": "bd3f53b7-0846-4cd8-8272-67a098d83235",
+      "name": "Abdulmalik",
+      "surname": "Nəsibzadə",
+      "delegation": "AZE"
+    },
+    {
+      "participantId": "15a13373-fd62-40b7-a2e0-f54be31358fd",
+      "name": "Abbas",
+      "surname": "Hüseynov",
+      "delegation": "AZE"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68dfc5660f6ddc607c6f2b42"
+  },
+  "groupId": 249,
+  "code": "249",
+  "name": "Azerbaijan 2",
+  "delegation": "AZE",
+  "participants": [
+    {
+      "participantId": "844b98e7-69e2-47ea-b3e2-a952944353d9",
+      "name": "Rəsul",
+      "surname": "Əliyev",
+      "delegation": "AZE"
+    },
+    {
+      "participantId": "a6689428-28ca-425d-b4ff-4f4742c69b2a",
+      "name": "Nəcəf",
+      "surname": "Şabanlı",
+      "delegation": "AZE"
+    },
+    {
+      "participantId": "32752d24-f548-4dc1-9420-baea4d379f58",
+      "name": "Nahid",
+      "surname": "Məmmədli",
+      "delegation": "AZE"
+    },
+    {
+      "participantId": "bd725c06-b41b-4036-a26d-72cee0a9377a",
+      "name": "Timur",
+      "surname": "Hüsnəddinov",
+      "delegation": "AZE"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68dfc5660f6ddc607c6f2b46"
+  },
+  "groupId": 250,
+  "code": "250",
+  "name": "Azerbaijan 1",
+  "delegation": "AZE",
+  "participants": [
+    {
+      "participantId": "12302d1d-09bc-4b2f-b42d-b82acebc8b57",
+      "name": "Gülarə",
+      "surname": "Tağızadə",
+      "delegation": "AZE"
+    },
+    {
+      "participantId": "615b3e63-183a-45dd-9bac-277ee4f7ce2b",
+      "name": "Fərəh",
+      "surname": "Abasova",
+      "delegation": "AZE"
+    },
+    {
+      "participantId": "edee49df-ef2b-45c9-8b90-0e9b5f14c2f3",
+      "name": "Cahan",
+      "surname": "Sadıxova",
+      "delegation": "AZE"
+    },
+    {
+      "participantId": "5f7504e2-df9d-4ffc-b407-747143345787",
+      "name": "Ala",
+      "surname": "Həsənova",
+      "delegation": "AZE"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68dfc5660f6ddc607c6f2b4a"
+  },
+  "groupId": 251,
+  "code": "251",
+  "name": "Azerbaijan 2",
+  "delegation": "AZE",
+  "participants": [
+    {
+      "participantId": "34f3875c-6f53-4bd0-9483-c0ff6304b316",
+      "name": "Züleyxa",
+      "surname": "Sultanlı",
+      "delegation": "AZE"
+    },
+    {
+      "participantId": "34d285cc-db08-49ec-87a7-2c51c20f7888",
+      "name": "Zərifə",
+      "surname": "Hüseynova",
+      "delegation": "AZE"
+    },
+    {
+      "participantId": "494185cd-5e5d-447b-81af-b80ca8eca3e7",
+      "name": "Valentina",
+      "surname": "Zeynalova",
+      "delegation": "AZE"
+    },
+    {
+      "participantId": "18bdb7ee-afe0-42b4-9479-db893cbc83dd",
+      "name": "Leyla",
+      "surname": "Əhmədova",
+      "delegation": "AZE"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68dfc5660f6ddc607c6f2b4e"
+  },
+  "groupId": 252,
+  "code": "252",
+  "name": "Azerbaijan 1",
+  "delegation": "AZE",
+  "participants": [
+    {
+      "participantId": "70a1cd58-a0be-4296-b68d-9e8aab4b69b0",
+      "name": "Mirxətai",
+      "surname": "Məmmədov",
+      "delegation": "AZE"
+    },
+    {
+      "participantId": "e1c75b3a-a57c-4d6f-ab18-892664d790f7",
+      "name": "Vahab",
+      "surname": "Fətullayev",
+      "delegation": "AZE"
+    },
+    {
+      "participantId": "10ff107c-ba30-4717-990d-588e7715ba9b",
+      "name": "Abbas",
+      "surname": "Səmədli",
+      "delegation": "AZE"
+    },
+    {
+      "participantId": "4d3254df-9b39-43fc-9a67-8be7115e224f",
+      "name": "Emin",
+      "surname": "Səfərbəyov",
+      "delegation": "AZE"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68dfc5660f6ddc607c6f2b52"
+  },
+  "groupId": 253,
+  "code": "253",
+  "name": "Azerbaijan 2",
+  "delegation": "AZE",
+  "participants": [
+    {
+      "participantId": "8ef3101e-e1c3-4a38-b2ff-a407d3653974",
+      "name": "Üzeyir",
+      "surname": "Əlizadə",
+      "delegation": "AZE"
+    },
+    {
+      "participantId": "621a067b-cd07-4ce4-b30a-4ded07d9f027",
+      "name": "Oruc",
+      "surname": "Misirzadə",
+      "delegation": "AZE"
+    },
+    {
+      "participantId": "6a9b4af5-46f2-4e2e-8084-85fa771bb5e2",
+      "name": "Rəhman",
+      "surname": "Məmmədov",
+      "delegation": "AZE"
+    },
+    {
+      "participantId": "b9649c0c-f621-4e87-b123-ab34be303063",
+      "name": "Səid",
+      "surname": "Əliyev",
+      "delegation": "AZE"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68dfc5660f6ddc607c6f2b56"
+  },
+  "groupId": 254,
+  "code": "254",
+  "name": "Azerbaijan 1",
+  "delegation": "AZE",
+  "participants": [
+    {
+      "participantId": "62d882f2-e5e3-4995-a5b5-e6ace103b70e",
+      "name": "Esnat",
+      "surname": "Mirzəyeva",
+      "delegation": "AZE"
+    },
+    {
+      "participantId": "125e6621-d8bd-4898-8aa1-695c8c604367",
+      "name": "Minayə",
+      "surname": "Qəribzadə",
+      "delegation": "AZE"
+    },
+    {
+      "participantId": "d6dcc1cf-53db-452b-8de7-a4a5234eb029",
+      "name": "Mirnuray",
+      "surname": "Abasova",
+      "delegation": "AZE"
+    },
+    {
+      "participantId": "80d5b64d-22e5-41b6-90aa-9e973ce4deac",
+      "name": "Aynur ",
+      "surname": "Quliyeva",
+      "delegation": "AZE"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68dfc5660f6ddc607c6f2b5a"
+  },
+  "groupId": 255,
+  "code": "255",
+  "name": "Azerbaijan 2",
+  "delegation": "AZE",
+  "participants": [
+    {
+      "participantId": "ad629d2f-3595-4a88-83d8-84223d4a1406",
+      "name": "Suğra",
+      "surname": "Baxış",
+      "delegation": "AZE"
+    },
+    {
+      "participantId": "ad47e41f-3b05-4dc3-a6e0-a6229e09fa37",
+      "name": "Nəzrin",
+      "surname": "Mehdiyeva",
+      "delegation": "AZE"
+    },
+    {
+      "participantId": "257d2f81-cd81-40f8-a32a-84e84c1fa677",
+      "name": "Xatun",
+      "surname": "Bayramova",
+      "delegation": "AZE"
+    },
+    {
+      "participantId": "413c3c7d-76a7-4c88-bc46-39fb384753c3",
+      "name": "Xədicə",
+      "surname": "Həsənli",
+      "delegation": "AZE"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68dfc5660f6ddc607c6f2b5e"
+  },
+  "groupId": 266,
+  "code": "266",
+  "name": "Belarus ",
+  "delegation": "BLR",
+  "participants": [
+    {
+      "participantId": "618ba4df-9d43-443e-9059-12bccfd99b69",
+      "name": "Raman",
+      "surname": "Zanin",
+      "delegation": "BLR"
+    },
+    {
+      "participantId": "c0c149e8-3ab8-4c7b-adf9-5bd4049af1b7",
+      "name": "Mikita",
+      "surname": "Bulhakau",
+      "delegation": "BLR"
+    },
+    {
+      "participantId": "c83cab3d-6d79-433c-88de-91888c8216f0",
+      "name": "Mikhail",
+      "surname": "Mitrakhovich",
+      "delegation": "BLR"
+    },
+    {
+      "participantId": "fc1c146a-f78a-45aa-9ddf-263075ae2799",
+      "name": "Leu",
+      "surname": "Yauseyenka",
+      "delegation": "BLR"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68dfc5660f6ddc607c6f2b62"
+  },
+  "groupId": 267,
+  "code": "267",
+  "name": "Belarus ",
+  "delegation": "BLR",
+  "participants": [
+    {
+      "participantId": "02069e5a-6b86-4ee9-9349-a8c8849f94c4",
+      "name": "Aliaksandra",
+      "surname": "Mishyna",
+      "delegation": "BLR"
+    },
+    {
+      "participantId": "abe80188-361c-4fe2-9032-bb26349dd655",
+      "name": "Maryia",
+      "surname": "Vlasiuk",
+      "delegation": "BLR"
+    },
+    {
+      "participantId": "fdfb0831-9117-455b-971c-942ae9d6071b",
+      "name": "Agata",
+      "surname": "Tsarkova",
+      "delegation": "BLR"
+    },
+    {
+      "participantId": "d412063d-1a7b-40bb-82f1-124721ca4fa5",
+      "name": "Valeryia",
+      "surname": "Nikonova",
+      "delegation": "BLR"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68dfc5660f6ddc607c6f2b68"
+  },
+  "groupId": 277,
+  "code": "277",
+  "name": "Russia 1",
+  "delegation": "RUS",
+  "participants": [
+    {
+      "participantId": "2c1ac267-f44c-42ff-959b-d4ddf19a8bcf",
+      "name": "Ivan",
+      "surname": "Rychkov",
+      "delegation": "RUS"
+    },
+    {
+      "participantId": "40831293-7d87-468b-9b52-1f4b6bd666aa",
+      "name": "Danil",
+      "surname": "Safin",
+      "delegation": "RUS"
+    },
+    {
+      "participantId": "c4a90823-5024-4bdf-b820-2e801f40e361",
+      "name": "Nikita",
+      "surname": "Gorin",
+      "delegation": "RUS"
+    },
+    {
+      "participantId": "4a0b1fe5-6c18-4388-8560-554bd6cf8d32",
+      "name": "Roman",
+      "surname": "Selyutin",
+      "delegation": "RUS"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68dfc5660f6ddc607c6f2b6c"
+  },
+  "groupId": 278,
+  "code": "278",
+  "name": "Russia 1",
+  "delegation": "RUS",
+  "participants": [
+    {
+      "participantId": "dc234645-02ff-4e76-bd2a-02c28ed0e294",
+      "name": "Anastasiia",
+      "surname": "Ilyushenko",
+      "delegation": "RUS"
+    },
+    {
+      "participantId": "77c4d1d0-3a5b-4851-8151-fcaa411e94d9",
+      "name": "Taisia",
+      "surname": "Larkina",
+      "delegation": "RUS"
+    },
+    {
+      "participantId": "afcee022-0627-4fee-85c2-a292b98e41f6",
+      "name": "Anastasiia",
+      "surname": "Zabelina",
+      "delegation": "RUS"
+    },
+    {
+      "participantId": "b18e8735-601c-4954-87db-0c4684031c93",
+      "name": "Sofia",
+      "surname": "Barsukova",
+      "delegation": "RUS"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68dfc5660f6ddc607c6f2b70"
+  },
+  "groupId": 279,
+  "code": "279",
+  "name": "Russia 1",
+  "delegation": "RUS",
+  "participants": [
+    {
+      "participantId": "b09a463a-8e76-4371-897f-df9e001fb8a5",
+      "name": "Kiram",
+      "surname": "Iarullin",
+      "delegation": "RUS"
+    },
+    {
+      "participantId": "051ebc1d-e896-4caf-82e8-c40f25b07779",
+      "name": "Petr",
+      "surname": "Taichenachev",
+      "delegation": "RUS"
+    },
+    {
+      "participantId": "5e7cc1a2-4911-46fe-b01b-213cf9f29139",
+      "name": "Ivan",
+      "surname": "Novikov",
+      "delegation": "RUS"
+    },
+    {
+      "participantId": "29e86d41-025d-4eff-b310-6a4d5acc5c06",
+      "name": "Iaroslav",
+      "surname": "Borisov",
+      "delegation": "RUS"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68dfc5660f6ddc607c6f2b79"
+  },
+  "groupId": 280,
+  "code": "280",
+  "name": "Russia 1",
+  "delegation": "RUS",
+  "participants": [
+    {
+      "participantId": "557a8f75-d08a-4356-bce2-63a3a2b260cf",
+      "name": "Maria",
+      "surname": "Tretiakova",
+      "delegation": "RUS"
+    },
+    {
+      "participantId": "f18ece20-5ddb-47f6-b46e-2e670b219197",
+      "name": "Iulia",
+      "surname": "Zhdanova",
+      "delegation": "RUS"
+    },
+    {
+      "participantId": "592cd72a-ec8a-4b04-bcdc-e5fbf379554b",
+      "name": "Karina",
+      "surname": "Tallada",
+      "delegation": "RUS"
+    },
+    {
+      "participantId": "bdcdfd81-9576-457a-8ae0-564783d143f9",
+      "name": "Malena",
+      "surname": "Kunasheva",
+      "delegation": "RUS"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68dfc5660f6ddc607c6f2b86"
+  },
+  "groupId": 458,
+  "code": "458",
+  "name": "Belarus",
+  "delegation": "BLR",
+  "participants": [
+    {
+      "participantId": "a6dae8f2-949d-4112-b906-2245b9c7d651",
+      "name": "ANDREI",
+      "surname": "AUSIANKIN",
+      "delegation": "BLR"
+    },
+    {
+      "participantId": "23667a1f-8793-4c21-8351-d74d2c39f1e6",
+      "name": "RAMAN",
+      "surname": "HRUSHAVETS",
+      "delegation": "BLR"
+    },
+    {
+      "participantId": "a125126c-94dd-450c-97ae-1786c530e488",
+      "name": "KANSTANTSIN",
+      "surname": "HAURUSIK",
+      "delegation": "BLR"
+    },
+    {
+      "participantId": "7c638f83-ff4a-481f-8964-320a620b49a5",
+      "name": "IVAN",
+      "surname": "NASENNIK",
+      "delegation": "BLR"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68dfc5660f6ddc607c6f2b92"
+  },
+  "groupId": 459,
+  "code": "459",
+  "name": "Belarus 1",
+  "delegation": "BLR",
+  "participants": [
+    {
+      "participantId": "c769389b-3818-4eb9-a5cd-a86d9b9a41f3",
+      "name": "Darya",
+      "surname": "PRATASEVICH",
+      "delegation": "BLR"
+    },
+    {
+      "participantId": "b9dcc747-4e26-47c9-975d-355be8b291ab",
+      "name": "VIKTORYIA",
+      "surname": "ARTSIUSHENKA",
+      "delegation": "BLR"
+    },
+    {
+      "participantId": "fcabada4-ac69-495b-b0a4-3019bf38490a",
+      "name": "ULADZISLAVA",
+      "surname": "SIDZELNIKAVA",
+      "delegation": "BLR"
+    },
+    {
+      "participantId": "25a413df-40c2-4c8c-b289-fa3b20e52801",
+      "name": "MARTA",
+      "surname": "PUTSIATA",
+      "delegation": "BLR"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68dfc5660f6ddc607c6f2b99"
+  },
+  "groupId": 487,
+  "code": "487",
+  "name": "Kazakhstan 1",
+  "delegation": "KAZ",
+  "participants": [
+    {
+      "participantId": "aa14c5ed-0542-4e52-9668-3ed762416912",
+      "name": "Zhanarbek",
+      "surname": "Zhanuzakov",
+      "delegation": "KAZ"
+    },
+    {
+      "participantId": "5a6defa1-62b0-47d2-8a92-298ef2decf4b",
+      "name": "Bauyrzhan",
+      "surname": "Anvarbek",
+      "delegation": "KAZ"
+    },
+    {
+      "participantId": "04adab64-8ac3-4ccf-8627-581611540042",
+      "name": "Nariman",
+      "surname": "Ualikhan",
+      "delegation": "KAZ"
+    },
+    {
+      "participantId": "e9829b22-61ac-4d66-9f82-b4a32c245c97",
+      "name": "Nurmukhamed",
+      "surname": "Baltabay",
+      "delegation": "KAZ"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68dfc5660f6ddc607c6f2b9d"
+  },
+  "groupId": 488,
+  "code": "488",
+  "name": "Kazakhstan 1",
+  "delegation": "KAZ",
+  "participants": [
+    {
+      "participantId": "700bf186-5ee6-42ef-b5c2-3737b8469f9c",
+      "name": "Yerkhan ",
+      "surname": "Karaman",
+      "delegation": "KAZ"
+    },
+    {
+      "participantId": "b2ded7d6-25a9-4f77-80cd-56db95259ad1",
+      "name": "Sultan",
+      "surname": "Stanbek",
+      "delegation": "KAZ"
+    },
+    {
+      "participantId": "51b6a073-1aaa-4b01-b92d-5139fcfe1182",
+      "name": "Aibar",
+      "surname": "Kaiym",
+      "delegation": "KAZ"
+    },
+    {
+      "participantId": "0f663b27-4c93-468e-9976-d89cfc111992",
+      "name": "Nurmukhammed",
+      "surname": "Zhailybay",
+      "delegation": "KAZ"
+    }
+  ]
+}]
