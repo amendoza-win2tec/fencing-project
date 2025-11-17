@@ -34,7 +34,9 @@ export class GroupRequestStartListDto {
 }
 
 export class CreateStartListDto {
+  competitorType?: string;
   metadata!: MetadataRequestStartListDto;
   participants!: ParticipantRequestStartListDto[];
   groups!: GroupRequestStartListDto[];
+  hasBye?: boolean;
 }

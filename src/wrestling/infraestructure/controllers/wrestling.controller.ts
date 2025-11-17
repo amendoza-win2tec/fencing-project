@@ -1,4 +1,4 @@
-import { Controller, Post, Body, BadRequestException, Req, RawBodyRequest, Logger } from '@nestjs/common';
+import { Controller, Post, Body, BadRequestException, Req, RawBodyRequest, Logger, Get, Query } from '@nestjs/common';
 import { MessagePattern, Payload } from '@nestjs/microservices';
 import { Queue } from 'bullmq';
 import { InjectQueue } from '@nestjs/bullmq';
@@ -14,6 +14,7 @@ import {
   MqttWrestlerData,
   WrestlingXmlData
 } from '../../domain/interfaces/wrestling.interfaces';
+import { CreateStartListDto } from '../../domain/interfaces/wrestling-participant.interfaces';
 import * as xml2js from 'xml2js';
 
 @Controller('wrestling')
@@ -104,6 +105,74 @@ export class WrestlingController {
       return result;
     } catch (error) {
       throw new BadRequestException(`Error sending poules to API: ${error.message}`);
+    }
+  }
+
+  @Get('participants/start-list')
+  async getWreParticipantsStartList(
+    @Query('discipline') discipline: string = 'WRE',
+    @Query('gender') gender: string = 'M',
+    @Query('sportEvent') sportEvent: string = 'Wrestling',
+    @Query('category') category: string = 'Senior',
+    @Query('phase') phase: string = 'Qualification',
+    @Query('unit') unit: string = '001',
+    @Query('phaseCode') phaseCode: string = 'WRE-M-Wrestling-Senior-Qualification',
+    @Query('unitCode') unitCode: string = 'WRE-M-Wrestling-Senior-Qualification-001'
+  ): Promise<CreateStartListDto> {
+    try {
+      this.logger.log('Getting WRE participants start list...');
+
+      const metadata = {
+        discipline,
+        gender,
+        sportEvent,
+        category,
+        phase,
+        unit,
+        phaseCode,
+        unitCode
+      };
+
+      const result = await this.wrestlingService.processWreParticipantsToStartList(metadata);
+
+      return result;
+    } catch (error) {
+      this.logger.error(`Error getting WRE participants start list: ${error.message}`);
+      throw new BadRequestException(`Error getting start list: ${error.message}`);
+    }
+  }
+
+  @Get('participants/start-list-by-gender')
+  async getWreParticipantsStartListByGender(
+    @Query('gender') gender: 'M' | 'F' = 'M',
+    @Query('discipline') discipline: string = 'WRE',
+    @Query('sportEvent') sportEvent: string = 'Wrestling',
+    @Query('category') category: string = 'Senior',
+    @Query('phase') phase: string = 'Qualification',
+    @Query('unit') unit: string = '001',
+    @Query('phaseCode') phaseCode: string = 'WRE-M-Wrestling-Senior-Qualification',
+    @Query('unitCode') unitCode: string = 'WRE-M-Wrestling-Senior-Qualification-001'
+  ): Promise<CreateStartListDto> {
+    try {
+      this.logger.log(`Getting WRE participants start list for gender: ${gender}`);
+
+      const metadata = {
+        discipline,
+        gender,
+        sportEvent,
+        category,
+        phase,
+        unit,
+        phaseCode,
+        unitCode
+      };
+
+      const result = await this.wrestlingService.processWreParticipantsByGenderToStartList(gender, metadata);
+
+      return result;
+    } catch (error) {
+      this.logger.error(`Error getting WRE participants start list by gender: ${error.message}`);
+      throw new BadRequestException(`Error getting start list by gender: ${error.message}`);
     }
   }
 }

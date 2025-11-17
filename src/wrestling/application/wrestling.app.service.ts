@@ -3,7 +3,7 @@ import { mapToW2tecPhases, convertPouleToMatch, convertEliminationToMatch } from
 import { WrestlingAppServicePort } from '../application/ports/wrestling.app.service';
 import { WrestlingCompetition, W2TECUnit, WrestlerStatus, ApiResponse, PoulesApiRequest, WrestlingXmlData } from '../../wrestling/domain/interfaces/wrestling.interfaces';
 import { ApiService } from '../../fencing/infraestructure/shared/api.service';
-import { CreateStartListDto } from '../../wrestling/domain/interfaces/wrestling-participant.interfaces';
+import { CreateStartListDto, ParticipantRequestStartListDto } from '../../wrestling/domain/interfaces/wrestling-participant.interfaces';
 import { WrestlingToParticipantMapper } from '../../wrestling/application/mapper/wrestling-to-participant.mapper';
 import { WrestlingToResultMapper } from '../../wrestling/application/mapper/wrestling-to-result.mapper';
 import { CreateResultDto } from '../../wrestling/domain/interfaces/wrestling-results.interface';
@@ -101,6 +101,53 @@ export class WrestlingService implements WrestlingAppServicePort {
       
       this.logger.log(`Processed ${processedUnits.length} wrestling units`);
       
+      // Create start list using XML StartList data and processed units metadata
+      let startList: CreateStartListDto | null = null;
+      
+      // Look for units with StartList data
+      for (const unit of units) {
+        if (unit.StartList) {
+          // Extract metadata from the first processed unit
+          const firstUnit = processedUnits[0];
+          if (firstUnit) {
+            const startListMetadata = {
+              discipline: firstUnit.metadata.discipline,
+              gender: firstUnit.metadata.gender,
+              sportEvent: firstUnit.metadata.sportEvent,
+              category: firstUnit.metadata.category,
+              phase: firstUnit.metadata.phase,
+              unit: firstUnit.metadata.unit,
+              phaseCode: firstUnit.metadata.phaseCode,
+              unitCode: firstUnit.code
+            };
+            
+            startList = await this.processXmlStartListToStartList(unit.StartList, startListMetadata);
+            this.logger.log(`Created start list from XML with ${startList.participants.length} participants`);
+            break; // Use the first unit with StartList data
+          }
+        }
+      }
+      
+      // Fallback to WRE participants if no XML StartList found
+      if (!startList) {
+        const firstUnit = processedUnits[0];
+        if (firstUnit) {
+          const startListMetadata = {
+            discipline: firstUnit.metadata.discipline,
+            gender: firstUnit.metadata.gender,
+            sportEvent: firstUnit.metadata.sportEvent,
+            category: firstUnit.metadata.category,
+            phase: firstUnit.metadata.phase,
+            unit: firstUnit.metadata.unit,
+            phaseCode: firstUnit.metadata.phaseCode,
+            unitCode: firstUnit.code
+          };
+          
+          startList = await this.processWreParticipantsToStartList(startListMetadata);
+          this.logger.log(`Created start list from WRE participants with ${startList.participants.length} participants`);
+        }
+      }
+      
       for (const unit of processedUnits) {
         await this.apiService.sendPouleData(unit);
       }
@@ -112,10 +159,141 @@ export class WrestlingService implements WrestlingAppServicePort {
       return {
         sessions: sessions.length,
         totalUnits: processedUnits.length,
-        units: processedUnits
+        units: processedUnits,
+        startList: startList
       };
     } catch (error) {
       this.logger.error('Error processing wrestling schedule:', error);
+      throw error;
+    }
+  }
+
+  /**
+   * Process XML StartList data and create start list
+   */
+  async processXmlStartListToStartList(
+    xmlStartList: any,
+    metadata: {
+      discipline: string;
+      gender: string;
+      sportEvent: string;
+      category: string;
+      phase: string;
+      unit: string;
+      subUnit?: string;
+      phaseCode: string;
+      unitCode: string;
+    }
+  ): Promise<CreateStartListDto> {
+    try {
+      this.logger.log('Processing XML StartList to start list...');
+      
+      if (!xmlStartList || !xmlStartList.Start) {
+        this.logger.warn('No StartList data found in XML, using WRE participants as fallback');
+        return await this.processWreParticipantsToStartList(metadata);
+      }
+
+      const participants: ParticipantRequestStartListDto[] = [];
+      
+      for (const start of xmlStartList.Start) {
+        for (const competitor of start.Competitor) {
+          const athlete = competitor.Composition[0].Athlete[0];
+          const description = athlete.Description[0].$;
+          
+          participants.push({
+            participantId: athlete.Code,
+            name: description.GivenName,
+            surname: description.FamilyName,
+            delegation: description.Organisation,
+            startingOrder: parseInt(start._StartOrder),
+            startingSortOrder: parseInt(start._SortOrder),
+            bib: athlete.Code,
+            street: participants.length % 2 === 0 ? 'D' : 'G',
+            decorator: [],
+          });
+        }
+      }
+
+      const startList: CreateStartListDto = {
+        competitorType: 'Individual',
+        metadata: {
+          discipline: metadata.discipline,
+          gender: metadata.gender,
+          sportEvent: metadata.sportEvent,
+          category: metadata.category,
+          phase: metadata.phase,
+          unit: metadata.unit,
+          subUnit: metadata.subUnit,
+          phaseCode: metadata.phaseCode,
+          unitCode: metadata.unitCode,
+        },
+        groups: [],
+        participants: participants,
+        hasBye: false
+      };
+      
+      this.logger.log(`Created start list with ${startList.participants.length} participants from XML`);
+      return startList;
+    } catch (error) {
+      this.logger.error('Error processing XML StartList to start list:', error);
+      // Fallback to WRE participants if XML processing fails
+      return await this.processWreParticipantsToStartList(metadata);
+    }
+  }
+
+  /**
+   * Process WRE participants and create start list
+   */
+  async processWreParticipantsToStartList(metadata: {
+    discipline: string;
+    gender: string;
+    sportEvent: string;
+    category: string;
+    phase: string;
+    unit: string;
+    subUnit?: string;
+    phaseCode: string;
+    unitCode: string;
+  }): Promise<CreateStartListDto> {
+    try {
+      this.logger.log('Processing WRE participants to start list...');
+      
+      const startList = this.wrestlingToParticipantMapper.mapWreParticipantsToStartList(metadata);
+      
+      this.logger.log(`Created start list with ${startList.participants.length} participants`);
+      return startList;
+    } catch (error) {
+      this.logger.error('Error processing WRE participants to start list:', error);
+      throw error;
+    }
+  }
+
+  /**
+   * Process WRE participants filtered by gender and create start list
+   */
+  async processWreParticipantsByGenderToStartList(
+    gender: 'M' | 'F',
+    metadata: {
+      discipline: string;
+      gender: string;
+      sportEvent: string;
+      category: string;
+      phase: string;
+      unit: string;
+      subUnit?: string;
+      phaseCode: string;
+      unitCode: string;
+    }
+  ): Promise<CreateStartListDto> {
+    try {
+      this.logger.log(`Processing WRE participants (${gender}) to start list...`);
+      
+      const startList = this.wrestlingToParticipantMapper.mapWreParticipantsByGenderToStartList(gender, metadata);
+      
+      this.logger.log(`Created start list with ${startList.participants.length} participants for gender ${gender}`);
+      return startList;
+    } catch (error) {
+      this.logger.error('Error processing WRE participants by gender to start list:', error);
       throw error;
     }
   }

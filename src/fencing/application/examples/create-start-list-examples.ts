@@ -31,7 +31,7 @@ export class CreateStartListExamples {
       unitCode: 'FENMSABRE-------------GP010001----'
     };
 
-    const startListDto = this.fencingToParticipantMapper.createStartListDto(tireurs as TireurInMatch[], metadata);
+    const startListDto = this.fencingToParticipantMapper.createStartListDto(tireurs as TireurInMatch[], metadata, [] as {ID: string, LicenceNat: string}[]);
     
     console.log('Basic Start List:', startListDto);
     return startListDto;
@@ -91,7 +91,7 @@ export class CreateStartListExamples {
       unitCode: `FENMSABRE-------------${phase.toUpperCase()}${unit.toUpperCase().padEnd(4, '0')}`
     };
 
-    const startListDto = this.fencingToParticipantMapper.createStartListDto(tireurs, metadata);
+    const startListDto = this.fencingToParticipantMapper.createStartListDto(tireurs, metadata, [] as {ID: string, LicenceNat: string}[]);
     
     console.log(`${phase} Start List:`, startListDto);
     return startListDto;
@@ -122,7 +122,7 @@ export class CreateStartListExamples {
       unitCode: 'ALL_POOLS'
     };
 
-    const startListDto = this.fencingToParticipantMapper.createStartListDto(tireurs, metadata);
+    const startListDto = this.fencingToParticipantMapper.createStartListDto(tireurs, metadata, [] as {ID: string, LicenceNat: string}[]);
     
     console.log('Full Start List with all participants:', startListDto);
     return startListDto;
@@ -150,7 +150,7 @@ export class CreateStartListExamples {
       unitCode: `POOL_${gender === 'M' ? 'A' : 'B'}`
     };
 
-    const startListDto = this.fencingToParticipantMapper.createStartListDto(tireurs, metadata);
+    const startListDto = this.fencingToParticipantMapper.createStartListDto(tireurs, metadata, [] as {ID: string, LicenceNat: string}[]);
     
     console.log(`${gender} ${category} Start List:`, startListDto);
     return startListDto;

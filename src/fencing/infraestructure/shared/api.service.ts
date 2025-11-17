@@ -137,6 +137,11 @@ export class ApiService {
           timeout: 15000, // 15 seconds timeout
         }
       );
+      return {
+        success: true,
+        data: response.data,
+        message: `Poule data sent successfully`,
+      };
     } catch (error) {
       this.logger.error(`Failed to send poule`);
       

@@ -173,7 +173,18 @@ export const mapToW2tecPhases = (
   sessionCode: string,
 ): W2TECUnit => {
   const unitCode = code;
-  
+
+  const medals = [] as string[]
+  const medalQuantities = [] as { code: string, quantity: number }[]
+  if (medal === '1') {
+    medals.push('GOLD', 'SILVER');
+    medalQuantities.push({ code: 'GOLD', quantity: 1 }, { code: 'SILVER', quantity: 1 });
+  }
+  else if (medal === '3') {
+    medals.push('BRONZE');
+    medalQuantities.push({ code: 'BRONZE', quantity: 1 });
+  }
+
   const processedRSC = rscCodeConverter(code);
   const metadata: UnitMetadata = {
     ...processedRSC,
@@ -189,9 +200,9 @@ export const mapToW2tecPhases = (
     metadata,
     dateInfo: generateDateInfo(startDate, endDate),
     location: locationDictionary[location],
-    hasMedals: medal === '1' ? true : false,
-    medalCodes: medal === '1' ? ['GOLD', 'SILVER', 'BRONZE'] : [],
-    medalQuantities: medal === '1' ? [{ code: 'GOLD', quantity: 1 }, { code: 'SILVER', quantity: 1 }, { code: 'BRONZE', quantity: 1 }] : [],
+    hasMedals: medals.length > 0 ? true : false,
+    medalCodes: medals,
+    medalQuantities: medals.length > 0 ? medalQuantities : undefined,
     venue: venue,
     status: scheduleStatus,
   };

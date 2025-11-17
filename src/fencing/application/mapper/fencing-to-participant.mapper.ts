@@ -3,41 +3,13 @@ import { ParticipantService } from '../../infraestructure/shared/participant.ser
 import { Participant } from '../../domain/interfaces/participant.interfaces';
 import { ParticipantRequestStartListDto, CreateStartListDto } from 'src/fencing/domain/interfaces/fencing-participant.interfaces';
 import { TireurInMatch } from 'src/fencing/domain/interfaces/fencing.interfaces';
-
+import participantsData from '../../../wrestling/application/examples/grs_db.participants-FEN.json';
 export interface Tireur {
   ID: string;
   Nom: string;
   Prenom?: string;
   Code?: string;
 }
-
-// Diccionario para mapear IDs de tireurs a códigos de participantes
-// const participantDictionary: Record<string, string> = {
-//   '1': '10000817',
-//   '2': '10000815',
-//   '3': '10007949',
-//   '4': '10003628',
-//   '5': '10005257',
-//   '6': '10003630',
-//   '7': '10003631',
-//   '8': '10007931',
-//   '9': '10007950',
-//   '10': '10005262',
-//   '11': '10007947',
-//   '12': '10007944',
-//   '13': '10003537',
-//   '14': '10003538',
-//   '15': '10000818',
-//   '16': '10007948',
-//   '17': '10003629',
-//   '18': '10007945',
-//   '19': '10005259',
-//   '20': '10007946',
-//   '21': '10003536',
-//   '22': '10005256',
-//   '23': '10000816',
-//   '24': '10003535',
-// };
 
 const participantDictionary: Record<string, string> = {
   '1': '10007923',
@@ -65,13 +37,12 @@ const participantDictionary: Record<string, string> = {
 @Injectable()
 export class FencingToParticipantMapper {
   constructor(private readonly participantService: ParticipantService) {}
-
   /**
    * Map tireur to participant using the participant service
-   */
-  mapToParticipant(tireur: TireurInMatch, index: number, street: string): ParticipantRequestStartListDto | null {
+  */
+ mapToParticipant(tireur: TireurInMatch, index: number, street: string, licenceNat: string): ParticipantRequestStartListDto | null {
     // Primero intentar obtener el código del diccionario usando el ID del tireur
-    const participantCode = participantDictionary[tireur.REF];
+    const participantCode = licenceNat;
     
     // Si encontramos el código en el diccionario, buscar por código
     if (participantCode) {
@@ -96,10 +67,10 @@ export class FencingToParticipantMapper {
   /**
    * Map multiple tireurs to participants
    */
-  mapToParticipants(tireurs: TireurInMatch[], street: string = ''): ParticipantRequestStartListDto[] {
+  mapToParticipants(tireurs: TireurInMatch[], street: string = '', licenceNat: string): ParticipantRequestStartListDto[] {
     const streetDict = ["D", "G"]
     return tireurs
-      .map((tireur, index) => this.mapToParticipant(tireur, index, streetDict[index % 2]))
+      .map((tireur, index) => this.mapToParticipant(tireur, index, streetDict[index % 2], licenceNat))
       .filter((participant): participant is ParticipantRequestStartListDto => participant !== null);
   }
 
@@ -157,11 +128,12 @@ export class FencingToParticipantMapper {
       subUnit?: string;
       phaseCode: string;
       unitCode: string;
-    }
+    },
+    tireusAll: {ID: string, LicenceNat: string}[]
   ): CreateStartListDto {
     const streetDict = ["D", "G"];
     const participants = tireurs
-      .map((tireur, index) => this.mapToParticipant(tireur, index, streetDict[index % 2]))
+      .map((tireur, index) => this.mapToParticipant(tireur, index, streetDict[index % 2], tireusAll.find(_tireur => _tireur.ID === tireur.REF)?.LicenceNat))
       .filter((participant): participant is ParticipantRequestStartListDto => participant !== null);
 
     return {
@@ -204,7 +176,7 @@ export class FencingToParticipantMapper {
   ): CreateStartListDto {
     const streetDict = ["D", "G"];
     const participants = tireurs
-      .map((tireur, index) => this.mapToParticipant(tireur, index, streetDict[index % 2]))
+      .map((tireur, index) => this.mapToParticipant(tireur, index, streetDict[index % 2], ''))
       .filter((participant): participant is ParticipantRequestStartListDto => participant !== null);
 
     return {

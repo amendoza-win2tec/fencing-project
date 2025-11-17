@@ -12,6 +12,9 @@ import {
   PhaseDeTableaux,
   SuiteDeTableaux
 } from '../../domain/interfaces/fencing.interfaces';
+import participantsData from '../../../wrestling/application/examples/grs_db.participants-FEN.json';
+
+const tireursDictionay = participantsData; 
 
 const phaseDictionary: Record<string, string> = {
   'POULE1': 'GP01',
@@ -33,6 +36,7 @@ const phaseDictionary: Record<string, string> = {
 const genderDictionary: Record<string, string> = {
   F: 'W',
   M: 'M',
+  W: "W",
 };
 
 const sportEventDictionary: Record<string, string> = {
@@ -83,11 +87,13 @@ const getMedalsInfo = (metadata: RSCCodeType): MedalInfo => {
 };
 
 const locationDictionary: Record<string, string> = {
-  'GREEN': '6cd841a7-53fe-40e6-9fb3-88a5c7bb5ca9',
-  'RED': '87cfd7c7-9ea7-40f1-86d8-c87e0b07e0d2',
-  'BLUE': '186fb422-8cd0-402c-b6ea-3d9caae13526',
-  'YELLOW': '48ddff12-af02-449e-9f17-1ffd6bcaad1c',
-  'FINAL': '3c5bddd0-990a-498c-8fd7-3c16becd9363'
+  'GREEN': '27d0dfdc-eba2-4c52-93ea-64543dbff01b',
+  'RED': 'd1780522-d1c2-4706-b4ee-48ffb07338ef',
+  'BLUE': '5b800390-38ab-4813-8945-fe0358676393',
+  'YELLOW': '04b90608-4cd2-4575-adb1-72c383205857',
+  'FINAL': '258b0efe-d0ec-421a-b60c-14fe0d05f396',
+  'BLACK': '258b0efe-d0ec-421a-b60c-14fe0d05f396',
+  '5': '258b0efe-d0ec-421a-b60c-14fe0d05f396',
 };
 
 const rscCodeConverter = (
@@ -101,13 +107,13 @@ const rscCodeConverter = (
   const phaseCode = phaseDictionary[phase];
   const sportEventCode = sportEventDictionary[sportEvent];
   const unitCode = combatNumber.padStart(4, '0');
-  const rscCode = `${disciplineCode}W${sportEventCode.padEnd(18, '-')}${phaseCode.padEnd(4, '-')}--------`;
+  const rscCode = `${disciplineCode}${genderCode}${sportEventCode.padEnd(18, '-')}${phaseCode.padEnd(4, '-')}--------`;
   // const rscCode = `${disciplineCode}${genderCode}${sportEventCode.padEnd(18, '-')}${phaseCode.padEnd(4, '-')}--------`;
 
   return {
     discipline: disciplineCode,
     // gender: genderCode,
-    gender: 'W',
+    gender: genderCode,
     sportEvent: sportEventCode,
     phase: phaseCode,
     phaseCode: rscCode,
@@ -136,9 +142,9 @@ const determineUnitStatus = (tireurStatus: TireurStatus[]): string => {
 };
 
 
-export const convertPouleToMatch = (poule: Poule, _sportEvent: string): ConvertedMatch[] => {
+export const convertPouleToMatch = (poule: Poule, _sportEvent: string, _gender: string, tireus: {REF: string, LicenceNat: string}[]): ConvertedMatch[] => {
   const matches = poule.Match;
-  const gender = 'M';
+  const gender = genderDictionary[_gender];
 
   const convertedMatches: ConvertedMatch[] = matches.map(m => {
     const sportEvent = _sportEvent;
@@ -164,7 +170,7 @@ export const convertPouleToMatch = (poule: Poule, _sportEvent: string): Converte
   return convertedMatches;
 };
 
-export const convertEliminationToMatch = (elimination: SuiteDeTableaux, _sportEvent: string, _gender: string): ConvertedMatch[] => {
+export const convertEliminationToMatch = (elimination: SuiteDeTableaux, _sportEvent: string, _gender: string, tireus: {REF: string, LicenceNat: string}[]): ConvertedMatch[] => {
   // Handle both single tableau and array of tableaux
   const tableaux = Array.isArray(elimination.Tableau) ? elimination.Tableau : [elimination.Tableau];
   const gender = genderDictionary[_gender];
@@ -232,7 +238,7 @@ export const mapToW2tecPhases = (
     hasMedals: getMedalsInfo(rscVO).hasMedals,
     medalCodes: getMedalsInfo(rscVO).medalCodes,
     medalQuantities: getMedalsInfo(rscVO).medalQuantities,
-    venue: 'GSP',
+    venue: 'SEFC',
     status: new Date(dateInfo.startDate) < new Date() ? 'OFFICIAL' : determineUnitStatus(tireurStatus),
   };
 };

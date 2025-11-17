@@ -1,162 +1,295 @@
 import { Injectable } from '@nestjs/common';
-import { ParticipantService } from '../../../fencing/infraestructure/shared/participant.service';
-import { Participant } from '../../../fencing/domain/interfaces/participant.interfaces';
 import { ParticipantRequestStartListDto, CreateStartListDto } from 'src/wrestling/domain/interfaces/wrestling-participant.interfaces';
 import { WrestlerInMatch } from 'src/wrestling/domain/interfaces/wrestling.interfaces';
+import { ParticipantService } from 'src/fencing/infraestructure/shared/participant.service';
+import * as fs from 'fs';
+import * as path from 'path';
 
-export interface Wrestler {
-  ID: string;
-  Nom: string;
-  Prenom?: string;
-  Code?: string;
-}
+// Type aliases for compatibility
+type TireurInMatch = WrestlerInMatch;
+type Participant = any;
 
-// Diccionario para mapear IDs de wrestlers a códigos de participantes
-const participantDictionary: Record<string, string> = {
-  '1': '10000817',
-  '2': '10000815',
-  '3': '10007949',
-  '4': '10003628',
-  '5': '10005257',
-  '6': '10003630',
-  '7': '10003631',
-  '8': '10007931',
-  '9': '10007950',
-  '10': '10005262',
-  '11': '10007947',
-  '12': '10007944',
-  '13': '10003537',
-  '14': '10003538',
-  '15': '10000818',
-  '16': '10000819',
-  '17': '10000820',
-  '18': '10000821',
-  '19': '10000822',
-  '20': '10000823',
-  '21': '10000824',
-  '22': '10000825',
-  '23': '10000826',
-  '24': '10000827',
-  '25': '10000828',
-  '26': '10000829',
-  '27': '10000830',
-  '28': '10000831',
-  '29': '10000832',
-  '30': '10000833',
-  '31': '10000834',
-  '32': '10000835',
-  '33': '10000836',
-  '34': '10000837',
-  '35': '10000838',
-  '36': '10000839',
-  '37': '10000840',
-  '38': '10000841',
-  '39': '10000842',
-  '40': '10000843',
-  '41': '10000844',
-  '42': '10000845',
-  '43': '10000846',
-  '44': '10000847',
-  '45': '10000848',
-  '46': '10000849',
-  '47': '10000850',
-  '48': '10000851',
-  '49': '10000852',
-  '50': '10000853',
-  '51': '10000854',
-  '52': '10000855',
-  '53': '10000856',
-  '54': '10000857',
-  '55': '10000858',
-  '56': '10000859',
-  '57': '10000860',
-  '58': '10000861',
-  '59': '10000862',
-  '60': '10000863',
-  '61': '10000864',
-  '62': '10000865',
-  '63': '10000866',
-  '64': '10000867',
-  '65': '10000868',
-  '66': '10000869',
-  '67': '10000870',
-  '68': '10000871',
-  '69': '10000872',
-  '70': '10000873',
-  '71': '10000874',
-  '72': '10000875',
-  '73': '10000876',
-  '74': '10000877',
-  '75': '10000878',
-  '76': '10000879',
-  '77': '10000880',
-  '78': '10000881',
-  '79': '10000882',
-  '80': '10000883',
-  '81': '10000884',
-  '82': '10000885',
-  '83': '10000886',
-  '84': '10000887',
-  '85': '10000888',
-  '86': '10000889',
-  '87': '10000890',
-  '88': '10000891',
-  '89': '10000892',
-  '90': '10000893',
-  '91': '10000894',
-  '92': '10000895',
-  '93': '10000896',
-  '94': '10000897',
-  '95': '10000898',
-  '96': '10000899',
-  '97': '10000900',
-  '98': '10000901',
-  '99': '10000902',
-  '100': '10000903',
-};
-
+// Mock participant dictionary - this should be replaced with actual data source
+const participantDictionary: Record<string, string> = {};
 @Injectable()
 export class WrestlingToParticipantMapper {
   constructor(private readonly participantService: ParticipantService) {}
 
-  createStartListDto(wrestlers: WrestlerInMatch[], metadata: any): CreateStartListDto {
-    const participants: ParticipantRequestStartListDto[] = [];
-    const groups: any[] = [];
-
-    wrestlers.forEach((wrestler, index) => {
-      const participantResult = this.participantService.getById(wrestler.REF);
-      
-      if (participantResult.participant) {
-        const participant = participantResult.participant;
-        const participantDto: ParticipantRequestStartListDto = {
-          participantId: participant.idParticipant,
-          name: participant.name,
-          surname: participant.surname,
-          delegation: participant.organisation.code,
+  
+  /**
+   * Map tireur to participant using the participant service
+   */
+  mapToParticipant(tireur: WrestlerInMatch, index: number, street: string): ParticipantRequestStartListDto | null {
+    // Primero intentar obtener el código del diccionario usando el ID del tireur
+    const participantCode = participantDictionary[tireur.REF];
+    
+    // Si encontramos el código en el diccionario, buscar por código
+    if (participantCode) {
+      const result = this.participantService.getByCode(participantCode);
+      if (result.participant) {
+        return {
+          participantId: result.participant.idParticipant,
+          name: result.participant.name,
+          surname: result.participant.surname,
+          delegation: result.participant.organisation.code,
           startingOrder: index + 1,
-          startingSortOrder: index + 1,
-          bib: wrestler.REF,
-          street: '',
-          decorator: []
+          startingSortOrder: index,
+          bib: "",
+          street: street,
+          decorator: [],
         };
-        participants.push(participantDto);
       }
-    });
+    }
+    return null;
+  }
+
+  /**
+   * Map multiple tireurs to participants
+   */
+  mapToParticipants(tireurs: TireurInMatch[], street: string = ''): ParticipantRequestStartListDto[] {
+    const streetDict = ["D", "G"]
+    return tireurs
+      .map((tireur, index) => this.mapToParticipant(tireur, index, streetDict[index % 2]))
+      .filter((participant): participant is ParticipantRequestStartListDto => participant !== null);
+  }
+
+  /**
+   * Find participant by tireur ID
+   */
+  findParticipantByTireurId(tireurId: string): Participant | null {
+    const result = this.participantService.getById(tireurId);
+    return result.participant;
+  }
+
+  /**
+   * Search participants by tireur name
+   */
+  searchParticipantsByTireurName(name: string, surname?: string): Participant[] {
+    if (surname) {
+      return this.participantService.getByFullName(name, surname);
+    }
+    return this.participantService.getByName(name);
+  }
+
+  /**
+   * Get participant code from tireur ID using the dictionary
+   */
+  getParticipantCodeFromTireurId(tireurId: string): string | null {
+    return participantDictionary[tireurId] || null;
+  }
+
+  /**
+   * Get all available tireur IDs from the dictionary
+   */
+  getAvailableTireurIds(): string[] {
+    return Object.keys(participantDictionary);
+  }
+
+  /**
+   * Get all participant codes from the dictionary
+   */
+  getParticipantCodesFromDictionary(): string[] {
+    return Object.values(participantDictionary);
+  }
+
+  /**
+   * Create CreateStartListDto from tireurs with default values
+   */
+  createStartListDto(
+    tireurs: TireurInMatch[], 
+    metadata: {
+      discipline: string;
+      gender: string;
+      sportEvent: string;
+      category: string;
+      phase: string;
+      unit: string;
+      subUnit?: string;
+      phaseCode: string;
+      unitCode: string;
+    }
+  ): CreateStartListDto {
+    const streetDict = ["D", "G"];
+    const participants = tireurs
+      .map((tireur, index) => this.mapToParticipant(tireur, index, streetDict[index % 2]))
+      .filter((participant): participant is ParticipantRequestStartListDto => participant !== null);
 
     return {
+      competitorType: 'Individual',
       metadata: {
-        discipline: 'WRESTLING',
-        gender: metadata.gender || 'M',
-        sportEvent: metadata.sportEvent || 'WRESTLING',
-        category: metadata.category || '',
-        phase: metadata.phase || 'POOL',
-        unit: metadata.unit || 'MATCH',
+        discipline: metadata.discipline,
+        gender: metadata.gender,
+        sportEvent: metadata.sportEvent,
+        category: metadata.category,
+        phase: metadata.phase,
+        unit: metadata.unit,
         subUnit: metadata.subUnit,
-        phaseCode: metadata.phaseCode || 'POOL',
-        unitCode: metadata.unitCode || 'MATCH'
+        phaseCode: metadata.phaseCode,
+        unitCode: metadata.unitCode,
       },
-      participants,
-      groups
+      groups: [],
+      participants: participants,
+      hasBye: false
+    };
+  }
+
+  /**
+   * Create CreateStartListDto with custom competitor type
+   */
+  createStartListDtoWithCustomType(
+    tireurs: TireurInMatch[], 
+    competitorType: string,
+    metadata: {
+      discipline: string;
+      gender: string;
+      sportEvent: string;
+      category: string;
+      phase: string;
+      unit: string;
+      subUnit?: string;
+      phaseCode: string;
+      unitCode: string;
+    },
+    hasBye: boolean = false
+  ): CreateStartListDto {
+    const streetDict = ["D", "G"];
+    const participants = tireurs
+      .map((tireur, index) => this.mapToParticipant(tireur, index, streetDict[index % 2]))
+      .filter((participant): participant is ParticipantRequestStartListDto => participant !== null);
+
+    return {
+      competitorType: competitorType,
+      metadata: {
+        discipline: metadata.discipline,
+        gender: metadata.gender,
+        sportEvent: metadata.sportEvent,
+        category: metadata.category,
+        phase: metadata.phase,
+        unit: metadata.unit,
+        subUnit: metadata.subUnit,
+        phaseCode: metadata.phaseCode,
+        unitCode: metadata.unitCode,
+      },
+      groups: [],
+      participants: participants,
+      hasBye: hasBye
+    };
+  }
+
+  /**
+   * Load participants from WRE participants JSON file
+   */
+  loadWreParticipants(): any[] {
+    try {
+      const filePath = path.join(process.cwd(), 'src', 'wrestling', 'application', 'examples', 'wre-participants.json');
+      const fileContent = fs.readFileSync(filePath, 'utf8');
+      return JSON.parse(fileContent);
+    } catch (error) {
+      console.error('Error loading WRE participants:', error);
+      return [];
+    }
+  }
+
+  /**
+   * Map WRE participants to startListDto
+   */
+  mapWreParticipantsToStartList(
+    metadata: {
+      discipline: string;
+      gender: string;
+      sportEvent: string;
+      category: string;
+      phase: string;
+      unit: string;
+      subUnit?: string;
+      phaseCode: string;
+      unitCode: string;
+    },
+    competitorType: string = 'Individual',
+    hasBye: boolean = false
+  ): CreateStartListDto {
+    const wreParticipants = this.loadWreParticipants();
+    const participants: ParticipantRequestStartListDto[] = wreParticipants.map((participant, index) => ({
+      participantId: participant.idParticipant,
+      name: participant.name,
+      surname: participant.surname,
+      delegation: participant.organisation.code,
+      startingOrder: index + 1,
+      startingSortOrder: index,
+      bib: participant.code,
+      street: index % 2 === 0 ? 'D' : 'G',
+      decorator: [],
+    }));
+
+    return {
+      competitorType: competitorType,
+      metadata: {
+        discipline: metadata.discipline,
+        gender: metadata.gender,
+        sportEvent: metadata.sportEvent,
+        category: metadata.category,
+        phase: metadata.phase,
+        unit: metadata.unit,
+        subUnit: metadata.subUnit,
+        phaseCode: metadata.phaseCode,
+        unitCode: metadata.unitCode,
+      },
+      groups: [],
+      participants: participants,
+      hasBye: hasBye
+    };
+  }
+
+  /**
+   * Map WRE participants filtered by gender to startListDto
+   */
+  mapWreParticipantsByGenderToStartList(
+    gender: 'M' | 'F',
+    metadata: {
+      discipline: string;
+      gender: string;
+      sportEvent: string;
+      category: string;
+      phase: string;
+      unit: string;
+      subUnit?: string;
+      phaseCode: string;
+      unitCode: string;
+    },
+    competitorType: string = 'Individual',
+    hasBye: boolean = false
+  ): CreateStartListDto {
+    const wreParticipants = this.loadWreParticipants();
+    const filteredParticipants = wreParticipants.filter(participant => participant.gender.code === gender);
+    
+    const participants: ParticipantRequestStartListDto[] = filteredParticipants.map((participant, index) => ({
+      participantId: participant.idParticipant,
+      name: participant.name,
+      surname: participant.surname,
+      delegation: participant.organisation.code,
+      startingOrder: index + 1,
+      startingSortOrder: index,
+      bib: participant.code,
+      street: index % 2 === 0 ? 'D' : 'G',
+      decorator: [],
+    }));
+
+    return {
+      competitorType: competitorType,
+      metadata: {
+        discipline: metadata.discipline,
+        gender: metadata.gender,
+        sportEvent: metadata.sportEvent,
+        category: metadata.category,
+        phase: metadata.phase,
+        unit: metadata.unit,
+        subUnit: metadata.subUnit,
+        phaseCode: metadata.phaseCode,
+        unitCode: metadata.unitCode,
+      },
+      groups: [],
+      participants: participants,
+      hasBye: hasBye
     };
   }
 }

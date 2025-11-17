@@ -30,21 +30,21 @@ export class ParticipantService {
   private loadParticipants(): Participant[] {
     try {
       // Try to load from source directory first
-      const sourcePath = path.join(__dirname, 'participants.json');
+      const sourcePath = path.join(__dirname, 'grs_db.participants-FEN.json');
       if (fs.existsSync(sourcePath)) {
         const data = fs.readFileSync(sourcePath, 'utf8');
         return JSON.parse(data) as Participant[];
       }
 
       // Try to load from project root
-      const rootPath = path.join(process.cwd(), 'src', 'fencing', 'infraestructure', 'shared', 'participants.json');
+      const rootPath = path.join(process.cwd(), 'src', 'fencing', 'infraestructure', 'shared', 'grs_db.participants-FEN.json');
       if (fs.existsSync(rootPath)) {
         const data = fs.readFileSync(rootPath, 'utf8');
         return JSON.parse(data) as Participant[];
       }
 
       // Try to load from dist directory
-      const distPath = path.join(__dirname, '..', '..', '..', '..', 'src', 'fencing', 'infraestructure', 'shared', 'participants.json');
+      const distPath = path.join(__dirname, '..', '..', '..', '..', 'src', 'fencing', 'infraestructure', 'shared', 'grs_db.participants-FEN.json');
       if (fs.existsSync(distPath)) {
         const data = fs.readFileSync(distPath, 'utf8');
         return JSON.parse(data) as Participant[];
