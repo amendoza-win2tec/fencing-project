@@ -12,7 +12,7 @@ export interface Wrestler {
   Sexe: 'M' | 'F';
   Lateralite: 'I' | 'D'; // I = Izquierda (Left), D = Derecha (Right)
   Nation: string;
-  LicenceNat?: string;
+  Licence?: string;
   dossard: string;
   IdOrigine: string;
 }

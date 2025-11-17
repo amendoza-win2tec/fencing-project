@@ -43,7 +43,7 @@ export class FencingService implements FencingAppServicePort {
       
       // Process each pool
       rawPoules.Poule.forEach((poule, index) => {
-        const convertedMatches = convertPouleToMatch(poule, sportEvent, gender, tireus.map(tireur => ({REF: tireur.ID, LicenceNat: tireur.LicenceNat})));
+        const convertedMatches = convertPouleToMatch(poule, sportEvent, gender, tireus.map(tireur => ({REF: tireur.ID, Licence: tireur.Licence})));
         
         convertedMatches.forEach((match, matchIndex) => {
           // Create tireur status for this match
@@ -63,8 +63,8 @@ export class FencingService implements FencingAppServicePort {
             gender
           );
 
-          const startList = this.fencingToParticipantMapper.createStartListDto(match.Tireur, {...unit.metadata, unitCode: unit.code }, tireus as {ID: string, LicenceNat: string}[]);
-          const result = this.fencingToResultMapper.createResultDto(match.Tireur, {...unit.metadata, unitCode: unit.code }, tireus as {ID: string, LicenceNat: string}[]);
+          const startList = this.fencingToParticipantMapper.createStartListDto(match.Tireur, {...unit.metadata, unitCode: unit.code }, tireus as {ID: string, Licence: string}[]);
+          const result = this.fencingToResultMapper.createResultDto(match.Tireur, {...unit.metadata, unitCode: unit.code }, tireus as {ID: string, Licence: string}[]);
           allUnits.push(unit);
           allResults.push(result);
           allStartLists.push(startList);
@@ -76,7 +76,7 @@ export class FencingService implements FencingAppServicePort {
       // Process elimination phases
       rawEliminationToArray.forEach((elimination, eliminationIndex) => {
         if (!elimination) return;
-        const convertedMatches = convertEliminationToMatch(elimination, sportEvent, gender, tireus.map(tireur => ({REF: tireur.ID, LicenceNat: tireur.LicenceNat})));
+        const convertedMatches = convertEliminationToMatch(elimination, sportEvent, gender, tireus.map(tireur => ({REF: tireur.ID, Licence: tireur.Licence})));
         convertedMatches.forEach((match, matchIndex) => {
           // Create tireur status for this elimination match
           const tireurStatus: TireurStatus[] = match.Tireur.map(tireur => ({
@@ -95,8 +95,8 @@ export class FencingService implements FencingAppServicePort {
             gender
           );
 
-          const startList = this.fencingToParticipantMapper.createStartListDto(match.Tireur, {...unit.metadata, unitCode: unit.code }, tireus as {ID: string, LicenceNat: string}[]);
-          const result = this.fencingToResultMapper.createResultDto(match.Tireur, {...unit.metadata, unitCode: unit.code }, tireus as {ID: string, LicenceNat: string}[]);
+          const startList = this.fencingToParticipantMapper.createStartListDto(match.Tireur, {...unit.metadata, unitCode: unit.code }, tireus as {ID: string, Licence: string}[]);
+          const result = this.fencingToResultMapper.createResultDto(match.Tireur, {...unit.metadata, unitCode: unit.code }, tireus as {ID: string, Licence: string}[]);
           
           allUnits.push(unit);
           allResults.push(result);
@@ -104,9 +104,9 @@ export class FencingService implements FencingAppServicePort {
         });
       });
 
-      // for(const unit of allUnits) {
-      //   await this.sendPouleToApi(unit);
-      // }
+      for(const unit of allUnits) {
+        await this.sendPouleToApi(unit);
+      }
       for(const startList of allStartLists) {
         await this.sendStartListToApi(startList);
       }
@@ -139,7 +139,7 @@ export class FencingService implements FencingAppServicePort {
 
       // Process each pool
       rawPoules.Poule.forEach((poule, index) => {
-        const convertedMatches = convertPouleToMatch(poule, sportEvent, gender, tireus.map(tireur => ({REF: tireur.ID, LicenceNat: tireur.LicenceNat})));
+        const convertedMatches = convertPouleToMatch(poule, sportEvent, gender, tireus.map(tireur => ({REF: tireur.ID, Licence: tireur.Licence})));
         
         convertedMatches.forEach((match, matchIndex) => {
           // Create tireur status for this match
@@ -159,8 +159,8 @@ export class FencingService implements FencingAppServicePort {
             gender
           );
 
-          const startList = this.fencingToParticipantMapper.createStartListDto(match.Tireur, {...unit.metadata, unitCode: unit.code }, tireus as {ID: string, LicenceNat: string}[]);
-          const result = this.fencingToResultMapper.createResultDto(match.Tireur, {...unit.metadata, unitCode: unit.code }, tireus as {ID: string, LicenceNat: string}[]);
+          const startList = this.fencingToParticipantMapper.createStartListDto(match.Tireur, {...unit.metadata, unitCode: unit.code }, tireus as {ID: string, Licence: string}[]);
+          const result = this.fencingToResultMapper.createResultDto(match.Tireur, {...unit.metadata, unitCode: unit.code }, tireus as {ID: string, Licence: string}[]);
           allUnits.push(unit);
           allResults.push(result);
           allStartLists.push(startList);
@@ -172,7 +172,7 @@ export class FencingService implements FencingAppServicePort {
       // Process elimination phases
       rawEliminationToArray.forEach((elimination, eliminationIndex) => {
         if (!elimination) return;
-        const convertedMatches = convertEliminationToMatch(elimination, sportEvent, gender, tireus.map(tireur => ({REF: tireur.ID, LicenceNat: tireur.LicenceNat})));
+        const convertedMatches = convertEliminationToMatch(elimination, sportEvent, gender, tireus.map(tireur => ({REF: tireur.ID, Licence: tireur.Licence})));
         convertedMatches.forEach((match, matchIndex) => {
           // Create tireur status for this elimination match
           const tireurStatus: TireurStatus[] = match.Tireur.map(tireur => ({
@@ -191,8 +191,8 @@ export class FencingService implements FencingAppServicePort {
             gender
           );
 
-          const startList = this.fencingToParticipantMapper.createStartListDto(match.Tireur, {...unit.metadata, unitCode: unit.code }, tireus as {ID: string, LicenceNat: string}[]);
-          const result = this.fencingToResultMapper.createResultDto(match.Tireur, {...unit.metadata, unitCode: unit.code }, tireus as {ID: string, LicenceNat: string}[]);
+          const startList = this.fencingToParticipantMapper.createStartListDto(match.Tireur, {...unit.metadata, unitCode: unit.code }, tireus as {ID: string, Licence: string}[]);
+          const result = this.fencingToResultMapper.createResultDto(match.Tireur, {...unit.metadata, unitCode: unit.code }, tireus as {ID: string, Licence: string}[]);
           
           allUnits.push(unit);
           allResults.push(result);

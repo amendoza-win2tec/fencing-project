@@ -12,7 +12,7 @@ export interface Tireur {
   Sexe: 'M' | 'F';
   Lateralite: 'I' | 'D'; // I = Izquierda (Left), D = Derecha (Right)
   Nation: string;
-  LicenceNat?: string;
+  Licence?: string;
   dossard: string;
   IdOrigine: string;
 }
@@ -402,7 +402,7 @@ export interface TeamMember {
   Sexe: 'M' | 'F';
   Lateralite: 'I' | 'D';
   Nation: string;
-  LicenceNat?: string;
+  Licence?: string;
   dossard: string;
   IdOrigine: string;
 }

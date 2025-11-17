@@ -142,7 +142,7 @@ const determineUnitStatus = (tireurStatus: TireurStatus[]): string => {
 };
 
 
-export const convertPouleToMatch = (poule: Poule, _sportEvent: string, _gender: string, tireus: {REF: string, LicenceNat: string}[]): ConvertedMatch[] => {
+export const convertPouleToMatch = (poule: Poule, _sportEvent: string, _gender: string, tireus: {REF: string, Licence: string}[]): ConvertedMatch[] => {
   const matches = poule.Match;
   const gender = genderDictionary[_gender];
 
@@ -170,7 +170,7 @@ export const convertPouleToMatch = (poule: Poule, _sportEvent: string, _gender: 
   return convertedMatches;
 };
 
-export const convertEliminationToMatch = (elimination: SuiteDeTableaux, _sportEvent: string, _gender: string, tireus: {REF: string, LicenceNat: string}[]): ConvertedMatch[] => {
+export const convertEliminationToMatch = (elimination: SuiteDeTableaux, _sportEvent: string, _gender: string, tireus: {REF: string, Licence: string}[]): ConvertedMatch[] => {
   // Handle both single tableau and array of tableaux
   const tableaux = Array.isArray(elimination.Tableau) ? elimination.Tableau : [elimination.Tableau];
   const gender = genderDictionary[_gender];
@@ -239,7 +239,7 @@ export const mapToW2tecPhases = (
     medalCodes: getMedalsInfo(rscVO).medalCodes,
     medalQuantities: getMedalsInfo(rscVO).medalQuantities,
     venue: 'SEFC',
-    status: new Date(dateInfo.startDate) < new Date() ? 'OFFICIAL' : determineUnitStatus(tireurStatus),
+    status: determineUnitStatus(tireurStatus),
   };
 };
 

@@ -75,9 +75,9 @@ export class FencingToResultMapper {
   /**
    * Map tireur to participant using the participant service
    */
-  mapToParticipant(tireur: TireurInMatch, index: number, street: string, licenceNat: string): ParticipantRequestResultDto | null {
-    // Usar el LicenceNat para buscar el participante
-    const participantCode = licenceNat;
+  mapToParticipant(tireur: TireurInMatch, index: number, street: string, Licence: string): ParticipantRequestResultDto | null {
+    // Usar el Licence para buscar el participante
+    const participantCode = Licence;
     
     // Si encontramos el código, buscar por código
     if (participantCode) {
@@ -111,10 +111,10 @@ export class FencingToResultMapper {
   /**
    * Map multiple tireurs to participants
    */
-  mapToParticipants(tireurs: TireurInMatch[], street: string = '', tireusAll: {ID: string, LicenceNat: string}[]): ParticipantRequestResultDto[] {
+  mapToParticipants(tireurs: TireurInMatch[], street: string = '', tireusAll: {ID: string, Licence: string}[]): ParticipantRequestResultDto[] {
     const streetDict = ["D", "G"]
     return tireurs
-      .map((tireur, index) => this.mapToParticipant(tireur, index, streetDict[index % 2], tireusAll.find(_tireur => _tireur.ID === tireur.REF)?.LicenceNat || ''))
+      .map((tireur, index) => this.mapToParticipant(tireur, index, streetDict[index % 2], tireusAll.find(_tireur => _tireur.ID === tireur.REF)?.Licence || ''))
       .filter((participant): participant is ParticipantRequestResultDto => participant !== null);
   }
 
@@ -182,7 +182,7 @@ export class FencingToResultMapper {
       phaseCode: string;
       unitCode: string;
     },
-    tireusAll: {ID: string, LicenceNat: string}[]
+    tireusAll: {ID: string, Licence: string}[]
   ): CreateResultDto {
     const streetDict = ["D", "G"];
 
@@ -205,7 +205,7 @@ export class FencingToResultMapper {
           order: 0,
           periodId: "period_1",
           participants: tireurs
-          .map((tireur, index) => this.mapToParticipant(tireur, index, streetDict[index % 2], tireusAll.find(_tireur => _tireur.ID === tireur.REF)?.LicenceNat || '')),
+          .map((tireur, index) => this.mapToParticipant(tireur, index, streetDict[index % 2], tireusAll.find(_tireur => _tireur.ID === tireur.REF)?.Licence || '')),
           groups: [],
           decorator: [],
           duration: "",
@@ -221,7 +221,7 @@ export class FencingToResultMapper {
         result: this.buildPeriodResult(tireurs),
         groups: [],
         participants: tireurs
-        .map((tireur, index) => this.mapToParticipant(tireur, index, streetDict[index % 2], tireusAll.find(_tireur => _tireur.ID === tireur.REF)?.LicenceNat || '')),
+        .map((tireur, index) => this.mapToParticipant(tireur, index, streetDict[index % 2], tireusAll.find(_tireur => _tireur.ID === tireur.REF)?.Licence || '')),
         decorator: [],
         current: "",
         currentPeriod: "1",

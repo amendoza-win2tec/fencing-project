@@ -7,7 +7,7 @@ export interface TeamMember {
   _Sexe: 'M' | 'F';
   _Lateralite: 'I' | 'D' | 'G';
   _Nation: string;
-  _LicenceNat?: string;
+  _Licence?: string;
   _dossard: string;
   _IdOrigine: string;
 }

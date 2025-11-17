@@ -40,9 +40,9 @@ export class FencingToParticipantMapper {
   /**
    * Map tireur to participant using the participant service
   */
- mapToParticipant(tireur: TireurInMatch, index: number, street: string, licenceNat: string): ParticipantRequestStartListDto | null {
+ mapToParticipant(tireur: TireurInMatch, index: number, street: string, Licence: string): ParticipantRequestStartListDto | null {
     // Primero intentar obtener el código del diccionario usando el ID del tireur
-    const participantCode = licenceNat;
+    const participantCode = Licence;
     
     // Si encontramos el código en el diccionario, buscar por código
     if (participantCode) {
@@ -67,10 +67,10 @@ export class FencingToParticipantMapper {
   /**
    * Map multiple tireurs to participants
    */
-  mapToParticipants(tireurs: TireurInMatch[], street: string = '', licenceNat: string): ParticipantRequestStartListDto[] {
+  mapToParticipants(tireurs: TireurInMatch[], street: string = '', Licence: string): ParticipantRequestStartListDto[] {
     const streetDict = ["D", "G"]
     return tireurs
-      .map((tireur, index) => this.mapToParticipant(tireur, index, streetDict[index % 2], licenceNat))
+      .map((tireur, index) => this.mapToParticipant(tireur, index, streetDict[index % 2], Licence))
       .filter((participant): participant is ParticipantRequestStartListDto => participant !== null);
   }
 
@@ -129,11 +129,11 @@ export class FencingToParticipantMapper {
       phaseCode: string;
       unitCode: string;
     },
-    tireusAll: {ID: string, LicenceNat: string}[]
+    tireusAll: {ID: string, Licence: string}[]
   ): CreateStartListDto {
     const streetDict = ["D", "G"];
     const participants = tireurs
-      .map((tireur, index) => this.mapToParticipant(tireur, index, streetDict[index % 2], tireusAll.find(_tireur => _tireur.ID === tireur.REF)?.LicenceNat))
+      .map((tireur, index) => this.mapToParticipant(tireur, index, streetDict[index % 2], tireusAll.find(_tireur => _tireur.ID === tireur.REF)?.Licence))
       .filter((participant): participant is ParticipantRequestStartListDto => participant !== null);
 
     return {
