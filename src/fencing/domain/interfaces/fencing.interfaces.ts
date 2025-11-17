@@ -162,7 +162,7 @@ export interface FencingErrorResponse {
 export interface TireurStatus {
   ref: string;
   score: string;
-  status: 'V' | 'D' | '';
+  status: 'V' | 'D' | '' | 'C';
 }
 
 export interface RSCCodeType {

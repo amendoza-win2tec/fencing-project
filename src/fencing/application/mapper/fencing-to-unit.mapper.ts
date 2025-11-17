@@ -136,9 +136,15 @@ const determineUnitStatus = (tireurStatus: TireurStatus[]): string => {
   if (justScheduled) {
     return 'SCHEDULED';
   }
-  return tireurStatus.find((tireur) => tireur.status)
+  const isRunning = tireurStatus.find((tireur) => tireur.status === 'C');
+  const isOfficial_StartList = tireurStatus.find((tireur) => tireur.status && tireur.status !== 'C')
     ? 'OFFICIAL'
     : 'START_LIST';
+
+  if (isRunning) {
+    return 'OFFICIAL';
+  }
+  return isOfficial_StartList;
 };
 
 
