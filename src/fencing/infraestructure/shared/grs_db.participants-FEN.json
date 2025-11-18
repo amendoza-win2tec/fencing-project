@@ -7,14 +7,7 @@
   "code": "ISG-00000241",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -62,14 +55,7 @@
   "code": "ISG-00000243",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -106,7 +92,10 @@
     },
     "order": 29
   },
-  "surname": "Alsiheeri"
+  "surname": "Alsiheeri",
+  "countryOfNationality": {
+    "code": "LBA"
+  }
 },
 {
   "_id": {
@@ -117,14 +106,7 @@
   "code": "ISG-00000244",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -172,14 +154,7 @@
   "code": "ISG-00000575",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -227,14 +202,7 @@
   "code": "ISG-00000576",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -282,14 +250,7 @@
   "code": "ISG-00000577",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -337,14 +298,7 @@
   "code": "ISG-00000578",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -392,14 +346,7 @@
   "code": "ISG-00000579",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -447,14 +394,7 @@
   "code": "ISG-00000581",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -502,14 +442,7 @@
   "code": "ISG-00001205",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -557,14 +490,7 @@
   "code": "ISG-00001206",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -612,14 +538,7 @@
   "code": "ISG-00002025",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -667,14 +586,7 @@
   "code": "ISG-00002028",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -722,14 +634,7 @@
   "code": "ISG-00002093",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -777,14 +682,7 @@
   "code": "ISG-00002095",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -832,14 +730,7 @@
   "code": "ISG-00002096",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -887,14 +778,7 @@
   "code": "ISG-00002098",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -942,14 +826,7 @@
   "code": "ISG-00002101",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -997,14 +874,7 @@
   "code": "ISG-00002105",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -1052,14 +922,7 @@
   "code": "ISG-00002264",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -1107,14 +970,7 @@
   "code": "ISG-00002267",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -1152,14 +1008,7 @@
   "code": "ISG-00002268",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -1207,14 +1056,7 @@
   "code": "ISG-00002271",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -1262,14 +1104,7 @@
   "code": "ISG-00002289",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -1317,14 +1152,7 @@
   "code": "ISG-00002294",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -1372,14 +1200,7 @@
   "code": "ISG-00002295",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -1427,14 +1248,7 @@
   "code": "ISG-00002537",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -1482,14 +1296,7 @@
   "code": "ISG-00002539",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -1537,14 +1344,7 @@
   "code": "ISG-00002552",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -1592,14 +1392,7 @@
   "code": "ISG-00002553",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -1647,14 +1440,7 @@
   "code": "ISG-00002554",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -1702,14 +1488,7 @@
   "code": "ISG-00002556",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -1757,14 +1536,7 @@
   "code": "ISG-00002558",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -1812,14 +1584,7 @@
   "code": "ISG-00002559",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -1867,14 +1632,7 @@
   "code": "ISG-00002560",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -1922,14 +1680,7 @@
   "code": "ISG-00002561",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -1977,14 +1728,7 @@
   "code": "ISG-00002563",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -2032,14 +1776,7 @@
   "code": "ISG-00002564",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -2087,14 +1824,7 @@
   "code": "ISG-00002565",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -2142,14 +1872,7 @@
   "code": "ISG-00002568",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -2197,14 +1920,7 @@
   "code": "ISG-00002624",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -2252,14 +1968,7 @@
   "code": "ISG-00002625",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -2307,14 +2016,7 @@
   "code": "ISG-00002626",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -2362,14 +2064,7 @@
   "code": "ISG-00002627",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -2417,14 +2112,7 @@
   "code": "ISG-00002747",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -2472,14 +2160,7 @@
   "code": "ISG-00002778",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -2527,14 +2208,7 @@
   "code": "ISG-00003031",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -2582,14 +2256,7 @@
   "code": "ISG-00003438",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -2637,14 +2304,7 @@
   "code": "ISG-00003531",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -2692,14 +2352,7 @@
   "code": "ISG-00003886",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -2747,14 +2400,7 @@
   "code": "ISG-00003890",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -2802,14 +2448,7 @@
   "code": "ISG-00003891",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -2857,14 +2496,7 @@
   "code": "ISG-00003894",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -2912,14 +2544,7 @@
   "code": "ISG-00003912",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -2967,14 +2592,7 @@
   "code": "ISG-00003913",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -3012,14 +2630,7 @@
   "code": "ISG-00003917",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -3067,14 +2678,7 @@
   "code": "ISG-00004792",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -3122,14 +2726,7 @@
   "code": "ISG-00004798",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -3177,14 +2774,7 @@
   "code": "ISG-00005097",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -3232,14 +2822,7 @@
   "code": "ISG-00005098",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -3277,14 +2860,7 @@
   "code": "ISG-00005101",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -3332,14 +2908,7 @@
   "code": "ISG-00005102",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -3387,14 +2956,7 @@
   "code": "ISG-00005103",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -3442,14 +3004,7 @@
   "code": "ISG-00005104",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -3487,14 +3042,7 @@
   "code": "ISG-00005105",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -3542,14 +3090,7 @@
   "code": "ISG-00005212",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -3597,14 +3138,7 @@
   "code": "ISG-00005217",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -3652,14 +3186,7 @@
   "code": "ISG-00005220",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -3707,14 +3234,7 @@
   "code": "ISG-00005228",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -3762,14 +3282,7 @@
   "code": "ISG-00005233",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -3817,14 +3330,7 @@
   "code": "ISG-00005238",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -3872,14 +3378,7 @@
   "code": "ISG-00005242",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -3927,14 +3426,7 @@
   "code": "ISG-00005244",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -3982,14 +3474,7 @@
   "code": "ISG-00005670",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -4037,14 +3522,7 @@
   "code": "ISG-00005672",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -4092,14 +3570,7 @@
   "code": "ISG-00005674",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -4147,14 +3618,7 @@
   "code": "ISG-00005675",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -4202,14 +3666,7 @@
   "code": "ISG-00005676",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -4257,14 +3714,7 @@
   "code": "ISG-00005677",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -4312,14 +3762,7 @@
   "code": "ISG-00005678",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -4367,14 +3810,7 @@
   "code": "ISG-00005679",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -4422,14 +3858,7 @@
   "code": "ISG-00005680",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -4477,14 +3906,7 @@
   "code": "ISG-00005691",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -4532,14 +3954,7 @@
   "code": "ISG-00005693",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -4587,14 +4002,7 @@
   "code": "ISG-00005725",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -4642,14 +4050,7 @@
   "code": "ISG-00005727",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -4697,14 +4098,7 @@
   "code": "ISG-00005730",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -4752,14 +4146,7 @@
   "code": "ISG-00005733",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -4807,14 +4194,7 @@
   "code": "ISG-00008205",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -4862,14 +4242,7 @@
   "code": "ISG-00008210",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -4917,14 +4290,7 @@
   "code": "ISG-00008211",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -4972,14 +4338,7 @@
   "code": "ISG-00008213",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -5027,14 +4386,7 @@
   "code": "ISG-00008214",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -5082,14 +4434,7 @@
   "code": "ISG-00008443",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -5137,14 +4482,7 @@
   "code": "ISG-00008456",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -5192,14 +4530,7 @@
   "code": "ISG-00008461",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -5247,14 +4578,7 @@
   "code": "ISG-00008464",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -5302,14 +4626,7 @@
   "code": "ISG-00008479",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -5357,14 +4674,7 @@
   "code": "ISG-00008487",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -5412,14 +4722,7 @@
   "code": "ISG-00008494",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -5457,14 +4760,7 @@
   "code": "ISG-00008499",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -5512,14 +4808,7 @@
   "code": "ISG-00008529",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -5567,14 +4856,7 @@
   "code": "ISG-00008586",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -5622,14 +4904,7 @@
   "code": "ISG-00008593",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -5677,14 +4952,7 @@
   "code": "ISG-00008632",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -5732,14 +5000,7 @@
   "code": "ISG-00008636",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -5787,14 +5048,7 @@
   "code": "ISG-00008638",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -5842,14 +5096,7 @@
   "code": "ISG-00008650",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -5897,14 +5144,7 @@
   "code": "ISG-00008656",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -5952,14 +5192,7 @@
   "code": "ISG-00008657",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -6007,14 +5240,7 @@
   "code": "ISG-00008661",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -6062,14 +5288,7 @@
   "code": "ISG-00008667",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -6117,14 +5336,7 @@
   "code": "ISG-00008670",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -6172,14 +5384,7 @@
   "code": "ISG-00008674",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -6227,14 +5432,7 @@
   "code": "ISG-00008679",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -6282,14 +5480,7 @@
   "code": "ISG-00008682",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -6326,7 +5517,10 @@
     },
     "order": 55
   },
-  "surname": "Perdebaeva"
+  "surname": "Perdebaeva",
+  "countryOfNationality": {
+    "code": "UZB"
+  }
 },
 {
   "_id": {
@@ -6337,14 +5531,7 @@
   "code": "ISG-00008789",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -6392,14 +5579,7 @@
   "code": "ISG-00010109",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -6447,14 +5627,7 @@
   "code": "ISG-00010110",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -6502,14 +5675,7 @@
   "code": "ISG-00010112",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -6557,14 +5723,7 @@
   "code": "ISG-00010113",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -6612,14 +5771,7 @@
   "code": "ISG-00010114",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -6667,14 +5819,7 @@
   "code": "ISG-00012478",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -6722,14 +5867,7 @@
   "code": "ISG-00012484",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -6777,14 +5915,7 @@
   "code": "ISG-00012486",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -6832,14 +5963,7 @@
   "code": "ISG-00012487",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -6887,14 +6011,7 @@
   "code": "ISG-00012489",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -6942,14 +6059,7 @@
   "code": "ISG-00012490",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -6997,14 +6107,7 @@
   "code": "ISG-00012494",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -7052,14 +6155,7 @@
   "code": "ISG-00012495",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -7107,14 +6203,7 @@
   "code": "ISG-00012498",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -7162,14 +6251,7 @@
   "code": "ISG-00012500",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -7217,14 +6299,7 @@
   "code": "ISG-00012503",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -7272,14 +6347,7 @@
   "code": "ISG-00012504",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -7327,14 +6395,7 @@
   "code": "ISG-00013069",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -7382,14 +6443,7 @@
   "code": "ISG-00013071",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -7437,14 +6491,7 @@
   "code": "ISG-00013073",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -7492,14 +6539,7 @@
   "code": "ISG-00013074",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -7547,14 +6587,7 @@
   "code": "ISG-00013077",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -7602,14 +6635,7 @@
   "code": "ISG-00013078",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -7657,14 +6683,7 @@
   "code": "ISG-00013079",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -7712,14 +6731,7 @@
   "code": "ISG-00013080",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -7767,14 +6779,7 @@
   "code": "ISG-00013617",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -7822,14 +6827,7 @@
   "code": "ISG-00013625",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -7877,14 +6875,7 @@
   "code": "ISG-00013896",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -7932,14 +6923,7 @@
   "code": "ISG-00013897",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -7987,14 +6971,7 @@
   "code": "ISG-00013906",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -8042,14 +7019,7 @@
   "code": "ISG-00013907",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -8097,14 +7067,7 @@
   "code": "ISG-00013908",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -8152,14 +7115,7 @@
   "code": "ISG-00013912",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -8207,14 +7163,7 @@
   "code": "ISG-00013940",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -8262,14 +7211,7 @@
   "code": "ISG-00013957",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -8317,14 +7259,7 @@
   "code": "ISG-00013963",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -8372,14 +7307,7 @@
   "code": "ISG-00013972",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -8427,14 +7355,7 @@
   "code": "ISG-00017592",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -8493,6 +7414,9 @@
   },
   "idNumber": "ISG-00006557",
   "code": "ISG-00006557",
+  "countryOfNationality": {
+    "code": "QAT"
+  },
   "organisation": {
     "code": "QAT",
     "description": {
@@ -8516,22 +7440,7 @@
   },
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        },
-        "fra": {
-          "long": "Escrime",
-          "short": "Escrime"
-        },
-        "ara": {
-          "long": "مبارزة بالسيف",
-          "short": "مبارزة بالسيف"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "accreditationNumber": 6557
@@ -8545,22 +7454,7 @@
   "code": "ISG-00008485",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        },
-        "fra": {
-          "long": "Escrime",
-          "short": "Escrime"
-        },
-        "ara": {
-          "long": "مبارزة بالسيف",
-          "short": "مبارزة بالسيف"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -8608,22 +7502,7 @@
   "code": "ISG-00008506",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        },
-        "fra": {
-          "long": "Escrime",
-          "short": "Escrime"
-        },
-        "ara": {
-          "long": "مبارزة بالسيف",
-          "short": "مبارزة بالسيف"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -8671,22 +7550,7 @@
   "code": "ISG-00044296",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        },
-        "fra": {
-          "long": "Escrime",
-          "short": "Escrime"
-        },
-        "ara": {
-          "long": "مبارزة بالسيف",
-          "short": "مبارزة بالسيف"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -8734,22 +7598,7 @@
   "code": "ISG-00044297",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        },
-        "fra": {
-          "long": "Escrime",
-          "short": "Escrime"
-        },
-        "ara": {
-          "long": "مبارزة بالسيف",
-          "short": "مبارزة بالسيف"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -8797,22 +7646,7 @@
   "code": "ISG-00009699",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        },
-        "fra": {
-          "long": "Escrime",
-          "short": "Escrime"
-        },
-        "ara": {
-          "long": "مبارزة بالسيف",
-          "short": "مبارزة بالسيف"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -8860,22 +7694,7 @@
   "code": "ISG-00003892",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        },
-        "fra": {
-          "long": "Escrime",
-          "short": "Escrime"
-        },
-        "ara": {
-          "long": "مبارزة بالسيف",
-          "short": "مبارزة بالسيف"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -8923,22 +7742,7 @@
   "code": "ISG-00003915",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        },
-        "fra": {
-          "long": "Escrime",
-          "short": "Escrime"
-        },
-        "ara": {
-          "long": "مبارزة بالسيف",
-          "short": "مبارزة بالسيف"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -8986,22 +7790,7 @@
   "code": "ISG-00005100",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        },
-        "fra": {
-          "long": "Escrime",
-          "short": "Escrime"
-        },
-        "ara": {
-          "long": "مبارزة بالسيف",
-          "short": "مبارزة بالسيف"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -9049,22 +7838,7 @@
   "code": "ISG-00005107",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        },
-        "fra": {
-          "long": "Escrime",
-          "short": "Escrime"
-        },
-        "ara": {
-          "long": "مبارزة بالسيف",
-          "short": "مبارزة بالسيف"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -9112,22 +7886,7 @@
   "code": "ISG-00000582",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        },
-        "fra": {
-          "long": "Escrime",
-          "short": "Escrime"
-        },
-        "ara": {
-          "long": "مبارزة بالسيف",
-          "short": "مبارزة بالسيف"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -9175,22 +7934,7 @@
   "code": "ISG-00008476",
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        },
-        "fra": {
-          "long": "Escrime",
-          "short": "Escrime"
-        },
-        "ara": {
-          "long": "مبارزة بالسيف",
-          "short": "مبارزة بالسيف"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "gender": {
@@ -9249,6 +7993,9 @@
   },
   "idNumber": "ISG-00005672",
   "code": "ISG-00005672",
+  "countryOfNationality": {
+    "code": "AZE"
+  },
   "organisation": {
     "code": "AZE",
     "description": {
@@ -9272,22 +8019,7 @@
   },
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        },
-        "fra": {
-          "long": "Escrime",
-          "short": "Escrime"
-        },
-        "ara": {
-          "long": "مبارزة بالسيف",
-          "short": "مبارزة بالسيف"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "accreditationNumber": 5672
@@ -9312,6 +8044,9 @@
   },
   "idNumber": "ISG-00014296",
   "code": "ISG-00014296",
+  "countryOfNationality": {
+    "code": "PLE"
+  },
   "organisation": {
     "code": "PLE",
     "description": {
@@ -9335,22 +8070,7 @@
   },
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        },
-        "fra": {
-          "long": "Escrime",
-          "short": "Escrime"
-        },
-        "ara": {
-          "long": "مبارزة بالسيف",
-          "short": "مبارزة بالسيف"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "accreditationNumber": 14296
@@ -9375,6 +8095,9 @@
   },
   "idNumber": "ISG-00002510",
   "code": "ISG-00002510",
+  "countryOfNationality": {
+    "code": "GUI"
+  },
   "organisation": {
     "code": "GUI",
     "description": {
@@ -9398,23 +8121,110 @@
   },
   "disciplines": [
     {
-      "code": "FEN",
-      "description": {
-        "eng": {
-          "long": "Fencing",
-          "short": "Fencing"
-        },
-        "fra": {
-          "long": "Escrime",
-          "short": "Escrime"
-        },
-        "ara": {
-          "long": "مبارزة بالسيف",
-          "short": "مبارزة بالسيف"
-        }
-      },
-      "order": 8
+      "code": "FEN"
     }
   ],
   "accreditationNumber": 2510
+},
+{
+  "_id": {
+    "$oid": "691b58846074839f9e0828d3"
+  },
+  "idParticipant": "b57823b0-5235-4ed8-900d-f8c64b5bb68c",
+  "name": "Safi",
+  "surname": "Malak",
+  "gender": {
+    "code": "W",
+    "description": {
+      "eng": {
+        "long": "Woman",
+        "short": "W",
+        "language": "eng"
+      }
+    },
+    "order": 2
+  },
+  "idNumber": "ISG-00014295",
+  "code": "ISG-00014295",
+  "countryOfNationality": {
+    "code": "PLE"
+  },
+  "organisation": {
+    "code": "PLE",
+    "description": {
+      "eng": {
+        "language": "eng",
+        "long": "Palestine",
+        "short": "Palestine"
+      },
+      "fra": {
+        "language": "fra",
+        "long": "Palestine",
+        "short": "Palestine"
+      },
+      "ara": {
+        "language": "ara",
+        "long": "فلسطين",
+        "short": "فلسطين"
+      }
+    },
+    "order": 40
+  },
+  "disciplines": [
+    {
+      "code": "FEN"
+    }
+  ],
+  "accreditationNumber": null
+},
+{
+  "_id": {
+    "$oid": "691b5a6f086805e9a47cf692"
+  },
+  "idParticipant": "f56e0c5f-7d43-4431-bdf2-bfac5b51280a",
+  "name": "Kamrunnahar",
+  "surname": "",
+  "gender": {
+    "code": "W",
+    "description": {
+      "eng": {
+        "long": "Woman",
+        "short": "W",
+        "language": "eng"
+      }
+    },
+    "order": 2
+  },
+  "idNumber": "ISG-00004783",
+  "code": "ISG-00004783",
+  "countryOfNationality": {
+    "code": "BAN"
+  },
+  "organisation": {
+    "code": "BAN",
+    "description": {
+      "eng": {
+        "language": "eng",
+        "long": "Bangladesh",
+        "short": "Bangladesh"
+      },
+      "fra": {
+        "language": "fra",
+        "long": "Bangladesh",
+        "short": "Bangladesh"
+      },
+      "ara": {
+        "language": "ara",
+        "long": "بنغلاديش",
+        "short": "بنغلاديش"
+      }
+    },
+    "order": 6
+  },
+  "disciplines": [
+    {
+      "code": "FEN"
+    }
+  ],
+  "accreditationNumber": null
 }]
