@@ -159,6 +159,15 @@ export class FencingTeamToUnitMapper {
     const equipes = match.Equipe.filter( e => e !== "")
     const equipe1 = (match.Equipe[0] as TeamInMatch)?._Statut || ""
     const equipe2 = (match.Equipe[1] as TeamInMatch)?._Statut || ""
+
+    let status = "UNSCHEDULED";
+    if (equipes.length < 2) {
+      status = "UNSCHEDULED";
+    } else if ((equipe1 === "" || equipe2 === "") && equipes.some((e: unknown) => ( e as {_Score?: string})?._Score )) {
+      status = "RUNNING"
+    } else {
+      status = determineUnitStatus(equipe1, equipe2);
+    }
     return {
       unitsNumber: 1,
       code: rscVO.rscCode,

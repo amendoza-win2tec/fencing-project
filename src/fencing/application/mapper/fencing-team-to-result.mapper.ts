@@ -206,10 +206,18 @@ export class FencingTeamToResultMapper {
     let group1: GroupRequestResultDto | null = null;
     let group2: GroupRequestResultDto | null = null;
 
+    const irmResults = ['pblack', 'DNF', 'WO']
+
+    const irmMappers = {
+      'pblack': 'DNF',
+      'DNF': 'DNF',
+      'WO': 'WO',
+    }
+
     if (startList && startList.groups && startList.groups.length >= 2) {
       // Use groups from start list
       group1 = {
-        result: team1InMatch._Score ?? "",
+        result: irmResults.includes(team1InMatch._Score ?? "") ? irmMappers[team1InMatch._Score ?? ""] : team1InMatch._Score ?? "",
         groupId: startList.groups[0].groupId,
         name: startList.groups[0].name,
         delegation: startList.groups[0].delegation,
@@ -237,7 +245,7 @@ export class FencingTeamToResultMapper {
         })),
         rk: team1InMatch._Place || "",
         rkPo: parseInt(team1InMatch._Place || "1") - 1,
-        irm: "",
+        irm: irmResults.includes(team1InMatch._Score ?? "") ? irmMappers[team1InMatch._Score ?? ""] : "",
         winner: team1InMatch._Statut === 'V',
         wlt: team1InMatch._Statut === 'V' ? 'W' : (team1InMatch._Statut === 'D' || team1InMatch._Statut === 'DNF' || team1InMatch._Statut === 'WO') ? 'L' : '',
         qualified: "",
@@ -247,7 +255,7 @@ export class FencingTeamToResultMapper {
       };
 
       group2 = {
-        result: team2InMatch._Score ?? "",
+        result: irmResults.includes(team2InMatch._Score ?? "") ? irmMappers[team2InMatch._Score ?? ""] : team2InMatch._Score ?? "",
         groupId: startList.groups[1].groupId,
         name: startList.groups[1].name,
         delegation: startList.groups[1].delegation,
@@ -275,7 +283,7 @@ export class FencingTeamToResultMapper {
         })),
         rk: team2InMatch._Place || "",
         rkPo: parseInt(team2InMatch._Place || "2") - 1,
-        irm: "",
+        irm: irmResults.includes(team2InMatch._Score ?? "") ? irmMappers[team2InMatch._Score ?? ""] : "",
         winner: team2InMatch._Statut === 'V',
         wlt: team2InMatch._Statut === 'V' ? 'W' : (team2InMatch._Statut === 'D' || team2InMatch._Statut === 'DNF' || team2InMatch._Statut === 'WO') ? 'L' : '',
         qualified: "",
