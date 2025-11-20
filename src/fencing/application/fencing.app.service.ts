@@ -362,22 +362,22 @@ export class FencingService implements FencingAppServicePort {
       const results = this.fencingTeamToResultMapper.processTeamCompetitionWithStartLists(teamCompetition, startLists);
       const units = this.fencingTeamToUnitMapper.processTeamCompetitionUnits(teamCompetition,);
       
-      // // Send units to API
-      // for (const unit of units) {
-      //   await this.sendPouleToApi(unit);
-      // }
+      // Send units to API
+      for (const unit of units) {
+        await this.sendPouleToApi(unit);
+      }
       
-      // // Send start lists to API
-      // for (const startList of startLists) {
-      //   await this.sendStartListToApi(startList);
-      //   allStartLists.push(startList);
-      // }
+      // Send start lists to API
+      for (const startList of startLists) {
+        await this.sendStartListToApi(startList);
+        allStartLists.push(startList);
+      }
       
-      // // Send results to API
-      // for (const result of results) {
-      //   await this.sendResultToApi(result);
-      //   allResults.push(result);
-      // }
+      // Send results to API
+      for (const result of results) {
+        await this.sendResultToApi(result);
+        allResults.push(result);
+      }
       
       // Extract unit from the first result (assuming all results have the same unit structure)
       const unit = allResults.length > 0 ? allResults[0].metadata.unit : '';
