@@ -231,7 +231,7 @@ export class FencingTeamToParticipantMapper {
     const metadata = this.generateMetadata(competition, phase, unit);
 
     return {
-      competitorType: "TEAM",
+      competitorType: "HTEAM",
       metadata: metadata,
       groups: groups,
       participants: participants,

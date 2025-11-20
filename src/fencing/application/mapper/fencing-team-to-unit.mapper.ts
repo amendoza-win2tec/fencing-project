@@ -141,7 +141,7 @@ export class FencingTeamToUnitMapper {
       name: name,
       description: generateDescription(name, shortName),
       order: 1,
-      unitTypeCode: 'TEAM',
+      unitTypeCode: 'HTEAM',
       metadata: {
         discipline: 'FEN',
         gender: gender,
