@@ -4,7 +4,8 @@ import {
   TeamMatch, 
   TeamTableau,
   TeamSuiteDeTableaux,
-  Team
+  Team,
+  TeamInMatch
 } from '../../domain/interfaces/fencing-teams.interfaces';
 import { W2TECUnit, UnitMetadata, Description, DateInfo, MedalInfo, RSCCodeType } from '../../domain/interfaces/fencing.interfaces';
 
@@ -91,6 +92,23 @@ const generateMedalInfo = (phase: string): MedalInfo => {
   };
 };
 
+const determineUnitStatus = (status1: string, status2: string): string => {
+  const justScheduled = status1 === "" && status2 === "";
+
+  if (justScheduled) {
+    return 'SCHEDULED';
+  }
+  const isRunning = status1 === 'C' || status2 === 'C';
+  const isOfficial_StartList = status1 === 'V' || status2 === 'V'
+    ? 'OFFICIAL'
+    : 'START_LIST';
+
+  if (isRunning) {
+    return 'OFFICIAL';
+  }
+  return isOfficial_StartList;
+};
+
 const rscCodeConverter = (gender: string, phase: string, sportEvent: string, unit: string): RSCCodeType => {
   const discipline = 'FEN';
   const genderCode = genderDictionary[gender] || 'M';
@@ -136,6 +154,10 @@ export class FencingTeamToUnitMapper {
     
     const startDate = new Date(dateInfo.startDate);
     const medalsInfo = generateMedalInfo(phaseCode);
+
+    const equipes = match.Equipe.filter( e => e !== "")
+    const equipe1 = (match.Equipe[0] as TeamInMatch)?._Statut || ""
+    const equipe2 = (match.Equipe[1] as TeamInMatch)?._Statut || ""
     return {
       unitsNumber: 1,
       code: rscVO.rscCode,
@@ -156,7 +178,8 @@ export class FencingTeamToUnitMapper {
       location: locationDictionary[match._Piste],
       ...medalsInfo,
       venue: 'SEFC',
-      status: startDate < new Date() ? 'OFFICIAL' : 'START_LIST',
+      // status: startDate < new Date() ? 'OFFICIAL' : 'START_LIST',
+      status: equipes.length < 2  ? "UNSCHEDULED" : determineUnitStatus(equipe1, equipe2),
     };
   }
 

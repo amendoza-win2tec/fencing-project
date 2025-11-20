@@ -3,6 +3,24 @@
   "code": "FEN_ME_AZE",
   "name": "Azerbaijan",
   "delegation": "AZE",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
   "participants": [
     "ISG-00005675",
     "ISG-00005672",
@@ -15,6 +33,24 @@
   "code": "FEN_ME_BRN",
   "name": "Bahrain",
   "delegation": "BRN",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
   "participants": [
     "ISG-00002093",
     "ISG-00002028",
@@ -27,6 +63,24 @@
   "code": "FEN_ME_INA",
   "name": "Indonesia",
   "delegation": "INA",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
   "participants": [
     "ISG-00012490",
     "ISG-00012484",
@@ -38,6 +92,24 @@
   "code": "FEN_ME_IRI",
   "name": "IR Iran",
   "delegation": "IRI",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
   "participants": [
     "ISG-00003890",
     "ISG-00003891",
@@ -50,6 +122,24 @@
   "code": "FEN_ME_KAZ",
   "name": "Kazakhstan",
   "delegation": "KAZ",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
   "participants": [
     "ISG-00002626",
     "ISG-00002625",
@@ -61,6 +151,24 @@
   "code": "FEN_ME_KW",
   "name": "Kuwait",
   "delegation": "KUW",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
   "participants": [
     "ISG-00000582",
     "ISG-00000575",
@@ -72,6 +180,24 @@
   "code": "FEN_ME_KGZ",
   "name": "Kyrgyzstan",
   "delegation": "KGZ",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
   "participants": [
     "ISG-00005097",
     "ISG-00005098",
@@ -84,6 +210,24 @@
   "code": "FEN_ME_LBA",
   "name": "Libya",
   "delegation": "LBA",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
   "participants": [
     "ISG-00000244",
     "ISG-00000243",
@@ -95,6 +239,24 @@
   "code": "FEN_ME_OMA",
   "name": "Oman",
   "delegation": "OMA",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
   "participants": [
     "ISG-00005212",
     "ISG-00005217",
@@ -107,6 +269,24 @@
   "code": "FEN_ME_QAT",
   "name": "Qatar",
   "delegation": "QAT",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
   "participants": [
     "ISG-00013077",
     "ISG-00013074",
@@ -118,6 +298,24 @@
   "code": "FEN_ME_KSA",
   "name": "Saudi Arabia",
   "delegation": "KSA",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
   "participants": [
     "ISG-00002554",
     "ISG-00002553",
@@ -129,6 +327,24 @@
   "code": "FEN_ME_UAE",
   "name": "United Arab Emirates",
   "delegation": "UAE",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
   "participants": [
     "ISG-00008506",
     "ISG-00008476",
@@ -141,6 +357,24 @@
   "code": "FEN_ME_UZB",
   "name": "Uzbekistan",
   "delegation": "UZB",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
   "participants": [
     "ISG-00008593",
     "ISG-00008636",
@@ -152,6 +386,24 @@
   "code": "FEN_MF_BRN",
   "name": "Bahrain",
   "delegation": "BRN",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
   "participants": [
     "ISG-00002025",
     "ISG-00002028",
@@ -163,6 +415,24 @@
   "code": "FEN_MF_INA",
   "name": "Indonesia",
   "delegation": "INA",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
   "participants": [
     "ISG-00012486",
     "ISG-00012503",
@@ -174,6 +444,24 @@
   "code": "FEN_MF_OMA",
   "name": "Oman",
   "delegation": "OMA",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
   "participants": [
     "ISG-00005212",
     "ISG-00005217",
@@ -186,6 +474,24 @@
   "code": "FEN_MF_QAT",
   "name": "Qatar",
   "delegation": "QAT",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
   "participants": [
     "c4419f6a-2a5b-4ecb-9f51-8fa15446478e",
     "ISG-00013071",
@@ -197,6 +503,24 @@
   "code": "FEN_MF_KSA",
   "name": "Saudi Arabia",
   "delegation": "KSA",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
   "participants": [
     "ISG-00002561",
     "ISG-00002560",
@@ -208,6 +532,24 @@
   "code": "FEN_MF_UAE",
   "name": "United Arab Emirates",
   "delegation": "UAE",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
   "participants": [
     "ISG-00008476",
     "ISG-00008499",
@@ -220,6 +562,24 @@
   "code": "FEN_MF_UZB",
   "name": "Uzbekistan",
   "delegation": "UZB",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
   "participants": [
     "ISG-00008650",
     "ISG-00008656",
@@ -231,6 +591,24 @@
   "code": "FEN_MS_AZE",
   "name": "Azerbaijan",
   "delegation": "AZE",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
   "participants": [
     "ISG-00005727",
     "ISG-00005691",
@@ -243,6 +621,24 @@
   "code": "FEN_MS_INA",
   "name": "Indonesia",
   "delegation": "INA",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
   "participants": [
     "ISG-00012494",
     "ISG-00012504",
@@ -254,6 +650,24 @@
   "code": "FEN_MS_IRI",
   "name": "IR Iran",
   "delegation": "IRI",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
   "participants": [
     "ISG-00003917",
     "ISG-00003913",
@@ -266,6 +680,24 @@
   "code": "FEN_MS_KSA",
   "name": "Saudi Arabia",
   "delegation": "KSA",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
   "participants": [
     "ISG-00002268",
     "ISG-00002264",
@@ -277,6 +709,24 @@
   "code": "FEN_MS_TUN",
   "name": "Tunisia",
   "delegation": "TUN",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
   "participants": [
     "ISG-00017592",
     "ISG-00010109",
@@ -288,6 +738,24 @@
   "code": "FEN_MS_TUR",
   "name": "Turkey",
   "delegation": "TUR",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
   "participants": [
     "ISG-00013896",
     "ISG-00013897",
@@ -299,6 +767,24 @@
   "code": "FEN_MS_UAE",
   "name": "United Arab Emirates",
   "delegation": "UAE",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
   "participants": [
     "ISG-00008461",
     "ISG-00008479",
@@ -311,6 +797,24 @@
   "code": "FEN_MS_UZB",
   "name": "Uzbekistan",
   "delegation": "UZB",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
   "participants": [
     "ISG-00008661",
     "ISG-00008667",
@@ -322,6 +826,24 @@
   "code": "FEN_WS_AZE",
   "name": "Azerbaijan",
   "delegation": "AZE",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
   "participants": [
     "ISG-00005670",
     "ISG-00005693",
@@ -333,6 +855,24 @@
   "code": "FEN_WS_INA",
   "name": "Indonesia",
   "delegation": "INA",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
   "participants": [
     "ISG-00012478",
     "ISG-00012489",
@@ -344,6 +884,24 @@
   "code": "FEN_WS_KSA",
   "name": "Saudi Arabia",
   "delegation": "KSA",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
   "participants": [
     "ISG-00002294",
     "ISG-00002295",
@@ -355,6 +913,24 @@
   "code": "FEN_WS_TUR",
   "name": "Turkey",
   "delegation": "TUR",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
   "participants": [
     "ISG-00013907",
     "ISG-00013912",
@@ -366,9 +942,434 @@
   "code": "FEN_WS_UZB",
   "name": "Uzbekistan",
   "delegation": "UZB",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
   "participants": [
     "ISG-00008670",
     "ISG-00008674",
     "ISG-00008682"
+  ]
+},
+{
+  "groupId": 1048693774,
+  "code": "FEN_WF_INA",
+  "name": "Indonesia",
+  "delegation": "INA",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
+  "participants": [
+    "ISG-00012498",
+    "ISG-00012500",
+    "ISG-00012495"
+  ]
+},
+{
+  "groupId": 1671702933,
+  "code": "FEN_WF_BRN",
+  "name": "Bahrain",
+  "delegation": "BRN",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
+  "participants": [
+    "ISG-00002101",
+    "ISG-00002098",
+    "ISG-00002105"
+  ]
+},
+{
+  "groupId": 2329277221,
+  "code": "FEN_WF_OMA",
+  "name": "Oman",
+  "delegation": "OMA",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
+  "participants": [
+    "ISG-00005242",
+    "ISG-00005244",
+    "ISG-00005233"
+  ]
+},
+{
+  "groupId": 9080444130,
+  "code": "FEN_WF_KSA",
+  "name": "Saudi Arabia",
+  "delegation": "KSA",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
+  "participants": [
+    "ISG-00002564",
+    "ISG-00002565",
+    "ISG-00002568"
+  ]
+},
+{
+  "groupId": 9607442838,
+  "code": "FEN_WE_AZE",
+  "name": "Azerbaijan",
+  "delegation": "AZE",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
+  "participants": [
+    "ISG-00005678",
+    "ISG-00005677",
+    "ISG-00005679"
+  ]
+},
+{
+  "groupId": 7237062273,
+  "code": "FEN_WE_BRN",
+  "name": "Bahrain",
+  "delegation": "BRN",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
+  "participants": [
+    "ISG-00002098",
+    "ISG-00002101",
+    "ISG-00002105"
+  ]
+},
+{
+  "groupId": 7050614791,
+  "code": "FEN_WE_INA",
+  "name": "Indonesia",
+  "delegation": "INA",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
+  "participants": [
+    "ISG-00012489",
+    "ISG-00012487",
+    "ISG-00012500"
+  ]
+},
+{
+  "groupId": 4442776442,
+  "code": "FEN_WE_JOR",
+  "name": "Jordan",
+  "delegation": "JOR",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
+  "participants": [
+    "ISG-00002747",
+    "ISG-00003031",
+    "ISG-00003438"
+  ]
+},
+{
+  "groupId": 4298823722,
+  "code": "FEN_WE_KGZ",
+  "name": "Kyrgizstan",
+  "delegation": "KGZ",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
+  "participants": [
+    "ISG-00005107",
+    "ISG-00005105",
+    "ISG-00005103",
+    "ISG-00005104"
+  ]
+},
+{
+  "groupId": 6161119121,
+  "code": "FEN_WE_OMA",
+  "name": "Oman",
+  "delegation": "OMA",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
+  "participants": [
+    "ISG-00005233",
+    "ISG-00005238",
+    "ISG-00005242"
+  ]
+},
+{
+  "groupId": 2374029059,
+  "code": "FEN_WE_QAT",
+  "name": "Qatar",
+  "delegation": "QAT",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
+  "participants": [
+    "ISG-00013079",
+    "ISG-00013080",
+    "ISG-00013078"
+  ]
+},
+{
+  "groupId": 3639571542,
+  "code": "FEN_WE_KSA",
+  "name": "Saudi Arabia",
+  "delegation": "KSA",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
+  "participants": [
+    "ISG-00002556",
+    "ISG-00002559",
+    "ISG-00002558"
+  ]
+},
+{
+  "groupId": 3851012281,
+  "code": "FEN_WE_UAE",
+  "name": "United Arab Emirates",
+  "delegation": "UAE",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
+  "participants": [
+    "ISG-00008443",
+    "ISG-00008464",
+    "ISG-00044297"
+  ]
+},
+{
+  "groupId": 6345081311,
+  "code": "FEN_WE_UZB",
+  "name": "Uzbekistan",
+  "delegation": "UZB",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
+  "participants": [
+    "ISG-00008632",
+    "ISG-00008586",
+    "ISG-00008529"
   ]
 }]
