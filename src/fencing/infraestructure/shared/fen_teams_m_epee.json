@@ -1,11 +1,8 @@
 [{
-  "_id": {
-    "$oid": "691dcd454c610a65b9493e80"
-  },
-  "groupId": 8929923931,
-  "code": "FEN_ME_UZB",
-  "name": "Uzbekistan",
-  "delegation": "UZB",
+  "groupId": 5563826111,
+  "code": "FEN_ME_AZE",
+  "name": "Azerbaijan",
+  "delegation": "AZE",
   "discipline": {
     "code": "FEN",
     "description": {
@@ -24,582 +21,14 @@
     },
     "order": 8
   },
-  "sportEvent": {
-    "rscCode": "FENMTEAMEPEE----------------------",
-    "discipline": "FEN",
-    "gender": "M",
-    "sportEvent": "TEAMEPEE",
-    "modality": "team",
-    "category": "GENERAL",
-    "description": {
-      "eng": {
-        "long": "Fencing Men's Épée Team",
-        "short": "Fencing Men's Épée Team"
-      }
-    }
-  },
   "participants": [
-    "ISG-00008593",
-    "ISG-00008636",
-    "ISG-00008638"
-  ],
-  "active": true,
-  "createdAt": {
-    "$date": "2025-11-19T13:59:33.647Z"
-  },
-  "updatedAt": {
-    "$date": "2025-11-19T13:59:33.647Z"
-  },
-  "__v": 0
+    "ISG-00005675",
+    "ISG-00005672",
+    "ISG-00005676",
+    "ISG-00005674"
+  ]
 },
 {
-  "_id": {
-    "$oid": "691dccfc494ee2e00e7270e8"
-  },
-  "groupId": 9611833905,
-  "code": "FEN_ME_UAE",
-  "name": "United Arab Emirates",
-  "delegation": "UAE",
-  "discipline": {
-    "code": "FEN",
-    "description": {
-      "eng": {
-        "long": "Fencing",
-        "short": "Fencing"
-      },
-      "fra": {
-        "long": "Escrime",
-        "short": "Escrime"
-      },
-      "ara": {
-        "long": "مبارزة بالسيف",
-        "short": "مبارزة بالسيف"
-      }
-    },
-    "order": 8
-  },
-  "sportEvent": {
-    "rscCode": "FENMTEAMEPEE----------------------",
-    "discipline": "FEN",
-    "gender": "M",
-    "sportEvent": "TEAMEPEE",
-    "modality": "team",
-    "category": "GENERAL",
-    "description": {
-      "eng": {
-        "long": "Fencing Men's Épée Team",
-        "short": "Fencing Men's Épée Team"
-      }
-    }
-  },
-  "participants": [
-    "ISG-00008506",
-    "ISG-00008476",
-    "ISG-00008499",
-    "ISG-00044296"
-  ],
-  "active": true,
-  "createdAt": {
-    "$date": "2025-11-19T13:58:20.336Z"
-  },
-  "updatedAt": {
-    "$date": "2025-11-19T13:58:20.336Z"
-  },
-  "__v": 0
-},
-{
-  "_id": {
-    "$oid": "691dcc704c610a65b9492c83"
-  },
-  "groupId": 4258805784,
-  "code": "FEN_ME_KSA",
-  "name": "Saudi Arabia",
-  "delegation": "KSA",
-  "discipline": {
-    "code": "FEN",
-    "description": {
-      "eng": {
-        "long": "Fencing",
-        "short": "Fencing"
-      },
-      "fra": {
-        "long": "Escrime",
-        "short": "Escrime"
-      },
-      "ara": {
-        "long": "مبارزة بالسيف",
-        "short": "مبارزة بالسيف"
-      }
-    },
-    "order": 8
-  },
-  "sportEvent": {
-    "rscCode": "FENMTEAMEPEE----------------------",
-    "discipline": "FEN",
-    "gender": "M",
-    "sportEvent": "TEAMEPEE",
-    "modality": "team",
-    "category": "GENERAL",
-    "description": {
-      "eng": {
-        "long": "Fencing Men's Épée Team",
-        "short": "Fencing Men's Épée Team"
-      }
-    }
-  },
-  "participants": [
-    "ISG-00002554",
-    "ISG-00002553",
-    "ISG-00002552"
-  ],
-  "active": true,
-  "createdAt": {
-    "$date": "2025-11-19T13:56:00.894Z"
-  },
-  "updatedAt": {
-    "$date": "2025-11-19T13:56:00.894Z"
-  },
-  "__v": 0
-},
-{
-  "_id": {
-    "$oid": "691dcc274c610a65b949172c"
-  },
-  "groupId": 4856034027,
-  "code": "FEN_ME_QAT",
-  "name": "Qatar",
-  "delegation": "QAT",
-  "discipline": {
-    "code": "FEN",
-    "description": {
-      "eng": {
-        "long": "Fencing",
-        "short": "Fencing"
-      },
-      "fra": {
-        "long": "Escrime",
-        "short": "Escrime"
-      },
-      "ara": {
-        "long": "مبارزة بالسيف",
-        "short": "مبارزة بالسيف"
-      }
-    },
-    "order": 8
-  },
-  "sportEvent": {
-    "rscCode": "FENMTEAMEPEE----------------------",
-    "discipline": "FEN",
-    "gender": "M",
-    "sportEvent": "TEAMEPEE",
-    "modality": "team",
-    "category": "GENERAL",
-    "description": {
-      "eng": {
-        "long": "Fencing Men's Épée Team",
-        "short": "Fencing Men's Épée Team"
-      }
-    }
-  },
-  "participants": [
-    "ISG-00013077",
-    "ISG-00013074",
-    "ISG-00013073"
-  ],
-  "active": true,
-  "createdAt": {
-    "$date": "2025-11-19T13:54:47.757Z"
-  },
-  "updatedAt": {
-    "$date": "2025-11-19T13:54:47.757Z"
-  },
-  "__v": 0
-},
-{
-  "_id": {
-    "$oid": "691dcbbd4c610a65b9490d55"
-  },
-  "groupId": 1747895655,
-  "code": "FEN_ME_OMA",
-  "name": "Oman",
-  "delegation": "OMA",
-  "discipline": {
-    "code": "FEN",
-    "description": {
-      "eng": {
-        "long": "Fencing",
-        "short": "Fencing"
-      },
-      "fra": {
-        "long": "Escrime",
-        "short": "Escrime"
-      },
-      "ara": {
-        "long": "مبارزة بالسيف",
-        "short": "مبارزة بالسيف"
-      }
-    },
-    "order": 8
-  },
-  "sportEvent": {
-    "rscCode": "FENMTEAMEPEE----------------------",
-    "discipline": "FEN",
-    "gender": "M",
-    "sportEvent": "TEAMEPEE",
-    "modality": "team",
-    "category": "GENERAL",
-    "description": {
-      "eng": {
-        "long": "Fencing Men's Épée Team",
-        "short": "Fencing Men's Épée Team"
-      }
-    }
-  },
-  "participants": [
-    "ISG-00005212",
-    "ISG-00005217",
-    "ISG-00005220",
-    "ISG-00005228"
-  ],
-  "active": true,
-  "createdAt": {
-    "$date": "2025-11-19T13:53:01.716Z"
-  },
-  "updatedAt": {
-    "$date": "2025-11-19T13:53:22.470Z"
-  },
-  "__v": 1
-},
-{
-  "_id": {
-    "$oid": "691dcb5d4c610a65b9490c96"
-  },
-  "groupId": 3718723082,
-  "code": "FEN_ME_LBA",
-  "name": "Libya",
-  "delegation": "LBA",
-  "discipline": {
-    "code": "FEN",
-    "description": {
-      "eng": {
-        "long": "Fencing",
-        "short": "Fencing"
-      },
-      "fra": {
-        "long": "Escrime",
-        "short": "Escrime"
-      },
-      "ara": {
-        "long": "مبارزة بالسيف",
-        "short": "مبارزة بالسيف"
-      }
-    },
-    "order": 8
-  },
-  "sportEvent": {
-    "rscCode": "FENMTEAMEPEE----------------------",
-    "discipline": "FEN",
-    "gender": "M",
-    "sportEvent": "TEAMEPEE",
-    "modality": "team",
-    "category": "GENERAL",
-    "description": {
-      "eng": {
-        "long": "Fencing Men's Épée Team",
-        "short": "Fencing Men's Épée Team"
-      }
-    }
-  },
-  "participants": [
-    "ISG-00000244",
-    "ISG-00000243",
-    "ISG-00000241"
-  ],
-  "active": true,
-  "createdAt": {
-    "$date": "2025-11-19T13:51:25.641Z"
-  },
-  "updatedAt": {
-    "$date": "2025-11-19T13:51:25.641Z"
-  },
-  "__v": 0
-},
-{
-  "_id": {
-    "$oid": "691dcb084c610a65b9490be3"
-  },
-  "groupId": 2069024444,
-  "code": "FEN_ME_KGZ",
-  "name": "Kyrgyzstan",
-  "delegation": "KGZ",
-  "discipline": {
-    "code": "FEN",
-    "description": {
-      "eng": {
-        "long": "Fencing",
-        "short": "Fencing"
-      },
-      "fra": {
-        "long": "Escrime",
-        "short": "Escrime"
-      },
-      "ara": {
-        "long": "مبارزة بالسيف",
-        "short": "مبارزة بالسيف"
-      }
-    },
-    "order": 8
-  },
-  "sportEvent": {
-    "rscCode": "FENMTEAMEPEE----------------------",
-    "discipline": "FEN",
-    "gender": "M",
-    "sportEvent": "TEAMEPEE",
-    "modality": "team",
-    "category": "GENERAL",
-    "description": {
-      "eng": {
-        "long": "Fencing Men's Épée Team",
-        "short": "Fencing Men's Épée Team"
-      }
-    }
-  },
-  "participants": [
-    "ISG-00005097",
-    "ISG-00005098",
-    "ISG-00005100",
-    "ISG-00005101"
-  ],
-  "active": true,
-  "createdAt": {
-    "$date": "2025-11-19T13:50:00.615Z"
-  },
-  "updatedAt": {
-    "$date": "2025-11-19T13:50:00.615Z"
-  },
-  "__v": 0
-},
-{
-  "_id": {
-    "$oid": "691dca6c4c610a65b948f80b"
-  },
-  "groupId": 7783323884,
-  "code": "FEN_ME_KW",
-  "name": "Kuwait",
-  "delegation": "KUW",
-  "discipline": {
-    "code": "FEN",
-    "description": {
-      "eng": {
-        "long": "Fencing",
-        "short": "Fencing"
-      },
-      "fra": {
-        "long": "Escrime",
-        "short": "Escrime"
-      },
-      "ara": {
-        "long": "مبارزة بالسيف",
-        "short": "مبارزة بالسيف"
-      }
-    },
-    "order": 8
-  },
-  "sportEvent": {
-    "rscCode": "FENMTEAMEPEE----------------------",
-    "discipline": "FEN",
-    "gender": "M",
-    "sportEvent": "TEAMEPEE",
-    "modality": "team",
-    "category": "GENERAL",
-    "description": {
-      "eng": {
-        "long": "Fencing Men's Épée Team",
-        "short": "Fencing Men's Épée Team"
-      }
-    }
-  },
-  "participants": [
-    "ISG-00000582",
-    "ISG-00000575",
-    "ISG-00000577"
-  ],
-  "active": true,
-  "createdAt": {
-    "$date": "2025-11-19T13:47:24.432Z"
-  },
-  "updatedAt": {
-    "$date": "2025-11-19T13:47:24.432Z"
-  },
-  "__v": 0
-},
-{
-  "_id": {
-    "$oid": "691dca2c4c610a65b948f30a"
-  },
-  "groupId": 8827949603,
-  "code": "FEN_ME_KAZ",
-  "name": "Kazakhstan",
-  "delegation": "KAZ",
-  "discipline": {
-    "code": "FEN",
-    "description": {
-      "eng": {
-        "long": "Fencing",
-        "short": "Fencing"
-      },
-      "fra": {
-        "long": "Escrime",
-        "short": "Escrime"
-      },
-      "ara": {
-        "long": "مبارزة بالسيف",
-        "short": "مبارزة بالسيف"
-      }
-    },
-    "order": 8
-  },
-  "sportEvent": {
-    "rscCode": "FENMTEAMEPEE----------------------",
-    "discipline": "FEN",
-    "gender": "M",
-    "sportEvent": "TEAMEPEE",
-    "modality": "team",
-    "category": "GENERAL",
-    "description": {
-      "eng": {
-        "long": "Fencing Men's Épée Team",
-        "short": "Fencing Men's Épée Team"
-      }
-    }
-  },
-  "participants": [
-    "ISG-00002626",
-    "ISG-00002625",
-    "ISG-00002624"
-  ],
-  "active": true,
-  "createdAt": {
-    "$date": "2025-11-19T13:46:20.135Z"
-  },
-  "updatedAt": {
-    "$date": "2025-11-19T13:46:20.135Z"
-  },
-  "__v": 0
-},
-{
-  "_id": {
-    "$oid": "691dc9a34c610a65b948e404"
-  },
-  "groupId": 1097858476,
-  "code": "FEN_ME_IRI",
-  "name": "IR Iran",
-  "delegation": "IRI",
-  "discipline": {
-    "code": "FEN",
-    "description": {
-      "eng": {
-        "long": "Fencing",
-        "short": "Fencing"
-      },
-      "fra": {
-        "long": "Escrime",
-        "short": "Escrime"
-      },
-      "ara": {
-        "long": "مبارزة بالسيف",
-        "short": "مبارزة بالسيف"
-      }
-    },
-    "order": 8
-  },
-  "sportEvent": {
-    "rscCode": "FENMTEAMEPEE----------------------",
-    "discipline": "FEN",
-    "gender": "M",
-    "sportEvent": "TEAMEPEE",
-    "modality": "team",
-    "category": "GENERAL",
-    "description": {
-      "eng": {
-        "long": "Fencing Men's Épée Team",
-        "short": "Fencing Men's Épée Team"
-      }
-    }
-  },
-  "participants": [
-    "ISG-00003890",
-    "ISG-00003891",
-    "ISG-00003892",
-    "ISG-00003894"
-  ],
-  "active": true,
-  "createdAt": {
-    "$date": "2025-11-19T13:44:03.352Z"
-  },
-  "updatedAt": {
-    "$date": "2025-11-19T13:44:03.352Z"
-  },
-  "__v": 0
-},
-{
-  "_id": {
-    "$oid": "691dc9304c610a65b948c524"
-  },
-  "groupId": 1219842307,
-  "code": "FEN_ME_INA",
-  "name": "Indonesia",
-  "delegation": "INA",
-  "discipline": {
-    "code": "FEN",
-    "description": {
-      "eng": {
-        "long": "Fencing",
-        "short": "Fencing"
-      },
-      "fra": {
-        "long": "Escrime",
-        "short": "Escrime"
-      },
-      "ara": {
-        "long": "مبارزة بالسيف",
-        "short": "مبارزة بالسيف"
-      }
-    },
-    "order": 8
-  },
-  "sportEvent": {
-    "rscCode": "FENMTEAMEPEE----------------------",
-    "discipline": "FEN",
-    "gender": "M",
-    "sportEvent": "TEAMEPEE",
-    "modality": "team",
-    "category": "GENERAL",
-    "description": {
-      "eng": {
-        "long": "Fencing Men's Épée Team",
-        "short": "Fencing Men's Épée Team"
-      }
-    }
-  },
-  "participants": [
-    "ISG-00012490",
-    "ISG-00012484",
-    "ISG-00012486"
-  ],
-  "active": true,
-  "createdAt": {
-    "$date": "2025-11-19T13:42:08.807Z"
-  },
-  "updatedAt": {
-    "$date": "2025-11-19T13:42:08.807Z"
-  },
-  "__v": 0
-},
-{
-  "_id": {
-    "$oid": "691dc8374c610a65b948bbe1"
-  },
   "groupId": 3991435434,
   "code": "FEN_ME_BRN",
   "name": "Bahrain",
@@ -622,43 +51,18 @@
     },
     "order": 8
   },
-  "sportEvent": {
-    "rscCode": "FENMTEAMEPEE----------------------",
-    "discipline": "FEN",
-    "gender": "M",
-    "sportEvent": "TEAMEPEE",
-    "modality": "team",
-    "category": "GENERAL",
-    "description": {
-      "eng": {
-        "long": "Fencing Men's Épée Team",
-        "short": "Fencing Men's Épée Team"
-      }
-    }
-  },
   "participants": [
     "ISG-00002093",
     "ISG-00002028",
     "ISG-00002095",
     "ISG-00002096"
-  ],
-  "active": true,
-  "createdAt": {
-    "$date": "2025-11-19T13:37:59.136Z"
-  },
-  "updatedAt": {
-    "$date": "2025-11-19T13:37:59.136Z"
-  },
-  "__v": 0
+  ]
 },
 {
-  "_id": {
-    "$oid": "691dc7f94c610a65b948bbca"
-  },
-  "groupId": 5563826111,
-  "code": "ME_AZE",
-  "name": "Azerbaijan",
-  "delegation": "AZE",
+  "groupId": 1219842307,
+  "code": "FEN_ME_INA",
+  "name": "Indonesia",
+  "delegation": "INA",
   "discipline": {
     "code": "FEN",
     "description": {
@@ -677,32 +81,508 @@
     },
     "order": 8
   },
-  "sportEvent": {
-    "rscCode": "FENMTEAMEPEE----------------------",
-    "discipline": "FEN",
-    "gender": "M",
-    "sportEvent": "TEAMEPEE",
-    "modality": "team",
-    "category": "GENERAL",
+  "participants": [
+    "ISG-00012490",
+    "ISG-00012484",
+    "ISG-00012486"
+  ]
+},
+{
+  "groupId": 1097858476,
+  "code": "FEN_ME_IRI",
+  "name": "IR Iran",
+  "delegation": "IRI",
+  "discipline": {
+    "code": "FEN",
     "description": {
       "eng": {
-        "long": "Fencing Men's Épée Team",
-        "short": "Fencing Men's Épée Team"
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
       }
-    }
+    },
+    "order": 8
   },
   "participants": [
-    "ISG-00005675",
-    "ISG-00005672",
-    "ISG-00005676",
-    "ISG-00005674"
-  ],
-  "active": true,
-  "createdAt": {
-    "$date": "2025-11-19T13:36:57.227Z"
+    "ISG-00003890",
+    "ISG-00003891",
+    "ISG-00003892",
+    "ISG-00003894"
+  ]
+},
+{
+  "groupId": 8827949603,
+  "code": "FEN_ME_KAZ",
+  "name": "Kazakhstan",
+  "delegation": "KAZ",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
   },
-  "updatedAt": {
-    "$date": "2025-11-19T13:36:57.227Z"
+  "participants": [
+    "ISG-00002626",
+    "ISG-00002625",
+    "ISG-00002624"
+  ]
+},
+{
+  "groupId": 7783323884,
+  "code": "FEN_ME_KW",
+  "name": "Kuwait",
+  "delegation": "KUW",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
   },
-  "__v": 0
+  "participants": [
+    "ISG-00000582",
+    "ISG-00000575",
+    "ISG-00000577"
+  ]
+},
+{
+  "groupId": 2069024444,
+  "code": "FEN_ME_KGZ",
+  "name": "Kyrgyzstan",
+  "delegation": "KGZ",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
+  "participants": [
+    "ISG-00005097",
+    "ISG-00005098",
+    "ISG-00005100",
+    "ISG-00005101"
+  ]
+},
+{
+  "groupId": 3718723082,
+  "code": "FEN_ME_LBA",
+  "name": "Libya",
+  "delegation": "LBA",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
+  "participants": [
+    "ISG-00000244",
+    "ISG-00000243",
+    "ISG-00000241"
+  ]
+},
+{
+  "groupId": 1747895655,
+  "code": "FEN_ME_OMA",
+  "name": "Oman",
+  "delegation": "OMA",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
+  "participants": [
+    "ISG-00005212",
+    "ISG-00005217",
+    "ISG-00005220",
+    "ISG-00005228"
+  ]
+},
+{
+  "groupId": 4856034027,
+  "code": "FEN_ME_QAT",
+  "name": "Qatar",
+  "delegation": "QAT",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
+  "participants": [
+    "ISG-00013077",
+    "ISG-00013074",
+    "ISG-00013073"
+  ]
+},
+{
+  "groupId": 4258805784,
+  "code": "FEN_ME_KSA",
+  "name": "Saudi Arabia",
+  "delegation": "KSA",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
+  "participants": [
+    "ISG-00002554",
+    "ISG-00002553",
+    "ISG-00002552"
+  ]
+},
+{
+  "groupId": 9611833905,
+  "code": "FEN_ME_UAE",
+  "name": "United Arab Emirates",
+  "delegation": "UAE",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
+  "participants": [
+    "ISG-00008506",
+    "ISG-00008476",
+    "ISG-00008499",
+    "ISG-00044296"
+  ]
+},
+{
+  "groupId": 8929923931,
+  "code": "FEN_ME_UZB",
+  "name": "Uzbekistan",
+  "delegation": "UZB",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
+  "participants": [
+    "ISG-00008593",
+    "ISG-00008636",
+    "ISG-00008638"
+  ]
+},
+{
+  "groupId": 7584576103,
+  "code": "FEN_MF_BRN",
+  "name": "Bahrain",
+  "delegation": "BRN",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
+  "participants": [
+    "ISG-00002025",
+    "ISG-00002028",
+    "ISG-00002093"
+  ]
+},
+{
+  "groupId": 6187494458,
+  "code": "FEN_MF_INA",
+  "name": "Indonesia",
+  "delegation": "INA",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
+  "participants": [
+    "ISG-00012486",
+    "ISG-00012503",
+    "ISG-00012504"
+  ]
+},
+{
+  "groupId": 4123952065,
+  "code": "FEN_MF_OMA",
+  "name": "Oman",
+  "delegation": "OMA",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
+  "participants": [
+    "ISG-00005212",
+    "ISG-00005217",
+    "ISG-00005220",
+    "ISG-00005228"
+  ]
+},
+{
+  "groupId": 3300059090,
+  "code": "FEN_MF_QAT",
+  "name": "Qatar",
+  "delegation": "QAT",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
+  "participants": [
+    "c4419f6a-2a5b-4ecb-9f51-8fa15446478e",
+    "ISG-00013071",
+    "ISG-00013069"
+  ]
+},
+{
+  "groupId": 6495055044,
+  "code": "FEN_MF_KSA",
+  "name": "Saudi Arabia",
+  "delegation": "KSA",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
+  "participants": [
+    "ISG-00002561",
+    "ISG-00002560",
+    "ISG-00002563"
+  ]
+},
+{
+  "groupId": 8538740086,
+  "code": "FEN_MF_UAE",
+  "name": "United Arab Emirates",
+  "delegation": "UAE",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
+  "participants": [
+    "ISG-00008476",
+    "ISG-00008499",
+    "ISG-00008461",
+    "ISG-00008506"
+  ]
+},
+{
+  "groupId": 9199103800,
+  "code": "FEN_MF_UZB",
+  "name": "Uzbekistan",
+  "delegation": "UZB",
+  "discipline": {
+    "code": "FEN",
+    "description": {
+      "eng": {
+        "long": "Fencing",
+        "short": "Fencing"
+      },
+      "fra": {
+        "long": "Escrime",
+        "short": "Escrime"
+      },
+      "ara": {
+        "long": "مبارزة بالسيف",
+        "short": "مبارزة بالسيف"
+      }
+    },
+    "order": 8
+  },
+  "participants": [
+    "ISG-00008650",
+    "ISG-00008656",
+    "ISG-00008657"
+  ]
 }]
