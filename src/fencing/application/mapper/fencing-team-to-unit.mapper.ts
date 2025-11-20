@@ -94,10 +94,11 @@ const generateMedalInfo = (phase: string): MedalInfo => {
 const rscCodeConverter = (gender: string, phase: string, sportEvent: string, unit: string): RSCCodeType => {
   const discipline = 'FEN';
   const genderCode = genderDictionary[gender] || 'M';
-  const sportEventCode = sportEventDictionary[sportEvent] || 'TEAMSABR';
+  // const sportEventCode = sportEventDictionary[sportEvent] || 'TEAMSABR';
+  const sportEventCode = sportEvent;
   const phaseCode = phaseDictionary[phase] || phase;
   const unitCode = unit.padStart(4, '0');
-  const phaseRscCode = `${discipline}${genderCode}${sportEventCode.padEnd(18, '-')}${phaseCode.padEnd(4, '-')}--------` 
+  const phaseRscCode = `${discipline}${genderCode}${sportEventCode.padEnd(18, '-')}${phaseCode.padEnd(4, '-')}--------`;
   const rscCode = `${discipline}${genderCode}${sportEventCode.padEnd(18, '-')}${phaseCode.padEnd(4, '-')}${unitCode.padEnd(4, '-')}`;
   
   return {

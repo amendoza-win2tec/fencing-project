@@ -360,7 +360,7 @@ export class FencingService implements FencingAppServicePort {
       // Process team competition using the team mappers
       const startLists = this.fencingTeamToParticipantMapper.processTeamCompetitionStartList(teamCompetition);
       const results = this.fencingTeamToResultMapper.processTeamCompetitionWithStartLists(teamCompetition, startLists);
-      const units = this.fencingTeamToUnitMapper.processTeamCompetitionUnits(teamCompetition);
+      const units = this.fencingTeamToUnitMapper.processTeamCompetitionUnits(teamCompetition,);
       
       // Send units to API
       for (const unit of units) {

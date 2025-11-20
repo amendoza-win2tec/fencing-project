@@ -24,6 +24,7 @@ export interface TeamInMatch {
   _Statut?: 'V' | 'D' | '';
   _Place?: string;
   _Cote?: 'D' | 'G';
+  _Score?: string;
 }
 
 export interface TeamMatch {

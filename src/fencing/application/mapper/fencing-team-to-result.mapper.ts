@@ -209,7 +209,7 @@ export class FencingTeamToResultMapper {
     if (startList && startList.groups && startList.groups.length >= 2) {
       // Use groups from start list
       group1 = {
-        result: team1InMatch._Statut === 'V' ? '1' : '0',
+        result: team1InMatch._Score,
         groupId: startList.groups[0].groupId,
         name: startList.groups[0].name,
         delegation: startList.groups[0].delegation,
@@ -247,7 +247,7 @@ export class FencingTeamToResultMapper {
       };
 
       group2 = {
-        result: team2InMatch._Statut === 'V' ? '1' : '0',
+        result: team2InMatch._Score,
         groupId: startList.groups[1].groupId,
         name: startList.groups[1].name,
         delegation: startList.groups[1].delegation,
@@ -420,6 +420,9 @@ export class FencingTeamToResultMapper {
     if (!periodResult) {
       return null;
     }
+
+    const team1 = match.Equipe[0] as TeamInMatch;
+    const team2 = match.Equipe[1] as TeamInMatch;
 
     const metadata = this.generateMetadata(competition, phase, unit);
     
