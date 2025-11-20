@@ -1345,6 +1345,18 @@
   ]
 },
 {
+  "groupId": 3313824163,
+  "code": "FEN_WE_TUR",
+  "name": "Turkey",
+  "delegation": "TUR",
+  "participants": [
+    "ISG-00013957",
+    "ISG-00013940",
+    "ISG-00013963"
+  ],
+  "active": true
+},
+{
   "groupId": 6345081311,
   "code": "FEN_WE_UZB",
   "name": "Uzbekistan",
