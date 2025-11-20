@@ -21,7 +21,7 @@ export interface Team {
 
 export interface TeamInMatch {
   _REF: string;
-  _Statut?: 'V' | 'D' | '';
+  _Statut?: 'V' | 'D' | 'DNF' | 'WO' | '';
   _Place?: string;
   _Cote?: 'D' | 'G';
   _Score?: string;

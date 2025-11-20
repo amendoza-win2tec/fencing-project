@@ -27,6 +27,7 @@ const phaseDictionary: Record<string, string> = {
 const genderDictionary: Record<string, string> = {
   F: 'W',
   M: 'M',
+  W: 'W'
 };
 
 const sportEventDictionary: Record<string, string> = {

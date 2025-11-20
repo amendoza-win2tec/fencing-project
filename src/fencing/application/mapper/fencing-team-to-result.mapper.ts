@@ -209,7 +209,7 @@ export class FencingTeamToResultMapper {
     if (startList && startList.groups && startList.groups.length >= 2) {
       // Use groups from start list
       group1 = {
-        result: team1InMatch._Score,
+        result: team1InMatch._Score ?? "",
         groupId: startList.groups[0].groupId,
         name: startList.groups[0].name,
         delegation: startList.groups[0].delegation,
@@ -239,15 +239,15 @@ export class FencingTeamToResultMapper {
         rkPo: parseInt(team1InMatch._Place || "1") - 1,
         irm: "",
         winner: team1InMatch._Statut === 'V',
-        wlt: team1InMatch._Statut === 'V' ? 'W' : team1InMatch._Statut === 'D' ? 'L' : '',
+        wlt: team1InMatch._Statut === 'V' ? 'W' : (team1InMatch._Statut === 'D' || team1InMatch._Statut === 'DNF' || team1InMatch._Statut === 'WO') ? 'L' : '',
         qualified: "",
-          difference: "",
+        difference: "",
         bib: "",
         street: team1InMatch._Cote || "",
       };
 
       group2 = {
-        result: team2InMatch._Score,
+        result: team2InMatch._Score ?? "",
         groupId: startList.groups[1].groupId,
         name: startList.groups[1].name,
         delegation: startList.groups[1].delegation,
@@ -277,9 +277,9 @@ export class FencingTeamToResultMapper {
         rkPo: parseInt(team2InMatch._Place || "2") - 1,
         irm: "",
         winner: team2InMatch._Statut === 'V',
-        wlt: team2InMatch._Statut === 'V' ? 'W' : team2InMatch._Statut === 'D' ? 'L' : '',
+        wlt: team2InMatch._Statut === 'V' ? 'W' : (team2InMatch._Statut === 'D' || team2InMatch._Statut === 'DNF' || team2InMatch._Statut === 'WO') ? 'L' : '',
         qualified: "",
-          difference: "",
+        difference: "",
         bib: "",
         street: team2InMatch._Cote || "",
       };
@@ -293,7 +293,7 @@ export class FencingTeamToResultMapper {
       return null;
     }
 
-    const result = `${group1.result} - ${group2.result}`;
+    const result = `${group1.result ?? ""} - ${group2.result ?? ""}`;
 
     return {
       result: result,
@@ -302,10 +302,10 @@ export class FencingTeamToResultMapper {
       order: parseInt(match._ID),
       duration: "",
       distance: "",
-      resHome: group1.result,
-      resAway: group2.result,
-      totalHome: group1.result,
-      totalAway: group2.result,
+      resHome: group1.result ?? "",
+      resAway: group2.result ?? "",
+      totalHome: group1.result ?? "",
+      totalAway: group2.result ?? "",
       periodId: `period_${match._ID}`,
       participants: [],
       groups: [group1, group2],
