@@ -1,7 +1,5 @@
 import { Controller, Post, Body, BadRequestException, Req, RawBodyRequest, Logger } from '@nestjs/common';
 import { MessagePattern, Payload } from '@nestjs/microservices';
-import { Queue } from 'bullmq';
-import { InjectQueue } from '@nestjs/bullmq';
 import { Request } from 'express';
 import { FencingService } from '../../application/fencing.app.service';
 import { 
@@ -22,8 +20,7 @@ import * as xml2js from 'xml2js';
 export class FencingController {
   private readonly logger = new Logger(FencingController.name);
 
-  constructor(@InjectQueue('fen-mim') private readonly fenMiMQueue: Queue, 
-  private readonly fencingService: FencingService) {}
+  constructor(private readonly fencingService: FencingService) {}
 
   @Post('process-xml')
   async processFencingXml(@Req() req: RawBodyRequest<Request>): Promise<FencingProcessResponse> {
@@ -118,7 +115,7 @@ export class FencingController {
   async processFencingTeamsXml(@Req() req: RawBodyRequest<Request>): Promise<{ success: boolean; data: { results: CreateResultDto[], startLists: CreateStartListDto[], unit: string }; message: string }> {
     try {
       // Get XML content from raw body
-      const xmlContent = req.body?.toString('utf8');
+      const xmlContent = req.body?.toString('utf8').replace("\ufeff", "");
       
       if (!xmlContent) {
         throw new BadRequestException('XML content is required');

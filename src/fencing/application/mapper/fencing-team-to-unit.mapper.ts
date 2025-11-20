@@ -48,7 +48,7 @@ const generateDescription = (name: string, shortName: string): Description => {
 
 const generateDateInfo = (date: string, time?: string): DateInfo => {
   const splittedDate = date.split('.');
-  const parsedDate = `${splittedDate[2]}-${splittedDate[1]}-${splittedDate[0]}T${time}:00`;
+  const parsedDate = `${2025}-${11}-${20}T${time}:00`;
   
   return {
     startDate: parsedDate,
@@ -57,14 +57,14 @@ const generateDateInfo = (date: string, time?: string): DateInfo => {
 };
 
 const locationDictionary: Record<string, string> = {
-  'GREEN': '6cd841a7-53fe-40e6-9fb3-88a5c7bb5ca9',
-  'RED': '87cfd7c7-9ea7-40f1-86d8-c87e0b07e0d2',
-  'BLUE': '186fb422-8cd0-402c-b6ea-3d9caae13526',
-  'YELLOW': '48ddff12-af02-449e-9f17-1ffd6bcaad1c',
-  'FINAL': '3c5bddd0-990a-498c-8fd7-3c16becd9363',
-  'PODIUM': '3c5bddd0-990a-498c-8fd7-3c16becd9363'
+  'GREEN': '27d0dfdc-eba2-4c52-93ea-64543dbff01b',
+  'RED': 'd1780522-d1c2-4706-b4ee-48ffb07338ef',
+  'BLUE': '5b800390-38ab-4813-8945-fe0358676393',
+  'YELLOW': '04b90608-4cd2-4575-adb1-72c383205857',
+  'FINAL': '258b0efe-d0ec-421a-b60c-14fe0d05f396',
+  'BLACK': '258b0efe-d0ec-421a-b60c-14fe0d05f396',
+  '5': '258b0efe-d0ec-421a-b60c-14fe0d05f396',
 };
-
 
 
 const generateMedalInfo = (phase: string): MedalInfo => {
@@ -154,7 +154,7 @@ export class FencingTeamToUnitMapper {
       dateInfo: dateInfo,
       location: locationDictionary[match._Piste],
       ...medalsInfo,
-      venue: 'GSP',
+      venue: 'SEFC',
       status: startDate < new Date() ? 'OFFICIAL' : 'START_LIST',
     };
   }

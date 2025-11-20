@@ -81,10 +81,10 @@ export class FencingTeamToResultMapper {
       if (group && group.participants && group.participants[index]) {
         const participant = group.participants[index];
         return {
-          participantId: participant.participantId,
+          participantId: participant.idParticipant,
           name: participant.name,
           surname: participant.surname,
-          delegation: participant.delegation,
+          delegation: participant.organisation.code,
           startingOrder: (index + 1).toString(),
           startingSortOrder: index,
           bib: teamMember._dossard,
@@ -124,10 +124,10 @@ export class FencingTeamToResultMapper {
     // Use all participants from the group
     group.participants.forEach((participant, index) => {
       participants.push({
-        participantId: participant.participantId,
+        participantId: participant.idParticipant,
         name: participant.name,
         surname: participant.surname,
-        delegation: participant.delegation,
+        delegation: participant.organisation.code,
         startingOrder: (index + 1).toString(),
         startingSortOrder: index,
         bib: "", // Will be filled from team member data if available
@@ -523,11 +523,25 @@ export class FencingTeamToResultMapper {
     tableaux.forEach(tableau => {
       if (!tableau.Match) return;
       
+      const dictionartPhases = {
+        'A16': 'R16',
+        'A32': 'R32',
+        'A8': '8FNL',
+        'A4': 'SFNL',
+        'A2': 'FNL',
+        'B2': 'REPF',
+        'POULE1': 'GP01',
+        'POULE2': 'GP02',
+        'POULE3': 'GP03',
+        'POULE4': 'GP04',
+        'POULE5': 'GP05',
+        'POULE6': 'GP06',
+      }
       const matches = Array.isArray(tableau.Match) ? tableau.Match : [tableau.Match];
       matches.forEach(match => {
         // Find corresponding start list for this match
         const correspondingStartList = startLists.find(sl => 
-          sl.metadata.unit === match._ID && sl.metadata.phase === tableau._ID
+          sl.metadata.unit === match._ID.padStart(4, '0') && sl.metadata.phase === dictionartPhases[tableau._ID]
         );
         
         const result = this.createTeamResultDtoWithStartList(competition, match, tableau._ID, match._ID, correspondingStartList);

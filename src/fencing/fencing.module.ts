@@ -12,20 +12,9 @@ import { FencingToResultMapper } from './application/mapper/fencing-to-result.ma
 import { FencingTeamToResultMapper } from './application/mapper/fencing-team-to-result.mapper';
 import { FencingTeamToParticipantMapper } from './application/mapper/fencing-team-to-participant.mapper';
 import { FencingTeamToUnitMapper } from './application/mapper/fencing-team-to-unit.mapper';
-import { BullModule } from '@nestjs/bullmq';
 
 @Module({
-  imports: [ConfigModule,
-    BullModule.registerQueue({
-      name: "fen-mim",
-      defaultJobOptions: {
-        attempts: 5,                                   // Retries on failure
-        backoff: { type: 'exponential', delay: 1000 }, // 1s,2s,4s...
-        removeOnComplete: 200,                         // Keep last 200 completed jobs
-        removeOnFail: 200,                             // Keep last 200 failed jobs
-      },
-    }),
-  ],
+  imports: [ConfigModule],
   controllers: [FencingController, ParticipantController],
   providers: [
     FencingService, 

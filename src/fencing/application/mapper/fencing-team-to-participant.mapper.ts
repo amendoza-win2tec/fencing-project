@@ -73,18 +73,18 @@ export class FencingTeamToParticipantMapper {
   /**
    * Map team member to participant for start list using group data
    */
-  mapTeamMemberToParticipant(teamMember: TeamMember, teamId: string, index: number, street: string): ParticipantRequestStartListDto | null {
-    const groupCode = participantDictionary[teamId];
+  mapTeamMemberToParticipant(teamMember: TeamMember, teamId: string, index: number, street: string, unifiedCode?: string): ParticipantRequestStartListDto | null {
+    const groupCode = unifiedCode ?? participantDictionary[teamId];
     
     if (groupCode) {
       const group = this.groupService.getGroupByCode(groupCode);
       if (group && group.participants && group.participants[index]) {
         const participant = group.participants[index];
         return {
-          participantId: participant.participantId,
+          participantId: participant.idParticipant,
           name: participant.name,
           surname: participant.surname,
-          delegation: participant.delegation,
+          delegation: participant.organisation.code,
           startingOrder: index + 1,
           startingSortOrder: index,
           bib: teamMember._dossard,
@@ -99,8 +99,9 @@ export class FencingTeamToParticipantMapper {
   /**
    * Map team to group for start list using real group data
    */
-  mapTeamToGroup(team: Team, street: string): GroupRequestStartListDto | null {
-    const groupCode = participantDictionary[team._ID];
+  mapTeamToGroup(team: Team, street: string, unifiedCode?: string): GroupRequestStartListDto | null {
+    
+    const groupCode = unifiedCode ?? participantDictionary[team._ID];
     
     if (!groupCode) {
       return null;
@@ -116,10 +117,10 @@ export class FencingTeamToParticipantMapper {
     // Use all participants from the group
     group.participants.forEach((participant, index) => {
       participants.push({
-        participantId: participant.participantId,
+        participantId: participant.idParticipant,
         name: participant.name,
         surname: participant.surname,
-        delegation: participant.delegation,
+        delegation: participant.organisation.code,
         startingOrder: index + 1,
         startingSortOrder: index,
         bib: "", // Will be filled from team member data if available
@@ -201,13 +202,17 @@ export class FencingTeamToParticipantMapper {
     const team1 = teams.find(t => t._ID === team1Ref);
     const team2 = teams.find(t => t._ID === team2Ref);
 
+    const genderNormalized = genderDictionary[competition._Sexe];
+    const unifiedCodeTeam1 = `FEN_${genderNormalized}${competition._Arme}_${team1._Nation}`
+    const unifiedCodeTeam2 = `FEN_${genderNormalized}${competition._Arme}_${team2._Nation}`
+
     if (!team1 || !team2) {
       return null;
     }
 
     // Create groups for both teams
-    const group1 = this.mapTeamToGroup(team1, "G"); // Left side
-    const group2 = this.mapTeamToGroup(team2, "D"); // Right side
+    const group1 = this.mapTeamToGroup(team1, "G", unifiedCodeTeam1); // Left side
+    const group2 = this.mapTeamToGroup(team2, "D", unifiedCodeTeam2); // Right side
 
     if (group1) {
       groups.push(group1);

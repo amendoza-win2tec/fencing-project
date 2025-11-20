@@ -1,7 +1,5 @@
 import { Controller, Post, Body, BadRequestException, Req, RawBodyRequest, Logger, Get, Query } from '@nestjs/common';
 import { MessagePattern, Payload } from '@nestjs/microservices';
-import { Queue } from 'bullmq';
-import { InjectQueue } from '@nestjs/bullmq';
 import { Request } from 'express';
 import { WrestlingService } from '../../application/wrestling.app.service';
 import { 
@@ -21,8 +19,7 @@ import * as xml2js from 'xml2js';
 export class WrestlingController {
   private readonly logger = new Logger(WrestlingController.name);
 
-  constructor(@InjectQueue('wrestling-mim') private readonly wrestlingMiMQueue: Queue, 
-  private readonly wrestlingService: WrestlingService) {}
+  constructor(private readonly wrestlingService: WrestlingService) {}
 
   @Post('process-xml')
   async processWrestlingXml(@Req() req: RawBodyRequest<Request>): Promise<WrestlingProcessResponse> {

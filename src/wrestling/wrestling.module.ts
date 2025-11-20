@@ -7,20 +7,9 @@ import { ParticipantService } from '../fencing/infraestructure/shared/participan
 import { ParticipantLookupUtil } from '../fencing/infraestructure/shared/participant-lookup.util';
 import { WrestlingToParticipantMapper } from './application/mapper/wrestling-to-participant.mapper';
 import { WrestlingToResultMapper } from './application/mapper/wrestling-to-result.mapper';
-import { BullModule } from '@nestjs/bullmq';
 
 @Module({
-  imports: [ConfigModule,
-    BullModule.registerQueue({
-      name: "wrestling-mim",
-      defaultJobOptions: {
-        attempts: 5,                                   // Retries on failure
-        backoff: { type: 'exponential', delay: 1000 }, // 1s,2s,4s...
-        removeOnComplete: 200,                         // Keep last 200 completed jobs
-        removeOnFail: 200,                             // Keep last 200 failed jobs
-      },
-    }),
-  ],
+  imports: [ConfigModule],
   controllers: [WrestlingController],
   providers: [
     WrestlingService, 
