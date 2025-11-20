@@ -200,18 +200,18 @@ export class FencingService implements FencingAppServicePort {
         });
       });
 
-      // for(const unit of allUnits) {
-      //   await this.sendPouleToApi(unit);
-      // }
-      // for(const startList of allStartLists) {
-      //   await this.sendStartListToApi(startList);
-      // }
-      // for(const result of allResults) {
-      //   await this.sendResultToApi(result);
-      // }
-      // for(const unit of allUnits) {
-      //   await this.sendPouleToApi(unit);
-      // }
+      for(const unit of allUnits) {
+        await this.sendPouleToApi(unit);
+      }
+      for(const startList of allStartLists) {
+        await this.sendStartListToApi(startList);
+      }
+      for(const result of allResults) {
+        await this.sendResultToApi(result);
+      }
+      for(const unit of allUnits) {
+        await this.sendPouleToApi(unit);
+      }
       return allUnits;
     } catch (error) {
       console.error('Error processing fencing fights:', error);
